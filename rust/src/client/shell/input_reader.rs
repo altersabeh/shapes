@@ -13,8 +13,8 @@ pub fn read_number() -> f64 {
         let user_input = read_input();
 
         match user_input.parse::<f64>() {
-            Ok(value) => return value,
-            Err(_) => println!("Invalid number. Please try again."),
+            | Ok(value) => return value,
+            | Err(_) => println!("Invalid number. Please try again."),
         }
     }
 }
