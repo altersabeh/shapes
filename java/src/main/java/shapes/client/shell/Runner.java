@@ -2,7 +2,6 @@ package shapes.client.shell;
 
 import static shapes.client.shell.InputReader.readInput;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public final class Runner {
@@ -13,8 +12,7 @@ public final class Runner {
     }
 
     static void startingMessage() {
-        System.out
-                .println("Choose a shape to calculate its area and perimeter.");
+        System.out.println("Choose a shape to calculate its area and perimeter.");
         System.out.println("  [C] CIRCLE");
         System.out.println("  [R] RECTANGLE");
         System.out.println("  [S] SQUARE");
@@ -36,16 +34,14 @@ public final class Runner {
                 break;
             }
 
-            Map<String, Runnable> actions = new HashMap<>() {
-                {
-                    put("circle", Handler::handleCircle);
-                    put("s", Handler::handleCircle);
-                    put("rectangle", Handler::handleRectangle);
-                    put("r", Handler::handleRectangle);
-                    put("square", Handler::handleSquare);
-                    put("s", Handler::handleSquare);
-                }
-            };
+            Map<String, Runnable> actions = Map.ofEntries(
+                Map.entry("circle", Handler::handleCircle),
+                Map.entry("c", Handler::handleCircle),
+                Map.entry("rectangle", Handler::handleRectangle),
+                Map.entry("r", Handler::handleRectangle),
+                Map.entry("square", Handler::handleSquare),
+                Map.entry("s", Handler::handleSquare)
+            );
 
             Runnable action = actions.getOrDefault(shape, () -> {
                 System.out.println("Invalid input. Please try again.");

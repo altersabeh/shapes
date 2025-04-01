@@ -7,8 +7,8 @@ public abstract class BaseShape {
     private final List<Map<String, Double>> dimensions;
 
     /**
-     * Initialize the BaseShape with a list of dictionaries representing
-     * dimensions. Each dictionary should have a single key-value pair, e.g.,
+     * Initialize the BaseShape with a list of dictionaries representing dimensions.
+     * Each dictionary should have a single key-value pair, e.g.,
      * <code>[{"width": 12}, {"length": 15}]</code>.
      */
     public BaseShape(List<Map<String, Double>> dimensions) {

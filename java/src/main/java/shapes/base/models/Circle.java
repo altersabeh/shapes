@@ -15,8 +15,12 @@ public class Circle extends BaseShape implements Dimensional, Displayable {
     public Circle(double radius) {
         double dim1 = (radius > 0) ? radius : 1;
 
-        super(List.of(Map.of("radius", Math.max(radius, 1)),
-                Map.of("diameter", Math.max(radius, 1) * 2)));
+        super(
+            List.of(
+                Map.of("radius", Math.max(radius, 1)),
+                Map.of("diameter", Math.max(radius, 1) * 2)
+            )
+        );
 
         this.radius = dim1;
         this.color = "None";
@@ -52,11 +56,16 @@ public class Circle extends BaseShape implements Dimensional, Displayable {
     }
 
     private String formatDimensions() {
-        String formattedString = getDimensions().stream()
-                .map(dim -> dim.entrySet().stream()
-                        .map(e -> e.getKey() + ": " + e.getValue())
-                        .collect(Collectors.joining(", ")))
-                .collect(Collectors.joining(" | "));
+        String formattedString = getDimensions()
+            .stream()
+            .map(
+                dim -> dim
+                    .entrySet()
+                    .stream()
+                    .map(e -> e.getKey() + ": " + e.getValue())
+                    .collect(Collectors.joining(", "))
+            )
+            .collect(Collectors.joining(" | "));
         return formattedString;
     }
 }

@@ -35,10 +35,13 @@ class CommonsTest {
         }
     }
 
-    void assertMeasurable(Dimensional shape, double expected_area,
-            double expected_perimeter) {
-        double areaDiff = Math.abs(shape.area() - expected_area);
-        double perimeterDiff = Math.abs(shape.perimeter() - expected_perimeter);
+    void assertMeasurable(
+        Dimensional geometricShape,
+        double expectedArea,
+        double expectedPerimeter
+    ) {
+        double areaDiff = Math.abs(geometricShape.area() - expectedArea);
+        double perimeterDiff = Math.abs(geometricShape.perimeter() - expectedPerimeter);
 
         assertTrue(areaDiff < 0.001, "AREA NOT EQUAL");
         assertTrue(perimeterDiff < 0.001, "PERIMETER NOT EQUAL!");
