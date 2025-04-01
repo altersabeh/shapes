@@ -13,7 +13,7 @@ final class Circle extends BaseShape implements Dimensional {
         $dim1 = $radius > 0 ? $radius : 0;
 
         parent::__construct([
-            ["radius" => max($radiu ?? 0, 0)],
+            ["radius" => max($radius ?? 0, 0)],
             ["diameter" => max($radius ?? 0, 0) * 2],
         ]);
 
