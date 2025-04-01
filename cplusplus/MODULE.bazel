@@ -1,0 +1,11 @@
+# Copyright 2024
+# HEHEHEHHEHE
+
+""" SHAPES MODULE """
+module(
+    name = "shapes",
+    version = "1.0.0",
+    compatibility_level = 1,
+)
+
+bazel_dep(name = "googletest", version = "1.16.0")

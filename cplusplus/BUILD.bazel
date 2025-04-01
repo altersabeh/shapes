@@ -1,0 +1,45 @@
+cc_library(
+    name = "shapes",
+    srcs = glob([
+        "src/base/**/*.cpp",
+        "src/client/**/*.cpp",
+    ]),
+    hdrs = glob([
+        "include/**/*.hpp",
+    ]),
+    copts = [
+        "/std:c++latest",
+        "-Iinclude",
+    ],
+)
+
+cc_binary(
+    name = "shapes-app",
+    srcs = ["src/app/main.cpp"],
+    copts = [
+        "/std:c++latest",
+        "-Iinclude",
+    ],
+    deps = [
+        ":shapes",
+    ],
+)
+
+cc_test(
+    name = "shapes-test",
+    srcs = glob([
+        "tests/**/*.cpp",
+        "tests/**/*.hpp",
+    ]),
+    copts = [
+        "/std:c++latest",
+        "-Iinclude",
+    ],
+    env = {
+        "GTEST_COLOR": "1",
+    },
+    deps = [
+        ":shapes",
+        "@googletest//:gtest_main",
+    ],
+)
