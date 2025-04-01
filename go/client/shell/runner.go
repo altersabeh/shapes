@@ -23,7 +23,7 @@ func (Runner) startingMessage() {
 }
 
 // Run starts the CLI application
-func (r *Runner) Run() {
+func (Runner) Run() {
 	printThankYouMessage := func() {
 		fmt.Println("Thank you for using the Shapes CLI!")
 		fmt.Println("P.S. Did you know? The secret code is 42!")
