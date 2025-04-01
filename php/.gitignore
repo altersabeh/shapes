@@ -12,3 +12,8 @@ package.tar
 /.phpunit-cache
 
 /.psalm-cache
+
+node_modules/
+
+composer.lock
+package-lock.json
