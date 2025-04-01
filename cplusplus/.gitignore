@@ -1,0 +1,56 @@
+#==============================================================================#
+# File extensions to be ignored anywhere in the tree.
+#==============================================================================#
+# Temp files created by most text editors.
+*~
+*.rej
+.*.sw?
+.sw?
+.DS_store
+
+# Ignore the user specified CMake presets in subproject directories.
+/*/CMakeUserPresets.json
+
+# Nested build directory
+/build*
+
+# Dont ignore bazel build files
+!BUILD.bazel
+
+#==============================================================================#
+# Explicit files to ignore (only matches one).
+#==============================================================================#
+# Various tag programs
+/tags
+/TAGS
+/GPATH
+/GRTAGS
+/GSYMS
+/GTAGS
+/ID
+.gitusers
+autom4te.cache
+cscope.files
+cscope.out
+autoconf/aclocal.m4
+autoconf/autom4te.cache
+/compile_commands.json
+/CMakeSettings.json
+/.idea
+/cmake-build*
+
+# Intellisense files
+.vscode-cpptools/
+
+# BAZEL generated files
+bazel-*
+
+#==============================================================================#
+# Directories to ignore (do not add trailing '/'s, they skip symlinks).
+#==============================================================================#
+# VS2017 and VSCode config files.
+# .vscode
+.vs
+.zed
+.clangd/
+.cache

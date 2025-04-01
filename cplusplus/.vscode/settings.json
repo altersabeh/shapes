@@ -1,0 +1,10 @@
+{
+  "C_Cpp.intelliSenseCachePath": "${workspaceFolder}/.vscode-cpptools",
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "files.watcherExclude": {
+    ".cache/**": true,
+    ".vscode-cpptools/**": true,
+    "bazel-*/**": true,
+    "build/**": true
+  }
+}
