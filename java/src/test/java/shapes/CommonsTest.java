@@ -11,37 +11,37 @@ import shapes.base.commons.Dimensional;
 @DisplayName("Commons Tests")
 class CommonsTest {
     @Nested
-    @DisplayName("Measurable Tests")
-    class MeasurableTest {
+    @DisplayName("Dimensional Tests")
+    class DimensionalTest {
         @Test
-        @DisplayName("Test Circle Implements Measurable")
-        void testCircleImplementsMeasurable() {
+        @DisplayName("Test Circle Implements Dimensional")
+        void testCircleImplementsDimensional() {
             var circle = Fixtures.setupCircle();
-            assertMeasurable(circle, 754.767, 97.389);
+            assertDimensional(circle, 754.767, 97.389);
         }
 
         @Test
-        @DisplayName("Test Rectangle Implements Measurable")
-        void testRectangleImplementsMeasurable() {
+        @DisplayName("Test Rectangle Implements Dimensional")
+        void testRectangleImplementsDimensional() {
             var rectangle = Fixtures.setupRectangle();
-            assertMeasurable(rectangle, 756.437, 112.0);
+            assertDimensional(rectangle, 756.437, 112.0);
         }
 
         @Test
-        @DisplayName("Test Square Implements Measurable")
-        void testSquareImplementsMeasurable() {
+        @DisplayName("Test Square Implements Dimensional")
+        void testSquareImplementsDimensional() {
             var square = Fixtures.setupSquare();
-            assertMeasurable(square, 105.062, 41.0);
+            assertDimensional(square, 105.062, 41.0);
         }
     }
 
-    void assertMeasurable(
-        Dimensional geometricShape,
+    void assertDimensional(
+        Dimensional dimensionalShape,
         double expectedArea,
         double expectedPerimeter
     ) {
-        double areaDiff = Math.abs(geometricShape.area() - expectedArea);
-        double perimeterDiff = Math.abs(geometricShape.perimeter() - expectedPerimeter);
+        double areaDiff = Math.abs(dimensionalShape.area() - expectedArea);
+        double perimeterDiff = Math.abs(dimensionalShape.perimeter() - expectedPerimeter);
 
         assertTrue(areaDiff < 0.001, "AREA NOT EQUAL");
         assertTrue(perimeterDiff < 0.001, "PERIMETER NOT EQUAL!");
