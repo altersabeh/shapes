@@ -24,5 +24,6 @@ def assert_measurable(
 ):
     area_diff = abs(geometric_shape.area() - expexted_area)
     perimeter_diff = abs(geometric_shape.perimeter() - expected_perimeter)
+
     assert area_diff < 0.001, "AREA NOT EQUAL"
     assert perimeter_diff < 0.001, "PERIMETER NOT EQUAL!"
