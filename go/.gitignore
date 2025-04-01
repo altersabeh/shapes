@@ -29,3 +29,6 @@ _testmain.go
 /misc/cgo/testso/main
 /pkg/
 /build
+
+[Tt]askfile.yml
+[Tt]askfile.yaml
