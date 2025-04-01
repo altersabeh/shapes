@@ -1,0 +1,11 @@
+[package]
+name = "shapes"
+version = "1.0.0"
+edition = "2024"
+
+[dependencies]
+text_io = "0.1.13"
+
+[[bin]]
+name = "shapes-app"
+path = "src/main.rs"

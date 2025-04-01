@@ -1,0 +1,65 @@
+## File system for macOS and Windows
+.DS_Store
+desktop.ini
+
+## Editor and IDE files
+*.swp
+*.swo
+Session.vim
+.cproject
+.idea
+*.iml
+#.vscode
+.project
+.vim/
+.helix/
+.zed/
+.favorites.json
+.settings/
+.vs/
+.dir-locals.el
+
+## Configuration
+/bootstrap.toml
+/config.toml
+/Makefile
+config.mk
+config.stamp
+no_llvm_build
+
+## Build artifacts
+/dl/
+/doc/
+/inst/
+/llvm/
+/mingw-build/
+/build
+/build-rust-analyzer/
+/dist/
+/unicode-downloads
+/target
+/library/target
+/src/bootstrap/target
+/src/ci/citool/target
+/src/tools/x/target
+/vendor
+/obj/
+/install
+
+## ICE reports
+rustc-ice-*.txt
+
+## Temporary files
+*~
+\#*
+\#*\#
+.#*
+
+## Tags
+tags
+tags.*
+TAGS
+TAGS.*
+
+## Rustdoc GUI tests
+tests/rustdoc-gui/src/**.lock
