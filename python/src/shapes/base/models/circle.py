@@ -44,10 +44,6 @@ class Circle(BaseShape, Dimensional, Displayable):
 
     def _format_dimensions(self) -> str:
         formatted_string = " | ".join(
-            [
-                f"{key}: {value}"
-                for dim in self.dimensions
-                for key, value in dim.items()
-            ]
+            [f"{key}: {value}" for dim in self.dimensions for key, value in dim.items()]
         )
         return formatted_string
