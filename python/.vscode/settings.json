@@ -1,3 +1,9 @@
 {
-
+  "files.watcherExclude": {
+    ".pdm-build/**": true,
+    ".pdm-plugins/**": true,
+    ".pytest-cache/**": true,
+    ".ruff-cache/**": true,
+    ".venv/**": true,
+  }
 }
