@@ -1,0 +1,47 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  default:
+    cmds:
+      - task: lint
+      - task: test
+      - task: build
+
+  build:
+    desc: Build the application
+    cmds:
+      - go build -o build/ ./...
+      - go test -c -o build ./...
+
+  clean:
+    desc: Clean the build artifacts
+    cmds:
+      - go clean -cache -modcache
+    silent: true
+
+  lint:
+    desc: Run linters
+    cmds:
+      - revive -formatter friendly ./...
+
+  run:
+    desc: Run the application
+    cmds:
+      - go run shapes/app
+
+  test:
+    desc: Run the tests
+    cmds:
+      - go test shapes/test -v
+    silent: true
+
+  tidy:
+    desc: Remove unused dependencies
+    cmds:
+      - go mod tidy
+    silent: true
