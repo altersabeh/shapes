@@ -1,0 +1,6 @@
+Implementation-Title: Shapes
+Implementation-Version: 1.0.0
+Implementation-Vendor: User.Com
+Specification-Title: shapes
+Specification-Version: 1.0.0
+Specification-Vendor: User.Com
