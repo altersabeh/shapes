@@ -63,11 +63,12 @@ if(NOT MSVC)
     enable_testing()
     add_test(NAME ShapesTests COMMAND shapes_tests)
 
-    add_executable(shapes_tests
-        tests/fixtures/fixtures.hpp
-        tests/commons_test.cpp
-        tests/models_test.cpp
+    file(GLOB TEST_SOURCES
+        tests/fixtures/*.hpp
+        tests/*.cpp
     )
+
+    add_executable(shapes_tests ${TEST_SOURCES})
 
     target_link_libraries(shapes_tests GTest::GTest GTest::Main shapes_static stdc++exp)
 
