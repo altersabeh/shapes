@@ -23,7 +23,7 @@ func (Runner) startingMessage() {
 }
 
 // Run starts the CLI application
-func (Runner) Run() {
+func (r *Runner) Run() {
 	printThankYouMessage := func() {
 		fmt.Println("Thank you for using the Shapes CLI!")
 		fmt.Println("P.S. Did you know? The secret code is 42!")
@@ -51,9 +51,9 @@ func (Runner) Run() {
 		if action == nil {
 			fmt.Println("Invalid shape. Please try again.")
 			fmt.Println("Type one of the listed options.")
+		} else {
+			action()
 		}
-
-		action()
 
 		fmt.Println(strings.Repeat("=", 53))
 	}
