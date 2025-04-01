@@ -1,30 +1,34 @@
-import "package:shapes/src/base/commons/dimensional.dart";
+import "package:shapes/base/commons.dart";
 import "package:test/test.dart";
 
 import "fixtures/fixtures.dart" as fixtures;
 
 void main() {
-  group("Measurable Tests", () {
-    test("Test Circle Implements Measurable", () {
+  group("Dimensional Tests", () {
+    test("Test Circle Implements Dimensional", () {
       var circle = fixtures.setupCircle();
-      _assertMeasurable(circle, 754.767, 97.389);
+      _assertDimensional(circle, 754.767, 97.389);
     });
 
-    test("Test Rectangle Implements Measurable", () {
+    test("Test Rectangle Implements Dimensional", () {
       var rectangle = fixtures.setupRectangle();
-      _assertMeasurable(rectangle, 756.437, 112.0);
+      _assertDimensional(rectangle, 756.437, 112.0);
     });
 
-    test("Test Square Implements Measurable", () {
+    test("Test Square Implements Dimensional", () {
       var square = fixtures.setupSquare();
-      _assertMeasurable(square, 105.062, 41.0);
+      _assertDimensional(square, 105.062, 41.0);
     });
   });
 }
 
-void _assertMeasurable(Dimensional shape, double area, double perimeter) {
-  var areaDiff = (shape.area() - area).abs();
-  var perimeterDiff = (shape.perimeter() - perimeter).abs();
+void _assertDimensional(
+  Dimensional dimensionalShape,
+  double expectedArea,
+  double expectedPerimeter,
+) {
+  var areaDiff = (dimensionalShape.area() - expectedArea).abs();
+  var perimeterDiff = (dimensionalShape.perimeter() - expectedPerimeter).abs();
 
   expect(areaDiff < 0.001, true, reason: "AREA NOT EQUAL");
   expect(perimeterDiff < 0.001, true, reason: "PERIMETER NOT EQUAL!");
