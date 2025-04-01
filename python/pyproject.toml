@@ -1,0 +1,33 @@
+[project]
+name = "shapes"
+version = "1.0.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+shapes-app = "shapes.app.__main__:main"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.11.2",
+    "pyright>=1.1.398",
+]
+
+[tool.pdm]
+distribution = true
+plugins = ["pdm-packer"]
+
+[tool.pdm.scripts]
+fmt = "ruff format src/ tests/"
+"fmt:check" = "ruff format --check src/ tests/"
+install-plugins = "pdm install --plugin"
+start = "python -m shapes.app"
+test = "pytest"
+zipapp = "pdm pack -o dist/shapes-app.pyz --pyc --no-py"

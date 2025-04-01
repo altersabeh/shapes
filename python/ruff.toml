@@ -1,0 +1,9 @@
+line-length = 80
+indent-width = 4
+cache-dir = ".ruff-cache"
+
+[format]
+docstring-code-format = true
+docstring-code-line-length = 80
+indent-style = "space"
+quote-style = "double"
