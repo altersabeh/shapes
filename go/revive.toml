@@ -1,0 +1,29 @@
+ignoreGeneratedHeader = false
+severity = "warning"
+confidence = 0.5
+errorCode = 1
+warningCode = 1
+enableAllRules = true
+
+[rule.add-constant]
+arguments = [
+    { maxLitCount = "5", allowInts = "0,2,4,53,64", allowFloats = "10.25,15.5,22.75,33.25" },
+]
+
+[rule.deep-exit]
+Disabled = true
+
+[rule.dot-imports]
+Disabled = true
+
+[rule.exported]
+Disabled = true
+
+[rule.line-length-limit]
+arguments = [100]
+
+[rule.package-comments]
+Disabled = true
+
+[rule.unhandled-error]
+arguments = ["fmt.*"]
