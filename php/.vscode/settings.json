@@ -1,5 +1,15 @@
 {
+  "[php]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "files.watcherExclude": {
-    "vendor/**": true,
-  }
+    ".phpunit-cache/**": true,
+    ".psalm-cache/**": true,
+    "vendor/**": true
+  },
+  "prettier.configPath": "prettier.config.js",
+  "prettier.documentSelectors": [
+    "**/*.{js,jsx,ts,tsx,vue,html,css,scss,less,json,md,mdx,graphql,yaml,yml,php}"
+  ],
+  "prettier.requireConfig": true
 }
