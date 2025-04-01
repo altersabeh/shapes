@@ -1,0 +1,19 @@
+file_reporters:
+    json: reports/tests.json
+
+paths:
+    - test
+
+reporter: github
+
+tags:
+    circle:
+        configuration: default
+    rectangle:
+        configuration: default
+    square:
+        configuration: default
+    area:
+        configuration: default
+    perimeter:
+        configuration: default
