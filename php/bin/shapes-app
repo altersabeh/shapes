@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+
+namespace Shapes\App;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use Shapes\Base\Models\Circle;
+use Shapes\Client\Shell\Runner;
+
+function main(): void {
+    $program = new Runner();
+
+    $circle = new Circle(15.25);
+    $circle->printDescription();
+
+    $program->run();
+}
+
+main();

@@ -1,0 +1,14 @@
+vendor/
+phpunit.xml
+.php-cs-fixer.cache
+.php-cs-fixer.php
+.phpunit.result.cache
+composer.phar
+package.tar
+/packages.json
+
+
+/.phpunit
+/.phpunit-cache
+
+/.psalm-cache
