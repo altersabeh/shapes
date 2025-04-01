@@ -1,0 +1,32 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": [ "^test:cov" ],
+      "inputs": [ "$TURBO_DEFAULT$" ],
+      "outputs": [ "./dist/cjs/**" ]
+    },
+    "archive": {
+      "dependsOn": [ "^build" ],
+      "inputs": [ "$TURBO_DEFAULT$" ],
+      "outputs": [ "./dist/tarballs/**" ]
+    },
+    "fmt": {
+      "dependsOn": [ "^fmt" ]
+    },
+    "test:cov": {
+      "inputs": [ "$TURBO_DEFAULT$", "lib/**/*", "test/**/*" ],
+      "outputs": [ "./coverage/**" ]
+    },
+    "start": {
+      "dependsOn": [ "^start" ],
+      "interactive": true,
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}
