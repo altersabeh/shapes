@@ -1,9 +1,7 @@
 #!/usr/bin/env php
-<?php
+<?php namespace Shapes\App;
 
-namespace Shapes\App;
-
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . "/../vendor/autoload.php";
 
 use Shapes\Base\Models\Circle;
 use Shapes\Client\Shell\Runner;

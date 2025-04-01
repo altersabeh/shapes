@@ -42,10 +42,12 @@ final class Runner {
                 "s" => [Handler::class, "handleSquare"],
             ];
 
-            $action = $actions[$shape] ?? function (): void {
-                echo "Invalid input. Please try again." . PHP_EOL;
-                echo "Type one of the listed options." . PHP_EOL;
-            };
+            $action =
+                $actions[$shape] ??
+                function (): void {
+                    echo "Invalid input. Please try again." . PHP_EOL;
+                    echo "Type one of the listed options." . PHP_EOL;
+                };
 
             call_user_func($action);
 

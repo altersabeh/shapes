@@ -26,7 +26,11 @@ class CommonsTest extends TestCase {
         $this->assertDimensional($square, 105.062, 41.0);
     }
 
-    private function assertDimensional(Dimensional $dimensionalShape, float $expectedArea, float $expectedPerimeter): void {
+    private function assertDimensional(
+        Dimensional $dimensionalShape,
+        float $expectedArea,
+        float $expectedPerimeter
+    ): void {
         $area_diff = abs($dimensionalShape->area() - $expectedArea);
         $perimeter_diff = abs($dimensionalShape->perimeter() - $expectedPerimeter);
 

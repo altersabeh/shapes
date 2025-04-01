@@ -5,7 +5,7 @@ namespace Shapes\Client\Shell;
 function readInput(): string {
     echo "Your Answer >>> ";
     $user_input = fgets(STDIN);
-    $user_input = $user_input !== false ? strtolower(trim($user_input)) : '';
+    $user_input = $user_input !== false ? strtolower(trim($user_input)) : "";
     readExit($user_input);
     return $user_input;
 }

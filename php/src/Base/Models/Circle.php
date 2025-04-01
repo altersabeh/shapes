@@ -10,11 +10,11 @@ final class Circle extends BaseShape implements Dimensional {
     private ?string $color;
 
     public function __construct(float $radius) {
-        $dim1 = $radius > 0 ? $radius : 1;
+        $dim1 = $radius > 0 ? $radius : 0;
 
         parent::__construct([
-            ["radius" => max($radius, 1)],
-            ["diameter" => max($radius, 1) * 2],
+            ["radius" => max($radiu ?? 0, 0)],
+            ["diameter" => max($radius ?? 0, 0) * 2],
         ]);
 
         $this->radius = $dim1;
@@ -51,10 +51,13 @@ final class Circle extends BaseShape implements Dimensional {
     }
 
     private function formatDimensions(): string {
-        $formatted_string = array_map(fn($dim) =>
-            implode(" | ", array_map(fn($key, $value) =>
-                "{$key}: {$value}", array_keys($dim), $dim)),
-            $this->getDimensions());
+        $formatted_string = array_map(
+            fn($dim) => implode(
+                " | ",
+                array_map(fn($key, $value) => "{$key}: {$value}", array_keys($dim), $dim)
+            ),
+            $this->getDimensions()
+        );
         return implode(" | ", $formatted_string);
     }
 }
