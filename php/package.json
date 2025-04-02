@@ -2,5 +2,19 @@
   "devDependencies": {
     "@prettier/plugin-php": "^0.22.4",
     "prettier": "^3.5.3"
+  },
+  "prettier": {
+    "braceStyle": "1tbs",
+    "bracketSpacing": true,
+    "endOfLine": "lf",
+    "parser": "php",
+    "plugins": [
+      "@prettier/plugin-php"
+    ],
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": false,
+    "tabWidth": 4,
+    "trailingCommaPHP": true
   }
 }
