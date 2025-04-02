@@ -4,7 +4,11 @@ import shapes.base.commons;
 import std.math.algebraic;
 import test.fixtures;
 
-private void assert_dimensional(Dimensional geometricShape, double expectedArea, double expectedPerimeter) {
+private void assert_dimensional(
+        Dimensional geometricShape,
+        double expectedArea,
+        double expectedPerimeter
+) {
     const double areaDiff = abs(geometricShape.area() - expectedArea);
     const double perimeterDiff = abs(geometricShape.perimeter() - expectedPerimeter);
 

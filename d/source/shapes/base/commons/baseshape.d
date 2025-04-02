@@ -13,8 +13,7 @@ protected:
         _dimensions = dimensions;
     }
 
-    @property
-    ref const(double[string][]) dimensions() const {
+    @property ref const(double[string][]) dimensions() const {
         return _dimensions;
     }
 

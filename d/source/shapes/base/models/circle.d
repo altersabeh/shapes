@@ -15,8 +15,9 @@ private:
 
     string formatDimensions() const {
         auto formattedString = dimensions.map!(
-            dim => dim.byKeyValue.map!(
-                kv => kv.key ~ ": " ~ kv.value.to!string).joiner(" | ")).joiner(" | ").text;
+                dim => dim.byKeyValue.map!(
+                kv => kv.key ~ ": " ~ kv.value.to!string).joiner(" | "))
+            .joiner(" | ").text;
 
         return formattedString;
     }
@@ -25,7 +26,11 @@ public:
     this(double radius) {
         immutable double dim1 = radius > 0 ? radius : 0;
 
-        super([["radius" : max(radius, 0)], ["diameter" : max(radius, 0) * 2]]);
+        super([
+            ["radius" : max(radius, 1)],
+            ["diameter" : max(radius, 1) * 2],
+            ["curvature" : 1 / max(radius, 1)],
+        ]);
 
         this.radius = dim1;
         this.color = "None";
