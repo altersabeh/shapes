@@ -13,7 +13,7 @@ final class Square implements Dimensional {
 
     #[\Override]
     public function area(): float {
-        return pow($this->side, 2);
+        return $this->side ** 2;
     }
 
     #[\Override]

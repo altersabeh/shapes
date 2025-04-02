@@ -18,7 +18,7 @@ abstract class BaseShape {
     }
 
     public function getDimensionAvailable(): int {
-        return count($this->dimensions);
+        return \count($this->dimensions);
     }
 
     public static function isAShape(): bool {

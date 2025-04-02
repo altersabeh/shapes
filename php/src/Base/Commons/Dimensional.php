@@ -3,7 +3,7 @@
 namespace Shapes\Base\Commons;
 
 /**
- * # Summary of Measurable
+ * # Summary of Measurable.
  *
  * ``` php
  * <?php
@@ -16,12 +16,12 @@ namespace Shapes\Base\Commons;
  */
 interface Dimensional {
     /**
-     * Print the area of the shape
+     * Print the area of the shape.
      */
     public function area(): float;
 
     /**
-     * Print the perimeter of the shape
+     * Print the perimeter of the shape.
      */
     public function perimeter(): float;
 }

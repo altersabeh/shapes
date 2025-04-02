@@ -6,8 +6,13 @@ use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
 use Shapes\Base\Commons\Dimensional;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 #[TestDox("Commons Test")]
-class CommonsTest extends TestCase {
+final class CommonsTest extends TestCase {
     #[TestDox("Test Circle Implements Dimensional")]
     public function testCircleImplementsDimensional(): void {
         $circle = Fixtures\setup_circle();
@@ -34,7 +39,7 @@ class CommonsTest extends TestCase {
         $area_diff = abs($dimensionalShape->area() - $expectedArea);
         $perimeter_diff = abs($dimensionalShape->perimeter() - $expectedPerimeter);
 
-        $this->assertTrue($area_diff < 0.001, "AREA NOT EQUAL");
-        $this->assertTrue($perimeter_diff < 0.001, "Perimeter is not equal!");
+        self::assertTrue($area_diff < 0.001, "AREA NOT EQUAL");
+        self::assertTrue($perimeter_diff < 0.001, "PERIMETER NOT EQUAL");
     }
 }

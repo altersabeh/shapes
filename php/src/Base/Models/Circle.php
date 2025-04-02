@@ -6,6 +6,7 @@ use Shapes\Base\Commons\{BaseShape, Dimensional, Displayable};
 
 final class Circle extends BaseShape implements Dimensional {
     use Displayable;
+
     private float $radius;
     private ?string $color;
 
@@ -13,8 +14,9 @@ final class Circle extends BaseShape implements Dimensional {
         $dim1 = $radius > 0 ? $radius : 0;
 
         parent::__construct([
-            ["radius" => max($radius ?? 0, 0)],
-            ["diameter" => max($radius ?? 0, 0) * 2],
+            ["radius" => max($radius, 0)],
+            ["diameter" => max($radius, 0) * 2],
+            ["curvature" => 1 / max($radius, 0)],
         ]);
 
         $this->radius = $dim1;
@@ -42,22 +44,23 @@ final class Circle extends BaseShape implements Dimensional {
 
     #[\Override]
     public function area(): float {
-        return pi() * pow($this->radius, 2);
+        return M_PI * $this->radius ** 2;
     }
 
     #[\Override]
     public function perimeter(): float {
-        return 2.0 * pi() * $this->radius;
+        return 2.0 * M_PI * $this->radius;
     }
 
     private function formatDimensions(): string {
         $formatted_string = array_map(
-            fn($dim) => implode(
+            static fn ($dim) => implode(
                 " | ",
-                array_map(fn($key, $value) => "{$key}: {$value}", array_keys($dim), $dim)
+                array_map(static fn ($key, $value) => "{$key}: {$value}", array_keys($dim), $dim)
             ),
             $this->getDimensions()
         );
+
         return implode(" | ", $formatted_string);
     }
 }

@@ -1,5 +1,7 @@
 #!/usr/bin/env php
-<?php namespace Shapes\App;
+<?php
+
+namespace Shapes\App;
 
 require __DIR__ . "/../vendor/autoload.php";
 

@@ -11,16 +11,8 @@ final class Runner {
         echo str_repeat("=", 53) . PHP_EOL;
     }
 
-    private static function startingMessage(): void {
-        echo "Choose a shape to calculate its area and perimeter." . PHP_EOL;
-        echo "  [C] CIRCLE" . PHP_EOL;
-        echo "  [R] RECTANGLE" . PHP_EOL;
-        echo "  [S] SQUARE" . PHP_EOL;
-        echo "Type '[E]XIT' to quit the program." . PHP_EOL;
-    }
-
     public function run(): void {
-        $printThankYouMessage = function (): void {
+        $printThankYouMessage = static function (): void {
             echo "Thank you for using the Shapes CLI!" . PHP_EOL;
             echo "P.S. Did you know? The secret code is 42!" . PHP_EOL;
         };
@@ -29,8 +21,9 @@ final class Runner {
             self::startingMessage();
 
             $shape = InputReader\readInput();
-            if ($shape === "q") {
+            if ("q" === $shape) {
                 $printThankYouMessage();
+
                 break;
             }
             $actions = [
@@ -42,16 +35,24 @@ final class Runner {
                 "s" => [Handler::class, "handleSquare"],
             ];
 
-            $action =
-                $actions[$shape] ??
-                function (): void {
+            $action
+                = $actions[$shape]
+                ?? static function (): void {
                     echo "Invalid input. Please try again." . PHP_EOL;
                     echo "Type one of the listed options." . PHP_EOL;
                 };
 
-            call_user_func($action);
+            \call_user_func($action);
 
             echo str_repeat("=", 53) . PHP_EOL;
         }
+    }
+
+    private static function startingMessage(): void {
+        echo "Choose a shape to calculate its area and perimeter." . PHP_EOL;
+        echo "  [C] CIRCLE" . PHP_EOL;
+        echo "  [R] RECTANGLE" . PHP_EOL;
+        echo "  [S] SQUARE" . PHP_EOL;
+        echo "Type '[E]XIT' to quit the program." . PHP_EOL;
     }
 }
