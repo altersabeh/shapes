@@ -61,22 +61,35 @@ install(DIRECTORY include DESTINATION include)
 if(NOT MSVC)
     find_package(GTest REQUIRED)
     enable_testing()
-    add_test(NAME ShapesTests COMMAND shapes_tests)
 
-    file(GLOB TEST_SOURCES
-        tests/fixtures/*.hpp
-        tests/*.cpp
+    # Commons Tests
+    file(GLOB COMMONS_TEST_SOURCES
+        tests/fixtures/commons/*.hpp
+        tests/commons*.cpp
     )
 
-    add_executable(shapes_tests ${TEST_SOURCES})
+    add_executable(commons_test ${COMMONS_TEST_SOURCES})
+    target_link_libraries(commons_test GTest::GTest GTest::Main shapes_static stdc++exp)
 
-    target_link_libraries(shapes_tests GTest::GTest GTest::Main shapes_static stdc++exp)
+    add_test(NAME CommonsTests COMMAND commons_test)
 
+    # Models Tests
+    file(GLOB MODELS_TEST_SOURCES
+        tests/fixtures/*.hpp
+        tests/models*.cpp
+    )
+
+    add_executable(models_test ${MODELS_TEST_SOURCES})
+    target_link_libraries(models_test GTest::GTest GTest::Main shapes_static stdc++exp)
+
+    add_test(NAME ModelsTests COMMAND models_test)
+
+    # Custom target to run all tests
     add_custom_target(runtests
-        COMMAND shapes_tests
-        DEPENDS shapes_tests
+        COMMAND commons_test && models_test
+        DEPENDS commons_test models_test
         WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-        COMMENT "Running the shapes tests"
+        COMMENT "Running all tests"
     )
 else()
     message(STATUS "Skipping Google Test setup and test targets for MSVC.")
