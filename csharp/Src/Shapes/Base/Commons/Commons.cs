@@ -1,0 +1,1 @@
+namespace Shapes.Base.Commons;

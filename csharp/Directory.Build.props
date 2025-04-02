@@ -1,0 +1,27 @@
+<Project>
+
+  <PropertyGroup>
+    <VSTestVerbosity>detailed</VSTestVerbosity>
+    <TargetFramework>net9.0</TargetFramework>
+  </PropertyGroup>
+
+  <Target Name="PostClean" AfterTargets="Clean">
+    <RemoveDir Directories="$(BaseIntermediateOutputPath)" />
+    <RemoveDir Directories="$(BaseOutputPath)" />
+  </Target>
+
+  <Target Name="PreFormat" BeforeTargets="Format">
+    <Exec Command="dotnet csharpier ." />
+  </Target>
+
+  <PropertyGroup>
+    <RepoRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</RepoRoot>
+    <ProjectRelativePath>$([MSBuild]::MakeRelative($(RepoRoot), $(MSBuildProjectDirectory)))</ProjectRelativePath>
+    <BaseOutputPath>$(RepoRoot)artifacts/$(ProjectRelativePath)/bin</BaseOutputPath>
+    <OutputPath>$(BaseOutputPath)</OutputPath>
+    <BaseIntermediateOutputPath>$(RepoRoot)artifacts/$(ProjectRelativePath)/obj</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
+    <PackageOutputPath>$(RepoRoot)artifacts/$(ProjectRelativePath)/nupkg</PackageOutputPath>
+  </PropertyGroup>
+
+</Project>

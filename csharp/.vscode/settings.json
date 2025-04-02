@@ -1,0 +1,8 @@
+{
+  "files.watcherExclude": {
+    ".cache/**": true,
+    ".vscode-cpptools/**": true,
+    "bazel-*/**": true,
+    "build/**": true
+  }
+}
