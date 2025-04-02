@@ -1,38 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <PropertyGroup>
-    <!-- For the shapes Library -->
     <AssemblyName>Shapes</AssemblyName>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <!-- For the shapes-app tool-->
-    <PackAsTool>true</PackAsTool>
-    <ToolCommandName>shapes-app</ToolCommandName>
-  </PropertyGroup>
-
-  <!-- Rename executable after publish -->
-  <Target Name="RenamePublishedExecutable" AfterTargets="Publish">
-    <Move SourceFiles="$(PublishDir)\Shapes.exe" DestinationFiles="$(PublishDir)\shapes-app.exe"
-      Condition="Exists('$(PublishDir)\Shapes.exe')" />
-    <Move SourceFiles="$(PublishDir)\Shapes" DestinationFiles="$(PublishDir)\shapes-app"
-      Condition="Exists('$(PublishDir)\Shapes') AND !Exists('$(PublishDir)\Shapes.exe')" />
-  </Target>
-
-  <ItemGroup>
-    <CompilerVisibleProperty Include="RootNamespace" />
-    <CompilerVisibleProperty Include="ProjectDir" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\..\README.md" Pack="true" PackagePath="" />
-  </ItemGroup>
 </Project>
