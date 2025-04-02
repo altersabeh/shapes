@@ -1,5 +1,3 @@
-load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library", "cc_test")
-
 cc_library(
     name = "shapes",
     srcs = glob([
@@ -7,6 +5,7 @@ cc_library(
         "src/client/**/*.cpp",
     ]),
     hdrs = glob([
+        "src/**/*.hpp",
         "include/**/*.hpp",
     ]),
     copts = [
