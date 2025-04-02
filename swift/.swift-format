@@ -7,7 +7,6 @@
     "lineBreakBeforeEachArgument": true,
     "lineBreakBeforeEachGenericRequirement": true,
     "lineBreakBetweenDeclarationAttributes": true,
-    "lineBreakAroundMultilineExpressionChainComponents": true,
     "lineLength": 100,
     "prioritizeKeepingFunctionOutputTogether": true,
     "respectsExistingLineBreaks": true,
