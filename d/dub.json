@@ -1,0 +1,44 @@
+{
+  "authors": [
+    "AlterSabeh"
+  ],
+  "configurations": [
+    {
+      "name": "library",
+      "excludedSourceFiles": [
+        "source/shapes/app/*.d"
+      ],
+      "sourcePaths": [
+        "source"
+      ],
+      "targetType": "library"
+    },
+    {
+      "name": "executable",
+      "sourcePaths": [
+        "source"
+      ],
+      "targetType": "executable"
+    },
+    {
+      "name": "unittest",
+      "excludedSourceFiles": [
+        "source/shapes/app/*.d"
+      ],
+      "sourcePaths": [
+        "tests"
+      ],
+      "targetType": "library"
+    }
+  ],
+  "copyright": "Copyright © 2025, AlterSabeh",
+  "dependencies": {
+    "silly": "~>1.1.1"
+  },
+  "description": "A minimal D application.",
+  "license": "proprietary",
+  "name": "shapes",
+  "targetPath": "build/",
+  "targetType": "library",
+  "version": "1.0.0"
+}
