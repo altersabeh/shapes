@@ -18,7 +18,8 @@ public class Circle extends BaseShape implements Dimensional, Displayable {
         super(
             List.of(
                 Map.of("radius", Math.max(radius, 1)),
-                Map.of("diameter", Math.max(radius, 1) * 2)
+                Map.of("diameter", Math.max(radius, 1) * 2),
+                Map.of("curvature", 1 / Math.max(radius, 1))
             )
         );
 

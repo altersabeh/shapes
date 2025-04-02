@@ -8,6 +8,7 @@ public class Main {
         Runner program = new Runner();
 
         Circle circle = new Circle(15.25);
+        circle.setColor("RED");
         circle.printDescription();
 
         program.run();

@@ -18,9 +18,13 @@ public final class Circle: BaseShape, Dimensional, Displayable {
     }
 
     public var color: String {
-        get { return _color }
+        get {
+            return _color
+        }
 
-        set(value) { _color = value }
+        set(value) {
+            _color = value
+        }
     }
 
     public override func printDescription() {
@@ -33,14 +37,20 @@ public final class Circle: BaseShape, Dimensional, Displayable {
         print("Circle is a shape: \(Circle.isAShape())")
     }
 
-    public func area() -> Double { return Double.pi * pow(radius, 2) }
+    public func area() -> Double {
+        return Double.pi * pow(radius, 2)
+    }
 
-    public func perimeter() -> Double { return 2 * Double.pi * radius }
+    public func perimeter() -> Double {
+        return 2 * Double.pi * radius
+    }
 
     private func formatDimensions() -> String {
-        let formattedString = dimensions.map { dim in
-            dim.map { "\($0.key): \($0.value)" }.joined(separator: " | ")
-        }.joined(separator: " | ")
+        let formattedString =
+            dimensions.map { dim in
+                dim.map { "\($0.key): \($0.value)" }.joined(separator: " | ")
+            }
+            .joined(separator: " | ")
 
         return formattedString
     }

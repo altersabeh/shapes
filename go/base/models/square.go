@@ -11,10 +11,10 @@ func (Square) New(side float64) *Square {
 	return &Square{side: dim1}
 }
 
-func (s *Square) Area() float64 {
+func (s Square) Area() float64 {
 	return math.Pow(s.side, 2)
 }
 
-func (s *Square) Perimeter() float64 {
+func (s Square) Perimeter() float64 {
 	return 4 * s.side
 }

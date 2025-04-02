@@ -2,13 +2,17 @@ import { BaseShape, Dimensional, Displayable } from "../commons";
 
 @Displayable
 export class Circle extends BaseShape implements Dimensional {
-    private radius: number;
+    private readonly radius: number;
     private _color: string;
 
     constructor(radius: number) {
         const dim1: number = radius > 0 ? radius : 1;
 
-        super([{ radius: Math.max(radius, 1) }, { diameter: Math.max(radius, 1) }]);
+        super([
+            { radius: Math.max(radius, 1) },
+            { diameter: Math.max(radius, 1) },
+            { curvature: 1 / Math.max(radius, 1) },
+        ]);
 
         this.radius = dim1;
         this._color = "None";

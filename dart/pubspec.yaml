@@ -8,3 +8,6 @@ environment:
 dev_dependencies:
   lints: ^5.0.0
   test: ^1.24.0
+
+executables:
+  shapes-app: shapes.dart

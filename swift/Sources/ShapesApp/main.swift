@@ -7,6 +7,7 @@ func main() {
     let program: Runner = Runner()
 
     let circle = Circle(radius: 15.25)
+    circle.color = "RED"
     circle.printDescription()
 
     program.run()

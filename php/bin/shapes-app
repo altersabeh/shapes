@@ -1,7 +1,5 @@
 #!/usr/bin/env php
-<?php
-
-namespace Shapes\App;
+<?php namespace Shapes\App;
 
 require __DIR__ . "/../vendor/autoload.php";
 
@@ -12,6 +10,7 @@ function main(): void {
     $program = new Runner();
 
     $circle = new Circle(15.25);
+    $circle->setColor("RED");
     $circle->printDescription();
 
     $program->run();

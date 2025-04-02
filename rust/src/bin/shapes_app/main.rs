@@ -6,7 +6,8 @@ use shapes::{
 fn main() {
     let program: Runner = Runner::new();
 
-    let circle: Circle = Circle::new(15.25);
+    let mut circle: Circle = Circle::new(15.25);
+    circle.set_color("RED");
     circle.print_description();
 
     program.run();

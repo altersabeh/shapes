@@ -8,6 +8,7 @@ class Program {
         Runner program = new Runner();
 
         Circle circle = new Circle(15.25);
+        circle.Color = "RED";
         circle.PrintDescription();
 
         program.Run();

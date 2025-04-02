@@ -11,6 +11,7 @@ public sealed class Circle : BaseShape, IDimensional, IDisplayable {
             [
                 new() { { "radius", Math.Max(radius, 1) } },
                 new() { { "diameter", Math.Max(radius, 1) * 2 } },
+                new() { { "curvature", 1 / Math.Max(radius, 1) } },
             ]
         ) {
         double dim1 = radius > 0 ? radius : 1;

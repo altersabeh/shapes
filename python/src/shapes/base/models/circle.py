@@ -13,6 +13,7 @@ class Circle(BaseShape, Dimensional, Displayable):
             [
                 {"radius": max(radius, 1)},
                 {"diameter": max(radius, 1) * 2},
+                {"curvature": 1 / max(radius, 1)},
             ]
         )
 

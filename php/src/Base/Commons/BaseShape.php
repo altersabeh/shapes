@@ -3,7 +3,7 @@
 namespace Shapes\Base\Commons;
 
 abstract class BaseShape {
-    private array $dimensions;
+    private readonly array $dimensions;
 
     /**
      * Initialize the BaseShape with an array of associative arrays representing dimensions.

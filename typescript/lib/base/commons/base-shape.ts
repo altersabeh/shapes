@@ -1,5 +1,5 @@
 export abstract class BaseShape {
-    private _dimensions: Array<{ [key: string]: number }>;
+    private readonly _dimensions: Array<{ [key: string]: number }>;
 
     /**
      * Initialize the BaseShape with a list of dictionaries representing dimensions.

@@ -7,6 +7,7 @@ function main() {
     const program: Runner = new Runner();
 
     const circle: Circle = new Circle(15.25);
+    circle.color = "RED";
     circle.printDescription();
 
     program.run();

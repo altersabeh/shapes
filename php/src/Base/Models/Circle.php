@@ -7,7 +7,7 @@ use Shapes\Base\Commons\{BaseShape, Dimensional, Displayable};
 final class Circle extends BaseShape implements Dimensional {
     use Displayable;
 
-    private float $radius;
+    private readonly float $radius;
     private ?string $color;
 
     public function __construct(float $radius) {
@@ -54,9 +54,9 @@ final class Circle extends BaseShape implements Dimensional {
 
     private function formatDimensions(): string {
         $formatted_string = array_map(
-            static fn ($dim) => implode(
+            static fn($dim) => implode(
                 " | ",
-                array_map(static fn ($key, $value) => "{$key}: {$value}", array_keys($dim), $dim)
+                array_map(static fn($key, $value) => "{$key}: {$value}", array_keys($dim), $dim)
             ),
             $this->getDimensions()
         );

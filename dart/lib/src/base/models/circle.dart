@@ -10,6 +10,7 @@ final class Circle extends BaseShape with Displayable implements Dimensional {
     : super([
         {"radius": max(radius, 1)},
         {"diameter": max(radius, 1) * 2},
+        {"curvature": 1 / max(radius, 1)},
       ]) {
     double dim1 = radius > 0 ? radius : 1;
 

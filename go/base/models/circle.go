@@ -21,6 +21,7 @@ func (Circle) New(radius float64) *Circle {
 		[]map[string]float64{
 			{"radius": math.Max(radius, 0)},
 			{"diameter": math.Max(radius, 0) * 2},
+			{"curvature": 1 / math.Max(radius, 0)},
 		},
 	)
 
@@ -50,11 +51,11 @@ func (c *Circle) PrintDescription() {
 	fmt.Printf("Circle is a shape: %t\n", c.BaseShape.IsAShape())
 }
 
-func (c *Circle) Area() float64 {
+func (c Circle) Area() float64 {
 	return math.Pi * math.Pow(c.radius, 2)
 }
 
-func (c *Circle) Perimeter() float64 {
+func (c Circle) Perimeter() float64 {
 	return 2 * math.Pi * c.radius
 }
 
