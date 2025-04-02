@@ -35,9 +35,7 @@ public sealed class Circle : BaseShape, IDimensional, IDisplayable {
         Console.WriteLine($"Circle color: {Color}");
         Console.WriteLine($"Circle area: {Area()}");
         Console.WriteLine($"Circle perimeter: {Perimeter()}");
-        Console.WriteLine(
-            $"Circle is displayable: {((IDisplayable)this).IsDisplayable()}"
-        );
+        Console.WriteLine($"Circle is displayable: {((IDisplayable)this).IsDisplayable()}");
         Console.WriteLine($"Circle is a shape: {IsAShape()}");
     }
 

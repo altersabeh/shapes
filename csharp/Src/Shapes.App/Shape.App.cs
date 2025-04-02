@@ -1,4 +1,4 @@
-﻿using Shapes.Base.Models;
+using Shapes.Base.Models;
 using Shapes.Client.Shell;
 
 namespace Shapes.App;
