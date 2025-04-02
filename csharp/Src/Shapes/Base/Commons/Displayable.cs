@@ -7,9 +7,9 @@ public interface IDisplayable {
 
     void Display() {
         if (IsDisplayable()) {
-            System.Console.WriteLine("Yes, this shape can be displayed.");
+            Console.WriteLine("Yes, this shape can be displayed.");
         } else {
-            System.Console.WriteLine("No, this shape cannot be displayed.");
+            Console.WriteLine("No, this shape cannot be displayed.");
         }
     }
 }
