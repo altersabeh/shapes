@@ -3,7 +3,7 @@ use std::{collections::HashMap as HM, f64::consts::PI};
 use crate::base::commons::{BaseShape, Dimensional, Displayable};
 
 pub struct Circle {
-    radius: f64,
+    pub radius: f64,
     dimensions: Vec<HM<&'static str, f64>>,
     color: &'static str,
 }
@@ -21,6 +21,14 @@ impl Circle {
             ],
             color: "None",
         }
+    }
+
+    pub fn get_color(&self) -> &str {
+        self.color
+    }
+
+    pub fn set_color(&mut self, color: &'static str) {
+        self.color = color;
     }
 
     fn format_dimensions(&self) -> String {
@@ -42,7 +50,7 @@ impl BaseShape for Circle {
     fn print_description(&self) {
         println!("Circle radius: {}", self.radius);
         println!("Circle dimensions: {}", self.format_dimensions());
-        println!("Circle color: {}", self.color);
+        println!("Circle color: {}", self.get_color());
         println!("Circle area: {}", self.area());
         println!("Circle perimeter: {}", self.perimeter());
         println!("Circle is displayable: {}", self.is_displayable());
