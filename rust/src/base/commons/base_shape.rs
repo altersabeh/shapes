@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 pub trait BaseShape {
-    fn get_dimensions(&self) -> &Vec<HashMap<String, f64>>;
+    fn get_dimensions(&self) -> &Vec<HashMap<&'static str, f64>>;
 
     fn print_description(&self);
 
