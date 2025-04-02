@@ -7,7 +7,6 @@ cc_library(
         "src/client/**/*.cpp",
     ]),
     hdrs = glob([
-        "src/**/*.hpp",
         "include/**/*.hpp",
     ]),
     copts = [
