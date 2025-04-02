@@ -4,6 +4,7 @@
 #include <iostream>
 #include <print>
 #include <shapes/client/shell.hpp>
+#include <string>
 
 using namespace std;
 
