@@ -1,0 +1,174 @@
+{
+  "folders": [
+    {
+      "path": "go"
+    },
+    {
+      "path": "python"
+    },
+    {
+      "path": "rust"
+    },
+    {
+      "path": "typescript"
+    },
+    {
+      "path": "java"
+    },
+    {
+      "path": "csharp"
+    },
+    {
+      "path": "php"
+    },
+    {
+      "path": "dart"
+    },
+    {
+      "path": "cplusplus"
+    },
+    {
+      "path": "swift"
+    },
+    {
+      "path": "d"
+    }
+  ],
+  "settings": {
+    "[json]": {
+      "editor.tabSize": 2
+    },
+    "editor.codeLens": false,
+    "editor.detectIndentation": true,
+    "editor.tabSize": 4,
+    "explorer.excludeGitIgnore": true,
+    "files.associations": {
+      "*.ASM*": "hlasm",
+      "*.ASSEMBLE*": "hlasm",
+      "*.bms": "hlasm",
+      "*.c": "c",
+      "*.cls": "apex-anon",
+      "*.COB*": "cobol",
+      "*.COBCOPY*": "cobol",
+      "*.COBOL*": "cobol",
+      "*.coffee": "coffeescript",
+      "*.COPY*": "cobol",
+      "*.copyasm": "hlasm",
+      "*.COPYBOOK*": "cobol",
+      "*.cow": "cow",
+      "*.csx": "csharpscript",
+      "*.e": "eiffel",
+      "*.embeddedhtml": "html",
+      "*.EXEC*": "rexx",
+      "*.fsproj": "xml",
+      "*.HLA*": "hlasm",
+      "*.HLASM*": "hlasm",
+      "*.INC*": "pl1",
+      "*.INCLUDE*": "pl1",
+      "*.ino": "cpp",
+      "*.JCL*": "jcl",
+      "*.m": "objective-c",
+      "*.macasm": "hlasm",
+      "*.MACLIB*": "hlasm",
+      "*.ml": "ocaml",
+      "*.n": "nemerle",
+      "*.php": "php",
+      "*.pl": "perl",
+      "*.PL1*": "pl1",
+      "*.PLI*": "pl1",
+      "*.rex": "rexx",
+      "*.rexx": "rexx",
+      "*.REXX*": "rexx",
+      "*.REXXINC*": "rexx",
+      "*.rkt": "racket",
+      "*.rmd": "markdown",
+      "*.tcc": "cpp",
+      "algorithm": "cpp",
+      "array": "cpp",
+      "atomic": "cpp",
+      "bit": "cpp",
+      "cctype": "cpp",
+      "charconv": "cpp",
+      "clocale": "cpp",
+      "cmath": "cpp",
+      "compare": "cpp",
+      "concepts": "cpp",
+      "cstddef": "cpp",
+      "cstdint": "cpp",
+      "cstdio": "cpp",
+      "cstdlib": "cpp",
+      "cstring": "cpp",
+      "ctime": "cpp",
+      "ctype.h": "c",
+      "cwchar": "cpp",
+      "cwctype": "cpp",
+      "deque": "cpp",
+      "exception": "cpp",
+      "format": "cpp",
+      "functional": "cpp",
+      "gmp.h": "c",
+      "initializer_list": "cpp",
+      "ios": "cpp",
+      "iosfwd": "cpp",
+      "iostream": "cpp",
+      "istream": "cpp",
+      "iterator": "cpp",
+      "limits": "cpp",
+      "list": "cpp",
+      "locale": "cpp",
+      "map": "cpp",
+      "memory": "cpp",
+      "memory_resource": "cpp",
+      "new": "cpp",
+      "numbers": "cpp",
+      "numeric": "cpp",
+      "optional": "cpp",
+      "ostream": "cpp",
+      "queue": "cpp",
+      "random": "c",
+      "regex": "c",
+      "span": "cpp",
+      "sstream": "cpp",
+      "stdexcept": "cpp",
+      "streambuf": "cpp",
+      "string": "cpp",
+      "string_view": "cpp",
+      "system_error": "cpp",
+      "text_encoding": "cpp",
+      "tuple": "cpp",
+      "type_traits": "cpp",
+      "typeinfo": "cpp",
+      "unordered_map": "cpp",
+      "utility": "cpp",
+      "variant": "cpp",
+      "vector": "cpp",
+      "xfacet": "cpp",
+      "xhash": "cpp",
+      "xiosbase": "cpp",
+      "xlocale": "cpp",
+      "xlocbuf": "cpp",
+      "xlocinfo": "cpp",
+      "xlocmes": "cpp",
+      "xlocmon": "cpp",
+      "xlocnum": "cpp",
+      "xloctime": "cpp",
+      "xmemory": "cpp",
+      "xstring": "cpp",
+      "xtr1common": "cpp",
+      "xtree": "cpp",
+      "xutility": "cpp"
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "git.openRepositoryInParentFolders": "always",
+    "jest.enable": false,
+    "prettier.documentSelectors": [
+      "**/*.{js,jsx,ts,tsx,vue,html,css,scss,less,json,md,mdx,graphql,yaml,yml,php}"
+    ],
+    "search.useParentIgnoreFiles": true,
+    "testing.gutterEnabled": false,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "xml.format.maxLineWidth": 200,
+  }
+}
