@@ -7,5 +7,4 @@ edition = "2024"
 text_io = "0.1.13"
 
 [[bin]]
-name = "shapes-app"
-path = "src/main.rs"
+name = "shapes_app"
