@@ -1,0 +1,8 @@
+{
+  "cmake.buildDirectory": "${workspaceFolder}/.build",
+  "files.watcherExclude": {
+    ".build/**": true,
+    ".index-cache/**": true,
+    "build/**": true,
+  },
+}
