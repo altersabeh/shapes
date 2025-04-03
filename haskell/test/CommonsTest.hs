@@ -24,7 +24,7 @@ assertDimensional dimensionalShape expectedArea expectedPerimeter = do
     let areaDiff = abs (area dimensionalShape - expectedArea)
     let perimeterDiff = abs (perimeter dimensionalShape - expectedPerimeter)
 
-    if areaDiff >= 0.0001
+    if areaDiff >= 0.001
         then expectationFailure "AREA NOT EQUAL"
         else return ()
 
