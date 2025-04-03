@@ -1,5 +1,6 @@
+packages: .
+
 compiler: ghc
-ignore-project: False
 
 program-options
   ghc-options: -haddock
