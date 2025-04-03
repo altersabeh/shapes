@@ -8,5 +8,5 @@ instance Dimensional Square where
     area (Square side) = side * side
     perimeter (Square side) = side * 4
 
-mkSquare :: Double -> Square
-mkSquare side = Square (max side 1)
+newSquare :: Double -> Square
+newSquare side = Square (max side 1)

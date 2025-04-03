@@ -29,6 +29,9 @@ library
         Shapes.Base.Models.Circle,
         Shapes.Base.Models.Rectangle,
         Shapes.Base.Models.Square,
+        Shapes.Client.Shell.Handler,
+        Shapes.Client.Shell.InputReader,
+        Shapes.Client.Shell.Runner
     -- other-extensions:
     build-depends:    base ^>=4.20.0.0
     hs-source-dirs:   src
@@ -46,14 +49,30 @@ executable shapes-app
     hs-source-dirs:   app
     default-language: GHC2024
 
-test-suite shapes-test
+test-suite models-test
     import:           warnings
     default-language: GHC2024
-    -- other-modules:
+    other-modules:
+        Fixtures
     -- other-extensions:
     type:             exitcode-stdio-1.0
     hs-source-dirs:   test
-    main-is:          Main.hs
+    main-is:          ModelsTest.hs
     build-depends:
         base ^>=4.20.0.0,
-        shapes
+        hspec ^>=2.11.12,
+        shapes,
+
+test-suite commons-test
+    import:           warnings
+    default-language: GHC2024
+    other-modules:
+        Fixtures
+    -- other-extensions:
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          CommonsTest.hs
+    build-depends:
+        base ^>=4.20.0.0,
+        hspec ^>=2.11.12,
+        shapes,

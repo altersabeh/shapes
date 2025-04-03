@@ -10,5 +10,5 @@ instance Dimensional Circle where
 
 instance Displayable Circle
 
-mkCircle :: Double -> Circle
-mkCircle radius = Circle (max radius 1) "None"
+newCircle :: Double -> Circle
+newCircle radius = Circle (max radius 1) "None"
