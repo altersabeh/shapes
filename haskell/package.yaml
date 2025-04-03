@@ -21,10 +21,10 @@ description: Please see the README on GitHub at <https://github.com/githubuser/s
 verbatim:
   cabal-version: 3.8
 
-language: GHC2024
+language: GHC2021
 
 dependencies:
-  - base ^>=4.20.0.0
+  - base <=5.0.0.0
 
 ghc-options:
   - -Wall
@@ -45,7 +45,7 @@ library:
     - Shapes.Base.Models
     - Shapes.Client.Shell
   dependencies:
-    - containers ^>=0.7
+    - containers ^>=0.6.8
   when:
     - condition: false
       other-modules: Paths_shapes
