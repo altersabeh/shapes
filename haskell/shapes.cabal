@@ -16,7 +16,6 @@ license:        ISC
 build-type:     Simple
 extra-source-files:
     README.md
-    CHANGELOG.md
 
 source-repository head
   type: git
@@ -38,9 +37,6 @@ library
       Shapes.Client.Shell.Handler
       Shapes.Client.Shell.InputReader
       Shapes.Client.Shell.Runner
-      Paths_shapes
-  autogen-modules:
-      Paths_shapes
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
@@ -51,16 +47,11 @@ library
 
 executable shapes-app
   main-is: Shapes/App/Main.hs
-  other-modules:
-      Paths_shapes
-  autogen-modules:
-      Paths_shapes
   hs-source-dirs:
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.20.0.0 && <4.21
-    , containers ==0.7.*
     , shapes
   default-language: GHC2024
 
@@ -69,16 +60,11 @@ test-suite commons-test
   main-is: CommonsTest.hs
   other-modules:
       Fixtures
-      ModelsTest
-      Paths_shapes
-  autogen-modules:
-      Paths_shapes
   hs-source-dirs:
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.20.0.0 && <4.21
-    , containers ==0.7.*
     , hspec
     , shapes
   default-language: GHC2024
@@ -87,17 +73,12 @@ test-suite models-test
   type: exitcode-stdio-1.0
   main-is: ModelsTest.hs
   other-modules:
-      CommonsTest
       Fixtures
-      Paths_shapes
-  autogen-modules:
-      Paths_shapes
   hs-source-dirs:
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.20.0.0 && <4.21
-    , containers ==0.7.*
     , hspec
     , shapes
   default-language: GHC2024
