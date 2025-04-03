@@ -47,6 +47,9 @@
     {
       "name": "haskell",
       "path": "haskell"
+    },
+    {
+      "path": "ruby"
     }
   ],
   "settings": {
