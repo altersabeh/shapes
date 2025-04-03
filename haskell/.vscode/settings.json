@@ -1,4 +1,8 @@
 {
+  "files.watcherExclude": {
+    "dist-newstyle/**": true,
+    ".stack-work/**": true,
+  },
   "haskell.checkProject": true,
   "haskell.manageHLS": "GHCup",
   "haskell.toolchain": {
@@ -7,5 +11,4 @@
     "hls": "2.10.0.0",
     "stack": "3.5.1"
   },
-  "haskell.indentationRules.enabled": false,
 }
