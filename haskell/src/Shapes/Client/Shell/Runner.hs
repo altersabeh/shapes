@@ -1,4 +1,4 @@
-module Shapes.Client.Shell.Runner (Runner, newRunner, run) where
+module Shapes.Client.Shell.Runner (Runner (..), run) where
 
 import Data.Map qualified as Map
 
@@ -8,14 +8,6 @@ import Shapes.Client.Shell.InputReader (readInput)
 import System.Exit (exitSuccess)
 
 data Runner = Runner {}
-
--- | Constructor equivalent to __init__
-newRunner :: IO Runner
-newRunner = do
-    putStrLn (replicate 53 '=')
-    putStrLn "Welcome to the Area and Perimeter Calculator!"
-    putStrLn (replicate 53 '=')
-    return Runner{}
 
 startingMessage :: IO ()
 startingMessage = do
@@ -27,6 +19,10 @@ startingMessage = do
 
 run :: Runner -> IO ()
 run Runner{} = do
+    putStrLn (replicate 53 '=')
+    putStrLn "Welcome to the Area and Perimeter Calculator!"
+    putStrLn (replicate 53 '=')
+
     let printThankYouMessage = \_ -> do
             putStrLn "Thank you for using the Shapes CLI!"
             putStrLn "P.S. Did you know? The secret code is 42!"
