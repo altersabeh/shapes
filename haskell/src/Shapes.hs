@@ -1,1 +1,1 @@
-module Shapes where
+module Shapes () where

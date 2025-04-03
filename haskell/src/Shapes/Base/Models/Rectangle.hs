@@ -1,4 +1,4 @@
-module Shapes.Base.Models.Rectangle where
+module Shapes.Base.Models.Rectangle (Rectangle (..), newRectangle) where
 
 import Shapes.Base.Commons
 

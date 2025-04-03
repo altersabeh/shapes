@@ -1,4 +1,4 @@
-module Shapes.Client.Shell.Handler where
+module Shapes.Client.Shell.Handler (handleCircle, handleRectangle, handleSquare) where
 
 import Shapes.Base.Commons
 import Shapes.Base.Models

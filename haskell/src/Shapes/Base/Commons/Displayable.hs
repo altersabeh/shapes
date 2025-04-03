@@ -1,4 +1,4 @@
-module Shapes.Base.Commons.Displayable where
+module Shapes.Base.Commons.Displayable (Displayable (..)) where
 
 class Displayable a where
     isDisplayable :: a -> Bool

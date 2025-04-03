@@ -1,4 +1,4 @@
-module Shapes.Base.Commons.BaseShape where
+module Shapes.Base.Commons.BaseShape (BaseShape (..)) where
 
 class BaseShape a where
     dimensions :: a -> [(String, Double)]

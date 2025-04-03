@@ -1,4 +1,4 @@
-module Shapes.Base.Models.Square where
+module Shapes.Base.Models.Square (Square (..), newSquare) where
 
 import Shapes.Base.Commons
 

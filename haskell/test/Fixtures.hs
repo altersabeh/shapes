@@ -1,4 +1,4 @@
-module Fixtures where
+module Fixtures (setupCircle, setupRectangle, setupSquare) where
 
 import Shapes.Base.Models
 

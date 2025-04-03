@@ -1,4 +1,4 @@
-module Shapes.Base.Commons.Dimensional where
+module Shapes.Base.Commons.Dimensional (Dimensional (..)) where
 
 class Dimensional a where
     area :: a -> Double
