@@ -1,11 +1,12 @@
 module Shapes.Client.Shell.Runner (Runner (..), run) where
 
+import Control.Monad (forever, when)
+import System.Exit (exitSuccess)
+
 import Data.Map qualified as Map
 
-import Control.Monad (forever, when)
 import Shapes.Client.Shell.Handler as Handler
 import Shapes.Client.Shell.InputReader (readInput)
-import System.Exit (exitSuccess)
 
 data Runner = Runner {}
 
@@ -18,7 +19,7 @@ startingMessage = do
     putStrLn "Type '[E]XIT' to quit the program."
 
 run :: Runner -> IO ()
-run Runner{} = do
+run Runner {} = do
     putStrLn (replicate 53 '=')
     putStrLn "Welcome to the Area and Perimeter Calculator!"
     putStrLn (replicate 53 '=')
@@ -29,12 +30,12 @@ run Runner{} = do
 
     let actions =
             Map.fromList
-                [ ("circle", Handler.handleCircle)
-                , ("c", Handler.handleCircle)
-                , ("rectangle", Handler.handleRectangle)
-                , ("r", Handler.handleRectangle)
-                , ("square", Handler.handleSquare)
-                , ("s", Handler.handleSquare)
+                [ ("circle", Handler.handleCircle),
+                  ("c", Handler.handleCircle),
+                  ("rectangle", Handler.handleRectangle),
+                  ("r", Handler.handleRectangle),
+                  ("square", Handler.handleSquare),
+                  ("s", Handler.handleSquare)
                 ]
 
     forever $ do

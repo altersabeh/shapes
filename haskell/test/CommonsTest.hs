@@ -1,9 +1,11 @@
 module Main (main) where
 
 import Control.Monad
-import Fixtures qualified
-import Shapes.Base.Commons
 import Test.Hspec
+
+import Shapes.Base.Commons
+
+import Fixtures qualified
 
 main :: IO ()
 main = hspec $ do
@@ -21,10 +23,13 @@ main = hspec $ do
             assertDimensional square 105.062 41.0
 
 assertDimensional :: (Dimensional a) => a -> Double -> Double -> Expectation
-assertDimensional dimensionalShape expectedArea expectedPerimeter = do
-    let areaDiff = abs (area dimensionalShape - expectedArea)
-    let perimeterDiff = abs (perimeter dimensionalShape - expectedPerimeter)
+assertDimensional
+    dimensionalShape
+    expectedArea
+    expectedPerimeter = do
+        let areaDiff = abs (area dimensionalShape - expectedArea)
+        let perimeterDiff = abs (perimeter dimensionalShape - expectedPerimeter)
 
-    when (areaDiff >= 0.001) $ expectationFailure "AREA NOT EQUAL"
+        when (areaDiff >= 0.001) $ expectationFailure "AREA NOT EQUAL"
 
-    when (perimeterDiff >= 0.001) $ expectationFailure "PERIMETER NOT EQUAL"
+        when (perimeterDiff >= 0.001) $ expectationFailure "PERIMETER NOT EQUAL"

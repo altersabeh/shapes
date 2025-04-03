@@ -1,8 +1,13 @@
-module Shapes.Base.Models.Rectangle (Rectangle (..), newRectangle) where
+module Shapes.Base.Models.Rectangle (
+    Rectangle (..),
+    newRectangle,
+) where
 
 import Shapes.Base.Commons
 
-data Rectangle = Rectangle {width :: Double, height :: Double} deriving (Show, Eq)
+data Rectangle where
+    Rectangle :: {width :: Double, height :: Double} -> Rectangle
+    deriving (Eq, Show)
 
 instance Dimensional Rectangle where
     area (Rectangle width height) = width * height

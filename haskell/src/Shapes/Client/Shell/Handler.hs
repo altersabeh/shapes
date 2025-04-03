@@ -1,9 +1,14 @@
-module Shapes.Client.Shell.Handler (handleCircle, handleRectangle, handleSquare) where
+module Shapes.Client.Shell.Handler (
+    handleCircle,
+    handleRectangle,
+    handleSquare,
+) where
+
+import Text.Printf (printf)
 
 import Shapes.Base.Commons
 import Shapes.Base.Models
 import Shapes.Client.Shell.InputReader (readNumber)
-import Text.Printf (printf)
 
 handleCircle :: IO ()
 handleCircle = do

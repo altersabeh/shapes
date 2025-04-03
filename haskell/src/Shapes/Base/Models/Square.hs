@@ -1,8 +1,13 @@
-module Shapes.Base.Models.Square (Square (..), newSquare) where
+module Shapes.Base.Models.Square (
+    Square (..),
+    newSquare,
+) where
 
 import Shapes.Base.Commons
 
-newtype Square = Square {side :: Double} deriving (Show, Eq)
+newtype Square where
+    Square :: {side :: Double} -> Square
+    deriving (Eq, Show)
 
 instance Dimensional Square where
     area (Square side) = side * side

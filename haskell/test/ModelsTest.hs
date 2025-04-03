@@ -1,8 +1,10 @@
 module Main (main) where
 
-import Fixtures qualified
-import Shapes.Base.Commons
 import Test.Hspec
+
+import Shapes.Base.Commons
+
+import Fixtures qualified
 
 delta :: Double
 delta = 0.001

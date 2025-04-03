@@ -1,8 +1,15 @@
-module Shapes.Base.Models.Circle (Circle (..), newCircle, getColor, setColor) where
+module Shapes.Base.Models.Circle (
+    Circle (..),
+    newCircle,
+    getColor,
+    setColor,
+) where
 
 import Shapes.Base.Commons
 
-data Circle = Circle {radius :: Double, color :: String} deriving (Show, Eq)
+data Circle where
+    Circle :: {radius :: Double, color :: String} -> Circle
+    deriving (Eq, Show)
 
 instance Dimensional Circle where
     area (Circle radius _) = pi * radius * radius
@@ -12,7 +19,11 @@ instance Dimensional Circle where
 instance Displayable Circle
 
 instance BaseShape Circle where
-    dimensions (Circle radius _) = [("radius", max radius 1), ("diameter", 2 * max radius 1), ("curvature", 1 / max radius 1)]
+    dimensions (Circle radius _) =
+        [ ("radius", max radius 1),
+          ("diameter", 2 * max radius 1),
+          ("curvature", 1 / max radius 1)
+        ]
 
     printDescription circle = do
         putStrLn ("Circle radius: " ++ show (radius circle))
@@ -36,4 +47,4 @@ setColor (Circle radius _) = Circle radius
 formatDimensions :: [(String, Double)] -> String
 formatDimensions dims =
     let formatted = unwords [key ++ ": " ++ show value ++ " |" | (key, value) <- dims]
-     in if not (null formatted) then init (init formatted) else formatted
+    in if not (null formatted) then init (init formatted) else formatted
