@@ -1,7 +1,7 @@
 module Main (main) where
 
 import Control.Monad
-import Fixtures
+import Fixtures qualified
 import Shapes.Base.Commons
 import Test.Hspec
 
@@ -9,15 +9,15 @@ main :: IO ()
 main = hspec $ do
     describe "Dimensional Type Class Tests" $ do
         it "Circle implements Dimensional" $ do
-            let circle = setupCircle
+            let circle = Fixtures.setupCircle
             assertDimensional circle 754.767 97.389
 
         it "Rectangle implements Dimensional" $ do
-            let rectangle = setupRectangle
+            let rectangle = Fixtures.setupRectangle
             assertDimensional rectangle 756.437 112.0
 
         it "Square implements Dimensional" $ do
-            let square = setupSquare
+            let square = Fixtures.setupSquare
             assertDimensional square 105.062 41.0
 
 assertDimensional :: (Dimensional a) => a -> Double -> Double -> Expectation
