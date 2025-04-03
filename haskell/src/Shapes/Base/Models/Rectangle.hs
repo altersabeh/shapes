@@ -6,7 +6,7 @@ module Shapes.Base.Models.Rectangle (
 import Shapes.Base.Commons
 
 data Rectangle where
-    Rectangle :: {width :: Double, height :: Double} -> Rectangle
+    Rectangle :: {width :: !Double, height :: !Double} -> Rectangle
     deriving (Eq, Show)
 
 instance Dimensional Rectangle where

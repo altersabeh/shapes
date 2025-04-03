@@ -5,8 +5,8 @@ module Shapes.Base.Models.Square (
 
 import Shapes.Base.Commons
 
-newtype Square where
-    Square :: {side :: Double} -> Square
+data Square where
+    Square :: {side :: !Double} -> Square
     deriving (Eq, Show)
 
 instance Dimensional Square where

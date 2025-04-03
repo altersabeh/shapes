@@ -8,7 +8,7 @@ module Shapes.Base.Models.Circle (
 import Shapes.Base.Commons
 
 data Circle where
-    Circle :: {radius :: Double, color :: String} -> Circle
+    Circle :: {radius :: !Double, color :: !String} -> Circle
     deriving (Eq, Show)
 
 instance Dimensional Circle where
