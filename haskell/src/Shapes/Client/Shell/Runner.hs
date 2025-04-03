@@ -23,7 +23,7 @@ run Runner{} = do
     putStrLn "Welcome to the Area and Perimeter Calculator!"
     putStrLn (replicate 53 '=')
 
-    let printThankYouMessage = \_ -> do
+    let printThankYouMessage _ = do
             putStrLn "Thank you for using the Shapes CLI!"
             putStrLn "P.S. Did you know? The secret code is 42!"
 

@@ -12,7 +12,7 @@ instance Dimensional Circle where
 instance Displayable Circle
 
 instance BaseShape Circle where
-    dimensions (Circle radius _) = [("radius", (max radius 1)), ("diameter", 2 * (max radius 1)), ("curvature", 1 / (max radius 1))]
+    dimensions (Circle radius _) = [("radius", max radius 1), ("diameter", 2 * max radius 1), ("curvature", 1 / max radius 1)]
 
     printDescription circle = do
         putStrLn ("Circle radius: " ++ show (radius circle))
@@ -31,7 +31,7 @@ getColor :: Circle -> String
 getColor (Circle _ color) = color
 
 setColor :: Circle -> String -> Circle
-setColor (Circle radius _) newColor = Circle radius newColor
+setColor (Circle radius _) = Circle radius
 
 formatDimensions :: [(String, Double)] -> String
 formatDimensions dims =
