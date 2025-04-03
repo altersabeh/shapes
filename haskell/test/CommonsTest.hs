@@ -19,7 +19,7 @@ main = hspec $ do
             let square = setupSquare
             assertDimensional square 105.062 41.0
 
-assertDimensional :: (Dimensional a, Show a) => a -> Double -> Double -> Expectation
+assertDimensional :: Dimensional a => a -> Double -> Double -> Expectation
 assertDimensional dimensionalShape expectedArea expectedPerimeter = do
     let areaDiff = abs (area dimensionalShape - expectedArea)
     let perimeterDiff = abs (perimeter dimensionalShape - expectedPerimeter)
