@@ -66,6 +66,6 @@ func (c *Circle) dimensionFormatter() string {
 			parts = append(parts, fmt.Sprintf("%s: %.2f", k, v))
 		}
 	}
-	formattedString := strings.Join(parts, " | ")
-	return formattedString
+
+	return strings.Join(parts, " | ")
 }
