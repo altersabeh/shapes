@@ -33,8 +33,8 @@ public final class Circle: BaseShape, Dimensional, Displayable {
         print("Circle color: \(color)")
         print("Circle area: \(area())")
         print("Circle perimeter: \(perimeter())")
-        print("Circle is displayable: \(isDisplayable())")
-        print("Circle is a shape: \(Circle.isAShape())")
+        print("Circle is displayable: \(shouldDisplay())")
+        print("Circle is a shape: \(Circle.validateShape())")
     }
 
     public func area() -> Double {

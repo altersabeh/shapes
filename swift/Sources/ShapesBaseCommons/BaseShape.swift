@@ -15,11 +15,11 @@ open class BaseShape {
         return _dimensions
     }
 
-    public func getDimensionAvailable() -> Int {
+    public func showAvailableDimensionCount() -> Int {
         return _dimensions.count
     }
 
-    public static func isAShape() -> Bool {
+    public static func validateShape() -> Bool {
         return true
     }
 
