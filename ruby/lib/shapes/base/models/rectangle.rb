@@ -1,9 +1,13 @@
+# frozen_string_literal: true
+
+require "shapes/base/commons"
+
 class Rectangle
     include Dimensional
 
     attr_accessor :width, :height
 
-    def initialize(length, width)
+    def initialize(width, height)
         dim1 = width >= 0 ? width : 0
         dim2 = height >= 0 ? height : 0
         @width = dim1

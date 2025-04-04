@@ -1,8 +1,20 @@
 AllCops:
   TargetRubyVersion: 3.1
-
+Layout/EmptyLineBetweenDefs:
+  AllowAdjacentOneLineDefs: true
+Layout/EndOfLine:
+  EnforcedStyle: lf
+Layout/LineLength:
+  Max: 100
+Layout/IndentationStyle:
+  EnforcedStyle: spaces
+Layout/IndentationWidth:
+  Width: 4
+Style/Documentation:
+  Enabled: false
+Style/RequireOrder:
+  Enabled: true
 Style/StringLiterals:
   EnforcedStyle: double_quotes
-
 Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes

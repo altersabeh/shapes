@@ -1,5 +1,17 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
-require "shapes"
+require "shapes/base/models"
+require "shapes/client/shell"
 
-puts "Hello, world!"
+def main
+    program = Runner.new
+
+    circle = Circle.new(5)
+    circle.color = "RED"
+    circle.print_description
+
+    program.run
+end
+
+main if __FILE__ == $PROGRAM_NAME
