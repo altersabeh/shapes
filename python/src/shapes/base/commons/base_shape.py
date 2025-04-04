@@ -14,12 +14,12 @@ class BaseShape(ABC):
     def dimensions(self) -> list[dict[str, float]]:
         return self._dimensions
 
-    @abstractmethod
-    def print_description(self) -> None: ...
-
-    def print_dimensions_available(self) -> int:
+    def show_available_dimension_count(self) -> int:
         return len(self.dimensions)
 
     @staticmethod
-    def a_shape() -> bool:
+    def validate_shape() -> bool:
         return True
+
+    @abstractmethod
+    def print_description(self) -> None: ...
