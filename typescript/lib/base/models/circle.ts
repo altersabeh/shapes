@@ -33,8 +33,8 @@ export class Circle extends BaseShape implements Dimensional {
         console.log(`Circle area: ${this.area()}`);
         console.log(`Circle perimeter: ${this.perimeter()}`);
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        console.log(`Circle is displayable: ${(this as any).isDisplayable()}`);
-        console.log(`Circle is a shape: ${Circle.isAShape()}`);
+        console.log(`Circle is displayable: ${(this as any).shouldDisplay()}`);
+        console.log(`Circle is a shape: ${Circle.validateShape()}`);
     }
 
     area(): number {

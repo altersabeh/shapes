@@ -14,13 +14,13 @@ export abstract class BaseShape {
         return this._dimensions;
     }
 
-    abstract printDescription(): void;
-
-    getDimensionsAvailable(): number {
+    printDimensionsAvailable(): number {
         return this._dimensions.length;
     }
 
-    static isAShape(): boolean {
+    static validateShape(): boolean {
         return true;
     }
+
+    abstract printDescription(): void;
 }
