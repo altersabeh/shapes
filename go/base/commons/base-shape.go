@@ -8,10 +8,10 @@ func (BaseShape) New(dimensions []map[string]float64) *BaseShape {
 	return &BaseShape{Dimensions: dimensions}
 }
 
-func (b *BaseShape) GetDimensionAvailable() int {
+func (b *BaseShape) PrintDimensionsAvailable() int {
 	return len(b.Dimensions)
 }
 
-func (BaseShape) IsAShape() bool {
+func (BaseShape) AShape() bool {
 	return true
 }
