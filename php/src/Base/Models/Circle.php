@@ -38,8 +38,8 @@ final class Circle extends BaseShape implements Dimensional {
         echo "Circle color: {$this->color}" . PHP_EOL;
         echo "Circle area: {$this->area()}" . PHP_EOL;
         echo "Circle perimeter: {$this->perimeter()}" . PHP_EOL;
-        echo "Circle is displayable: {$this->isDisplayable()} " . PHP_EOL;
-        echo "Circle is a shape: " . self::isAShape() . PHP_EOL;
+        echo "Circle is displayable: {$this->shouldDisplay()} " . PHP_EOL;
+        echo "Circle is a shape: " . self::validateShape() . PHP_EOL;
     }
 
     #[\Override]

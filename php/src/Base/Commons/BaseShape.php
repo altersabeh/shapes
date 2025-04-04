@@ -17,11 +17,11 @@ abstract class BaseShape {
         return $this->dimensions;
     }
 
-    public function getDimensionAvailable(): int {
+    public function showAvailableDimensionCount(): int {
         return \count($this->dimensions);
     }
 
-    public static function isAShape(): bool {
+    public static function validateShape(): bool {
         return true;
     }
 
