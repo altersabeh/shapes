@@ -33,7 +33,7 @@ linter:
     - unnecessary_final
 
 formatter:
-  page_width: 100
+  page_width: 99
 
 analyzer:
   errors:
