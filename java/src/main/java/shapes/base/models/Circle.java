@@ -42,8 +42,8 @@ public class Circle extends BaseShape implements Dimensional, Displayable {
         System.out.println("Circle color: " + color);
         System.out.println("Circle area: " + area());
         System.out.println("Circle perimeter: " + perimeter());
-        System.out.println("Circle is displayable: " + isDisplayable());
-        System.out.println("Circle is a shape: " + Circle.isAShape());
+        System.out.println("Circle is displayable: " + shouldDisplay());
+        System.out.println("Circle is a shape: " + Circle.validateShape());
     }
 
     @Override

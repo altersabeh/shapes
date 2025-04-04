@@ -19,11 +19,11 @@ public abstract class BaseShape {
         return dimensions;
     }
 
-    public int getDimensionAvailable() {
+    public int showAvailableDimensionCount() {
         return dimensions.size();
     }
 
-    public static boolean isAShape() {
+    public static boolean validateShape() {
         return true;
     }
 
