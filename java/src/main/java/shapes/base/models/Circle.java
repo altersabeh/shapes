@@ -57,16 +57,17 @@ public class Circle extends BaseShape implements Dimensional, Displayable {
     }
 
     private String formatDimensions() {
-        String formattedString = getDimensions()
+        List<String> parts = getDimensions()
             .stream()
             .map(
                 dim -> dim
                     .entrySet()
                     .stream()
-                    .map(e -> e.getKey() + ": " + e.getValue())
+                    .map(e -> e.getKey() + ": " + String.format("%.3f", e.getValue()))
                     .collect(Collectors.joining(", "))
             )
-            .collect(Collectors.joining(" | "));
-        return formattedString;
+            .collect(Collectors.toList());
+
+        return String.join(" | ", parts);
     }
 }
