@@ -5,8 +5,8 @@ class BaseShape a where
 
     printDescription :: a -> IO ()
 
-    getDimensionAvailable :: a -> Int
-    getDimensionAvailable shape = length (dimensions shape)
+    showAvailableDimensionCount :: a -> Int
+    showAvailableDimensionCount shape = length (dimensions shape)
 
-    isAShape :: a -> Bool
-    isAShape _ = True
+    validateShape :: a -> Bool
+    validateShape _ = True

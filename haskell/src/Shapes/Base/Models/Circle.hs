@@ -31,9 +31,8 @@ instance BaseShape Circle where
         putStrLn ("Circle color: " ++ color circle)
         putStrLn ("Circle area: " ++ show (area circle))
         putStrLn ("Circle perimeter: " ++ show (perimeter circle))
-        putStrLn ("Circle is a shape: " ++ show (isAShape circle))
-
-    getDimensionAvailable circle = length (dimensions circle)
+        putStrLn ("Circle is a displayable shape: " ++ show (shouldDisplay circle))
+        putStrLn ("Circle is a shape: " ++ show (validateShape circle))
 
 newCircle :: Double -> Circle
 newCircle radius = Circle (max radius 1) "None"
