@@ -48,9 +48,15 @@ final class Circle extends BaseShape with Displayable implements Dimensional {
   }
 
   String _formatDimensions() {
-    var formattedString = dimensions
-        .map((dim) => dim.entries.map((e) => "${e.key}: ${e.value}").join(", "))
-        .join(" | ");
-    return formattedString;
+    List<String> parts =
+        dimensions.map((dim) {
+          return dim.entries
+              .map((e) {
+                return "${e.key}: ${e.value.toStringAsFixed(3)}";
+              })
+              .join(", ");
+        }).toList();
+
+    return parts.join(" | ");
   }
 }
