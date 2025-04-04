@@ -16,11 +16,11 @@ public abstract class BaseShape {
         get => _dimensions;
     }
 
-    public int GetDimensionAvailable() {
+    public int ShowAvailableDimensionCount() {
         return _dimensions.Count;
     }
 
-    public static bool IsAShape() {
+    public static bool ValidateShape() {
         return true;
     }
 
