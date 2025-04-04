@@ -1,10 +1,10 @@
 abstract mixin class Displayable {
-  bool isDisplayable() {
+  bool shouldDisplay() {
     return true;
   }
 
   void display() {
-    if (isDisplayable()) {
+    if (shouldDisplay()) {
       print("Yes, this shape can be displayed.");
     } else {
       print("No, this shape cannot be displayed.");

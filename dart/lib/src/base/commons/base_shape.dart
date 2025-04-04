@@ -10,11 +10,11 @@ abstract base class BaseShape {
     return _dimensions;
   }
 
-  int getDimensionAvailable() {
+  int showAvailableDimensionCount() {
     return _dimensions.length;
   }
 
-  static bool isAShape() {
+  static bool validateShape() {
     return true;
   }
 

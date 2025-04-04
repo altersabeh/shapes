@@ -33,8 +33,8 @@ final class Circle extends BaseShape with Displayable implements Dimensional {
     print("Circle color: $color");
     print("Circle area: ${area()}");
     print("Circle perimeter: ${perimeter()}");
-    print("Circle is displayable: ${isDisplayable()}");
-    print("Circle is a shape: ${BaseShape.isAShape()}");
+    print("Circle is displayable: ${shouldDisplay()}");
+    print("Circle is a shape: ${BaseShape.validateShape()}");
   }
 
   @override
