@@ -47,8 +47,8 @@ func (c *Circle) PrintDescription() {
 	fmt.Printf("Circle color: %s\n", c.color)
 	fmt.Printf("Circle area: %.2f\n", c.Area())
 	fmt.Printf("Circle perimeter: %.2f\n", c.Perimeter())
-	fmt.Printf("Circle is displayable: %t\n", c.Displayable.Displayable())
-	fmt.Printf("Circle is a shape: %t\n", c.BaseShape.AShape())
+	fmt.Printf("Circle is displayable: %t\n", c.Displayable.ShouldDisplay())
+	fmt.Printf("Circle is a shape: %t\n", c.BaseShape.ValidateShape())
 }
 
 func (c Circle) Area() float64 {

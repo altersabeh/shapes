@@ -4,12 +4,12 @@ import "fmt"
 
 type Displayable struct{}
 
-func (Displayable) Displayable() bool {
+func (Displayable) ShouldDisplay() bool {
 	return true
 }
 
 func (d *Displayable) Display() {
-	if d.Displayable() {
+	if d.ShouldDisplay() {
 		fmt.Println("Yes, this shape can be displayed.")
 	} else {
 		fmt.Println("No, this shape cannot be displayed.")
