@@ -3,19 +3,20 @@ import Testing
 
 @testable import ShapesBaseCommons
 
-@Suite("Test Dimensional") final class DimensionalTests {
+@Suite("Test Dimensional")
+final class DimensionalTests {
     @Test func TestCircleImplementsDimensional() {
-        let circle = setupCircle()
+        let circle = Helper.setupCircle()
         assertDimensional(circle, 754.767, 97.389)
     }
 
     @Test func TestRectangleImplementsDimensional() {
-        let rectangle = setupRectangle()
+        let rectangle = Helper.setupRectangle()
         assertDimensional(rectangle, 756.437, 112.0)
     }
 
     @Test func TestSquareImplementsDimensional() {
-        let square = setupSquare()
+        let square = Helper.setupSquare()
         assertDimensional(square, 105.062, 41.0)
     }
 

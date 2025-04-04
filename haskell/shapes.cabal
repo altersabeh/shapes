@@ -59,7 +59,7 @@ test-suite commons-test
   type: exitcode-stdio-1.0
   main-is: CommonsTest.hs
   other-modules:
-      Fixtures
+      Fixtures.Helper
   hs-source-dirs:
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
@@ -73,7 +73,7 @@ test-suite models-test
   type: exitcode-stdio-1.0
   main-is: ModelsTest.hs
   other-modules:
-      Fixtures
+      Fixtures.Helper
   hs-source-dirs:
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N

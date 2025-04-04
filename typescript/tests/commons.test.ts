@@ -1,20 +1,20 @@
 import { Dimensional } from "shapes/base/commons";
 import { describe, expect, it } from "vitest";
-import * as fixtures from "./fixtures";
+import * as helper from "./fixtures/helper";
 
 describe("Dimensional Tests", () => {
     it("Test Circle Implements Dimensional", () => {
-        const circle = fixtures.setupCircle();
+        const circle = helper.setupCircle();
         assertDimensional(circle, 754.767, 97.389);
     });
 
     it("Test Rectangle Implements Dimensional", () => {
-        const rectangle = fixtures.setupRectangle();
+        const rectangle = helper.setupRectangle();
         assertDimensional(rectangle, 756.437, 112.0);
     });
 
     it("Test Square Implements Dimensional", () => {
-        const square = fixtures.setupSquare();
+        const square = helper.setupSquare();
         assertDimensional(square, 105.062, 41.0);
     });
 });

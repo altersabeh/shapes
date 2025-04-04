@@ -1,13 +1,14 @@
-module modelstest;
+module tests.modelstest;
 
 import std.math.algebraic;
-import test.fixtures;
+
+import helper = tests.fixtures.helper;
 
 enum DELTA = 0.001;
 
 @("Test Circle Area")
 unittest {
-    auto circle = setupCircle();
+    auto circle = helper.setupCircle();
     const double result = circle.area();
     const double expected = 754.767;
     assert(abs(result - expected) < DELTA);
@@ -15,7 +16,7 @@ unittest {
 
 @("Test Circle Perimeter")
 unittest {
-    auto circle = setupCircle();
+    auto circle = helper.setupCircle();
     const double result = circle.perimeter();
     const double expected = 97.389;
     assert(abs(result - expected) < DELTA);
@@ -23,7 +24,7 @@ unittest {
 
 @("Test Rectangle Area")
 unittest {
-    auto rectangle = setupRectangle();
+    auto rectangle = helper.setupRectangle();
     const double result = rectangle.area();
     const double expected = 756.437;
     assert(abs(result - expected) < DELTA);
@@ -31,7 +32,7 @@ unittest {
 
 @("Test Rectangle Perimeter")
 unittest {
-    auto rectangle = setupRectangle();
+    auto rectangle = helper.setupRectangle();
     const double result = rectangle.perimeter();
     const double expected = 112.0;
     assert(abs(result - expected) < DELTA);
@@ -39,7 +40,7 @@ unittest {
 
 @("Test Square Area")
 unittest {
-    auto square = setupSquare();
+    auto square = helper.setupSquare();
     const double result = square.area();
     const double expected = 105.062;
     assert(abs(result - expected) < DELTA);
@@ -47,7 +48,7 @@ unittest {
 
 @("Test Square Perimeter")
 unittest {
-    auto square = setupSquare();
+    auto square = helper.setupSquare();
     const double result = square.perimeter();
     const double expected = 41.0;
     assert(abs(result - expected) < DELTA);

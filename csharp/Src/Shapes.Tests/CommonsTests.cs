@@ -1,6 +1,7 @@
 using NUnit.Framework;
 
 using Shapes.Base.Commons;
+using Shapes.Tests.Fixtures;
 
 namespace Shapes.Tests;
 
@@ -10,19 +11,19 @@ class UtilsTests {
     class IMeasurableTest {
         [TestCase(TestName = "Test Circle Implements IMeasurable")]
         public void TestCircleImplementsIMeasurable() {
-            var circle = Fixtures.SetupCircle();
+            var circle = Helper.SetupCircle();
             AssertIMeasurable(circle, 754.767, 97.389);
         }
 
         [TestCase(TestName = "Test Rectangle Implements IMeasurable")]
         public void TestRectangleImplementsIMeasurable() {
-            var rectangle = Fixtures.SetupRectangle();
+            var rectangle = Helper.SetupRectangle();
             AssertIMeasurable(rectangle, 756.437, 112.0);
         }
 
         [TestCase(TestName = "Test Square Implements IMeasurable")]
         public void TestSquareImplementsIMeasurable() {
-            var square = Fixtures.SetupSquare();
+            var square = Helper.SetupSquare();
             AssertIMeasurable(square, 105.0625, 41.0);
         }
     }

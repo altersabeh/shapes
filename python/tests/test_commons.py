@@ -1,19 +1,18 @@
-import fixtures
-
 from shapes.base.commons import Dimensional
+from tests.fixtures import helper
 
 
 class TestDimensional:
     def test_circle_implements_dimensional(self):
-        circle = fixtures.setup_circle()
+        circle = helper.setup_circle()
         assert_dimensional(circle, 754.767, 97.389)
 
     def test_rectangle_implements_dimensional(self):
-        rectangle = fixtures.setup_rectangle()
+        rectangle = helper.setup_rectangle()
         assert_dimensional(rectangle, 756.437, 112.0)
 
     def test_square_implements_dimensional(self):
-        square = fixtures.setup_square()
+        square = helper.setup_square()
         assert_dimensional(square, 105.062, 41.0)
 
 

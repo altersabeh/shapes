@@ -1,14 +1,16 @@
 package shapes;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static shapes.Fixtures.setupCircle;
-import static shapes.Fixtures.setupRectangle;
-import static shapes.Fixtures.setupSquare;
+import static shapes.fixtures.Helper.setupCircle;
+import static shapes.fixtures.Helper.setupRectangle;
+import static shapes.fixtures.Helper.setupSquare;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+
+import shapes.fixtures.Helper;
 
 @DisplayName("Models Tests")
 class ModelsTest {
@@ -32,7 +34,7 @@ class ModelsTest {
         @Tag("Perimeter")
         @DisplayName("Test Circle Circumference")
         void testCircleCircumference() {
-            var circle = Fixtures.setupCircle();
+            var circle = Helper.setupCircle();
             double result = circle.perimeter();
             double expected = 97.389;
             assertTrue(Math.abs(result - expected) < DELTA);

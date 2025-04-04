@@ -1,18 +1,28 @@
 {
-  "name": "shapes/shapes",
-  "version": "1.0.0",
-  "bin": [ "bin/shapes-app" ],
   "autoload": {
+    "files": [
+      "src/Client/Shell/InputReader.php"
+    ],
     "psr-4": {
       "Shapes\\": "src/"
-    },
-    "files": [ "src/Client/Shell/InputReader.php" ]
+    }
   },
   "autoload-dev": {
+    "files": [
+      "tests/Fixtures/Helper.php"
+    ],
     "psr-4": {
       "Shapes\\Tests\\": "tests/"
-    },
-    "files": [ "tests/Fixtures/Fixtures.php" ]
+    }
+  },
+  "bin": [
+    "bin/shapes-app"
+  ],
+  "name": "shapes/shapes",
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.75",
+    "phpunit/phpunit": "^12.0",
+    "vimeo/psalm": "^6.9"
   },
   "scripts": {
     "fmt": "npx prettier bin/ src/ tests/ --write && composer fmt:cs",
@@ -21,9 +31,5 @@
     "start": "@php bin/shapes-app",
     "test": "phpunit --colors=always"
   },
-  "require-dev": {
-    "phpunit/phpunit": "^12.0",
-    "vimeo/psalm": "^6.9",
-    "friendsofphp/php-cs-fixer": "^3.75"
-  }
+  "version": "1.0.0"
 }

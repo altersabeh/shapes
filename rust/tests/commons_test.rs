@@ -1,4 +1,8 @@
-mod fixtures;
+mod fixtures {
+    pub mod helper;
+}
+
+use fixtures::helper;
 
 mod dimensional_test {
     use shapes::base::commons::Dimensional;
@@ -7,19 +11,19 @@ mod dimensional_test {
 
     #[test]
     fn test_circle_implements_dimensional() {
-        let circle = fixtures::setup_circle();
+        let circle = helper::setup_circle();
         assert_dimensional(circle, 754.767, 97.389);
     }
 
     #[test]
     fn test_rectangle_implements_dimensional() {
-        let rectangle = fixtures::setup_rectangle();
+        let rectangle = helper::setup_rectangle();
         assert_dimensional(rectangle, 756.437, 112.0);
     }
 
     #[test]
     fn test_square_implements_dimensional() {
-        let square = fixtures::setup_square();
+        let square = helper::setup_square();
         assert_dimensional(square, 105.062, 41.0);
     }
 

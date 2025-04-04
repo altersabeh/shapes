@@ -5,6 +5,7 @@ namespace Shapes\Tests;
 use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
 use Shapes\Base\Commons\Dimensional;
+use Shapes\Tests\Fixtures as Helper;
 
 /**
  * @internal
@@ -15,19 +16,19 @@ use Shapes\Base\Commons\Dimensional;
 final class CommonsTest extends TestCase {
     #[TestDox("Test Circle Implements Dimensional")]
     public function testCircleImplementsDimensional(): void {
-        $circle = Fixtures\setup_circle();
+        $circle = Helper\setup_circle();
         $this->assertDimensional($circle, 754.767, 97.389);
     }
 
     #[TestDox("Test Rectangle Implements Dimensional")]
     public function testRectangleImplementsDimensional(): void {
-        $rectangle = Fixtures\setup_rectangle();
+        $rectangle = Helper\setup_rectangle();
         $this->assertDimensional($rectangle, 756.437, 112.0);
     }
 
     #[TestDox("Test Square Implements Dimensional")]
     public function testSquareImplementsDimensional(): void {
-        $square = Fixtures\setup_square();
+        $square = Helper\setup_square();
         $this->assertDimensional($square, 105.062, 41.0);
     }
 

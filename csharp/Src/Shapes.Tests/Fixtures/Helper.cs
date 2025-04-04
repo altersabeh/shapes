@@ -1,8 +1,8 @@
 using Shapes.Base.Models;
 
-namespace Shapes.Tests;
+namespace Shapes.Tests.Fixtures;
 
-class Fixtures {
+public class Helper {
     public static Circle SetupCircle() {
         double radius = 15.5;
         return new Circle(radius);

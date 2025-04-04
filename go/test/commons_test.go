@@ -3,7 +3,7 @@ package test
 import (
 	"math"
 	. "shapes/base/commons"
-	"shapes/test/fixtures"
+	helper "shapes/test/fixtures"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -11,17 +11,17 @@ import (
 
 func TestMeasurableInterface(test *testing.T) {
 	test.Run("Test Circle Implements Measurable", func(test *testing.T) {
-		circle := fixtures.SetupCircle()
+		circle := helper.SetupCircle()
 		assertMeasurable(test, &circle, 754.767, 97.389)
 	})
 
 	test.Run("Test Rectangle Implements Measurable", func(test *testing.T) {
-		rectangle := fixtures.SetupRectangle()
+		rectangle := helper.SetupRectangle()
 		assertMeasurable(test, &rectangle, 756.437, 112.0)
 	})
 
 	test.Run("Test Square Implements Measurable", func(test *testing.T) {
-		square := fixtures.SetupSquare()
+		square := helper.SetupSquare()
 		assertMeasurable(test, &square, 105.062, 41.0)
 	})
 }

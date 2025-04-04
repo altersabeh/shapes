@@ -1,4 +1,4 @@
-module fixtures;
+module tests.fixtures.helper;
 
 import shapes.base.models;
 

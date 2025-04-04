@@ -1,4 +1,4 @@
-#include "fixtures/fixtures.hpp"
+#include "fixtures/helper.hpp"
 #include <gtest/gtest.h>
 #include <shapes/base/commons.hpp>
 

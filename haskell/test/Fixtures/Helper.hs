@@ -1,4 +1,4 @@
-module Fixtures (
+module Fixtures.Helper (
     setupCircle,
     setupRectangle,
     setupSquare,
