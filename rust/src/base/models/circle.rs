@@ -32,13 +32,16 @@ impl Circle {
     }
 
     fn format_dimensions(&self) -> String {
-        let formatted_string = self
+        let parts: Vec<String> = self
             .dimensions
             .iter()
-            .flat_map(|dim| dim.iter().map(|(key, value)| format!("{}: {}", key, value)))
-            .collect::<Vec<_>>()
-            .join(" | ");
-        formatted_string
+            .flat_map(|dim| {
+                dim.iter()
+                    .map(|(key, value)| format!("{}: {:.3}", key, value))
+            })
+            .collect::<Vec<_>>();
+
+        parts.join(" | ")
     }
 }
 
