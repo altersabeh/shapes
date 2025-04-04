@@ -19,8 +19,8 @@ namespace commons {
         [[nodiscard]]
         auto getDimensions() const -> const vector<map<string, double>>&;
         [[nodiscard]]
-        auto getDimensionAvailable() const -> size_t;
-        static auto isAShape() -> bool;
+        auto showAvailableDimensionCount() const -> size_t;
+        static auto validateShape() -> bool;
         virtual void printDescription() const = 0; // Pure virtual function
     };
 
@@ -45,7 +45,7 @@ namespace commons {
       public:
         virtual ~Displayable();
         [[nodiscard]]
-        virtual auto isDisplayable() const -> bool;
+        virtual auto shouldDisplay() const -> bool;
         virtual void display() const;
     };
 } // namespace commons

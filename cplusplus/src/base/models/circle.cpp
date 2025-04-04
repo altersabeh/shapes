@@ -28,13 +28,13 @@ void Circle::setColor(const string& value) {
 }
 
 void Circle::printDescription() const {
-    std::println("Circle radius: {}", radius);
-    std::println("Circle dimensions: {}", formatDimensions());
-    std::println("Circle color: {}", color);
-    std::println("Circle area: {}", area());
-    std::println("Circle perimeter: {}", perimeter());
-    std::println("Circle is displayable: {}", isDisplayable());
-    std::println("Circle is a shape: {}", isAShape());
+    std::println("Circle radius: {}", this->radius);
+    std::println("Circle dimensions: {}", this->formatDimensions());
+    std::println("Circle color: {}", this->color);
+    std::println("Circle area: {}", this->area());
+    std::println("Circle perimeter: {}", this->perimeter());
+    std::println("Circle is displayable: {}", this->shouldDisplay());
+    std::println("Circle is a shape: {}", Circle::validateShape());
 }
 
 auto Circle::area() const -> double {

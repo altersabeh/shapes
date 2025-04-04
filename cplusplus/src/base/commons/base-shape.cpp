@@ -12,11 +12,11 @@ auto BaseShape::getDimensions() const -> const vector<map<string, double>>& {
     return dimensions;
 }
 
-auto BaseShape::getDimensionAvailable() const -> size_t {
+auto BaseShape::showAvailableDimensionCount() const -> size_t {
     return dimensions.size();
 }
 
-auto BaseShape::isAShape() -> bool {
+auto BaseShape::validateShape() -> bool {
     return true;
 }
 } // namespace shapes::base::commons
