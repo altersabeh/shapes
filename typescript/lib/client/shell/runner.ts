@@ -27,7 +27,7 @@ export class Runner {
             Runner.startingMessage();
 
             const shape = await readInput();
-            if (shape === "e") {
+            if (shape === "q") {
                 printThankYouMesage();
                 break;
             }
