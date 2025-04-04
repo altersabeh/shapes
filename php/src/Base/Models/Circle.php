@@ -53,14 +53,18 @@ final class Circle extends BaseShape implements Dimensional {
     }
 
     private function formatDimensions(): string {
-        $formatted_string = array_map(
-            static fn ($dim) => implode(
+        $parts = (array) array_map(
+            static fn($dim) => implode(
                 " | ",
-                array_map(static fn ($key, $value) => "{$key}: {$value}", array_keys($dim), $dim)
+                array_map(
+                    static fn($key, $value) => "{$key}: " . number_format($value, 3),
+                    array_keys($dim),
+                    $dim
+                )
             ),
             $this->getDimensions()
         );
 
-        return implode(" | ", $formatted_string);
+        return implode(" | ", $parts);
     }
 }
