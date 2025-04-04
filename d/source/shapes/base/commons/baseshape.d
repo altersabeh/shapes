@@ -18,11 +18,11 @@ protected:
     }
 
 public:
-    ulong getDimensionAvailable() const {
+    ulong showAvailableDimensionCount() const {
         return dimensions.length;
     }
 
-    static bool isAShape() {
+    static bool validateShape() {
         return true;
     }
 

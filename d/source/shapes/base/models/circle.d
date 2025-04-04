@@ -15,7 +15,7 @@ private:
 
     string formatDimensions() const {
         auto formattedString = dimensions.map!(
-                dim => dim.byKeyValue.map!(
+            dim => dim.byKeyValue.map!(
                 kv => kv.key ~ ": " ~ kv.value.to!string).joiner(" | "))
             .joiner(" | ").text;
 
@@ -50,8 +50,8 @@ public:
         writeln("Circle color: ", color);
         writeln("Circle area: ", area());
         writeln("Circle perimeter: ", perimeter());
-        writeln("Circle is displayable: ", isDisplayable());
-        writeln("Circle is a shape: ", isAShape());
+        writeln("Circle is displayable: ", shouldDisplay());
+        writeln("Circle is a shape: ", validateShape());
     }
 
     double area() const {
