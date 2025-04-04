@@ -20,7 +20,11 @@ RSpec.describe "Dimensional Tests" do
         assert_dimensional(square, 105.062, 41.0)
     end
 
-    def assert_dimensional(dimensional_shape, expected_area, expected_perimeter)
+    def assert_dimensional(
+        dimensional_shape,
+        expected_area,
+        expected_perimeter,
+    )
         area_diff = (dimensional_shape.area - expected_area).abs
         perimeter_diff = (dimensional_shape.perimeter - expected_perimeter).abs
 
