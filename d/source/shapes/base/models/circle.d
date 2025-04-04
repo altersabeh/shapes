@@ -1,7 +1,9 @@
 module shapes.base.models.circle;
 
 import std.algorithm;
+import std.array;
 import std.conv;
+import std.format;
 import std.stdio;
 import std.math;
 
@@ -14,12 +16,15 @@ private:
     string _color;
 
     string formatDimensions() const {
-        auto formattedString = dimensions.map!(
-            dim => dim.byKeyValue.map!(
-                kv => kv.key ~ ": " ~ kv.value.to!string).joiner(" | "))
-            .joiner(" | ").text;
+        string[] parts = dimensions
+            .map!(dim => dim.byKeyValue.map!(kv =>
+                    kv.key ~ ": " ~ format("%.3f", kv.value)
+            ).array
+        ).joiner.array;
 
-        return formattedString;
+        string formattedDimensions = parts.join(" | ");
+
+        return formattedDimensions;
     }
 
 public:
@@ -45,13 +50,13 @@ public:
     }
 
     override void printDescription() const {
-        writeln("Circle radius: ", radius);
-        writeln("Circle dimensions: ", formatDimensions());
-        writeln("Circle color: ", color);
-        writeln("Circle area: ", area());
-        writeln("Circle perimeter: ", perimeter());
-        writeln("Circle is displayable: ", shouldDisplay());
-        writeln("Circle is a shape: ", validateShape());
+        writeln("Circle radius: ", this.radius);
+        writeln("Circle dimensions: ", this.formatDimensions());
+        writeln("Circle color: ", this.color);
+        writeln("Circle area: ", this.area());
+        writeln("Circle perimeter: ", this.perimeter());
+        writeln("Circle is displayable: ", this.shouldDisplay());
+        writeln("Circle is a shape: ", Circle.validateShape());
     }
 
     double area() const {
