@@ -1,9 +1,9 @@
 class Displayable:
-    def is_displayable(self) -> bool:
+    def displayable(self) -> bool:
         return True
 
     def display(self):
-        if self.is_displayable():
+        if self.displayable():
             print("Yes, this shape can be displayed.")
         else:
             print("No, this shape cannot be displayed.")

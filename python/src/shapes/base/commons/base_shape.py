@@ -17,9 +17,9 @@ class BaseShape(ABC):
     @abstractmethod
     def print_description(self) -> None: ...
 
-    def get_dimension_available(self) -> int:
+    def print_dimensions_available(self) -> int:
         return len(self.dimensions)
 
     @staticmethod
-    def is_a_shape() -> bool:
+    def a_shape() -> bool:
         return True

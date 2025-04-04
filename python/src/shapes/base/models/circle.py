@@ -34,8 +34,8 @@ class Circle(BaseShape, Dimensional, Displayable):
         print(f"Circle color: {self.color}")
         print(f"Circle area: {self.area()}")
         print(f"Circle perimeter: {self.perimeter()}")
-        print(f"Circle is displayable: {self.is_displayable()}")
-        print(f"Circle is a shape: {Circle.is_a_shape()}")
+        print(f"Circle is displayable: {self.displayable()}")
+        print(f"Circle is a shape: {Circle.a_shape()}")
 
     def area(self) -> float:
         return math.pi * self.radius**2
