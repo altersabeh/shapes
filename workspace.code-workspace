@@ -58,6 +58,7 @@
     },
     "editor.codeLens": false,
     "editor.detectIndentation": true,
+    "editor.inlayHints.enabled": "offUnlessPressed",
     "editor.tabSize": 4,
     "explorer.excludeGitIgnore": true,
     "files.associations": {
@@ -176,6 +177,7 @@
       "xtree": "cpp",
       "xutility": "cpp"
     },
+    "files.eol": "\n",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
@@ -184,11 +186,10 @@
     "prettier.documentSelectors": [
       "**/*.{js,jsx,ts,tsx,vue,html,css,scss,less,json,md,mdx,graphql,yaml,yml,php}"
     ],
+    "python.analysis.enablePytestSupport": false,
+    "python.testing.pytestEnabled": false,
     "search.useParentIgnoreFiles": true,
     "testing.gutterEnabled": false,
-    "editor.inlayHints.enabled": "offUnlessPressed",
-    "xml.format.maxLineWidth": 200,
-    "python.testing.pytestEnabled": false,
-    "python.analysis.enablePytestSupport": false,
+    "xml.format.maxLineWidth": 200
   }
 }
