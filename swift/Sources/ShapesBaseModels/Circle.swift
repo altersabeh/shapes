@@ -28,12 +28,12 @@ public final class Circle: BaseShape, Dimensional, Displayable {
     }
 
     public override func printDescription() {
-        print("Circle radius: \(radius)")
-        print("Circle dimensions: \(formatDimensions())")
-        print("Circle color: \(color)")
-        print("Circle area: \(area())")
-        print("Circle perimeter: \(perimeter())")
-        print("Circle is displayable: \(shouldDisplay())")
+        print("Circle radius: \(self.radius)")
+        print("Circle dimensions: \(self.formatDimensions())")
+        print("Circle color: \(self.color)")
+        print("Circle area: \(self.area())")
+        print("Circle perimeter: \(self.perimeter())")
+        print("Circle is displayable: \(self.shouldDisplay())")
         print("Circle is a shape: \(Circle.validateShape())")
     }
 
@@ -46,12 +46,10 @@ public final class Circle: BaseShape, Dimensional, Displayable {
     }
 
     private func formatDimensions() -> String {
-        let formattedString =
-            dimensions.map { dim in
-                dim.map { "\($0.key): \($0.value)" }.joined(separator: " | ")
-            }
-            .joined(separator: " | ")
+        let parts: [String] = dimensions.map { dim in
+            dim.map { "\($0.key): \(String(format: "%.3f", $0.value))" }.joined(separator: " | ")
+        }
 
-        return formattedString
+        return parts.joined(separator: " | ")
     }
 }
