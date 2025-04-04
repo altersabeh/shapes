@@ -1,10 +1,10 @@
 pub trait Displayable {
-    fn is_displayable(&self) -> bool {
+    fn should_display(&self) -> bool {
         true
     }
 
     fn display(&self) {
-        if self.is_displayable() {
+        if self.should_display() {
             println!("Yes, this shape can be displayed.");
         } else {
             println!("Shape is not displayable.");

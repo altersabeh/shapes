@@ -53,8 +53,8 @@ impl BaseShape for Circle {
         println!("Circle color: {}", self.get_color());
         println!("Circle area: {}", self.area());
         println!("Circle perimeter: {}", self.perimeter());
-        println!("Circle is displayable: {}", self.is_displayable());
-        println!("Circle is a shape: {}", Circle::is_a_shape());
+        println!("Circle is displayable: {}", self.should_display());
+        println!("Circle is a shape: {}", Circle::validate_shape());
     }
 }
 

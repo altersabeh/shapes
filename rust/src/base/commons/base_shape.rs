@@ -3,13 +3,13 @@ use std::collections::HashMap;
 pub trait BaseShape {
     fn get_dimensions(&self) -> &Vec<HashMap<&'static str, f64>>;
 
-    fn print_description(&self);
-
-    fn get_dimension_available(&self) -> usize {
+    fn show_available_dimension_count(&self) -> usize {
         self.get_dimensions().len()
     }
 
-    fn is_a_shape() -> bool {
+    fn validate_shape() -> bool {
         true
     }
+
+    fn print_description(&self);
 }
