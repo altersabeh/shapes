@@ -49,10 +49,10 @@ public sealed class Circle : BaseShape, IDimensional, IDisplayable {
     }
 
     private string FormatDimensions() {
-        var formattedString = Dimensions.Select(dim =>
-            string.Join("", dim.Select(kv => $"{kv.Key}: {kv.Value}"))
+        IEnumerable<string> parts = Dimensions.Select(dim =>
+            string.Join("", dim.Select(kv => $"{kv.Key}: {Math.Round(kv.Value, 3):F3}"))
         );
 
-        return string.Join(" | ", formattedString);
+        return string.Join(" | ", parts);
     }
 }
