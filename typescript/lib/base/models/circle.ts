@@ -46,12 +46,11 @@ export class Circle extends BaseShape implements Dimensional {
     }
 
     private formatDimensions(): string {
-        const formattedString = this.dimensions
-            .map((dim) => {
-                const [key, value] = Object.entries(dim)[0] ?? ["", 0];
-                return `${key}: ${value}`;
-            })
-            .join(" | ");
-        return formattedString;
+        const parts: string[] = this.dimensions.map((dim) => {
+            const [key, value] = Object.entries(dim)[0] ?? ["", 0];
+            return `${key}: ${value.toFixed(3)}`;
+        });
+
+        return parts.join(" | ");
     }
 }
