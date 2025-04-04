@@ -18,7 +18,7 @@ export class Runner {
     }
 
     public async run(): Promise<void> {
-        const printThankYouMesage = (): void => {
+        const printThankYouMessage = (): void => {
             console.log("Thank you for using the Shapes CLI!");
             console.log("P.S. Did you know? The secret code is 42!");
         };
@@ -28,8 +28,8 @@ export class Runner {
 
             const shape = await readInput();
             if (shape === "q") {
-                printThankYouMesage();
-                break;
+                printThankYouMessage();
+                process.exit(0);
             }
 
             const actions: Record<string, () => Promise<void>> = {
