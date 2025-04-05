@@ -1,5 +1,6 @@
-import tests.fixtures.helper as helper
 import pytest
+
+from tests.fixtures import helper
 
 DELTA = 0.001
 
