@@ -49,8 +49,13 @@
       "path": "haskell"
     },
     {
+      "name": "ruby",
       "path": "ruby"
-    }
+    },
+    {
+      "name": "scala",
+      "path": "scala"
+    },
   ],
   "settings": {
     "[json]": {
@@ -181,6 +186,9 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "files.watcherExclude": {
+      "**/target": true
+    },
     "git.openRepositoryInParentFolders": "always",
     "jest.enable": false,
     "prettier.documentSelectors": [
@@ -190,6 +198,9 @@
     "python.testing.pytestEnabled": false,
     "search.useParentIgnoreFiles": true,
     "testing.gutterEnabled": false,
-    "xml.format.maxLineWidth": 200
+    "xml.format.maxLineWidth": 200,
+    "rubyLsp.featureFlags": {
+      "fullTestDiscovery": true,
+    },
   }
 }
