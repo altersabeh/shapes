@@ -13,6 +13,9 @@ cc_library(
         "/std:c++latest",
         "-Iinclude",
     ],
+    deps = [
+        "@boost.algorithm",
+    ],
 )
 
 cc_binary(
