@@ -4,7 +4,10 @@
   "files.watcherExclude": {
     ".cache/**": true,
     ".vscode-cpptools/**": true,
-    "bazel-*/**": true,
+    "bazel-bin/**": true,
+    "bazel-cplusplus/**": true,
+    "bazel-out/**": true,
+    "bazel-testlogs/**": true,
     "build/**": true
   },
 }
