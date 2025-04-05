@@ -1,11 +1,14 @@
 #define _USE_MATH_DEFINES
 
+#include <boost/algorithm/string/join.hpp>
 #include <cmath>
+#include <iomanip>
 #include <iostream>
 #include <print>
 #include <shapes/base/models.hpp>
 #include <sstream>
 
+using namespace boost::algorithm;
 using namespace std;
 
 namespace shapes::base::models {
@@ -46,13 +49,15 @@ auto Circle::perimeter() const -> double {
 }
 
 auto Circle::formatDimensions() const -> string {
-    std::ostringstream oss;
+    vector<string> parts;
     for (const auto& dim : getDimensions()) {
         for (const auto& [key, value] : dim) {
-            oss << key << ": " << value << " | ";
+            ostringstream oss;
+            oss << key << ": " << fixed << setprecision(3) << value;
+            parts.push_back(oss.str());
         }
     }
-    string formattedDimensions = oss.str().substr(0, oss.str().size() - 3);
-    return formattedDimensions;
+
+    return join(parts, " | ");
 }
 } // namespace shapes::base::models
