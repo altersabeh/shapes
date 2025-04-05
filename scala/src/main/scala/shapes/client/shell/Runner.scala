@@ -3,11 +3,9 @@ package shapes.client.shell
 import scala.annotation.tailrec
 
 final class Runner {
-    private def printWelcomeMessage(): Unit = {
-        println("=" * 53)
-        println("Welcome to the Area and Perimeter Calculator!")
-        println("=" * 53)
-    }
+    println("=" * 53)
+    println("Welcome to the Area and Perimeter Calculator!")
+    println("=" * 53)
 
     private def startingMessage(): Unit = {
         println("Choose a shape to calculate its area and perimeter.")
