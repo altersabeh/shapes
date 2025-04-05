@@ -1,7 +1,9 @@
+#include <boost/algorithm/string.hpp>
 #include <iostream>
 #include <print>
 #include <shapes/client/shell.hpp>
 
+using namespace boost::algorithm;
 using namespace std;
 
 namespace shapes::client::shell {
@@ -18,7 +20,7 @@ auto readInput() -> string {
     std::print("Your Answer >>> ");
     string userInput;
     getline(cin, userInput);
-    userInput = string(userInput.begin(), userInput.end());
+    userInput = to_lower_copy(trim_copy(userInput));
     readExit(userInput);
     return userInput;
 }
