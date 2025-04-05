@@ -6,5 +6,5 @@
     ".vscode-cpptools/**": true,
     "bazel-*/**": true,
     "build/**": true
-  }
+  },
 }
