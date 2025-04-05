@@ -1,0 +1,7 @@
+{
+  "files.watcherExclude": {
+    "**/target": true,
+    "project/target/": true,
+    "project/proje/**": true,
+  },
+}
