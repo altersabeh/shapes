@@ -46,6 +46,6 @@ setColor :: Circle -> String -> Circle
 setColor (Circle radius _) = Circle radius
 
 formatDimensions :: [(String, Double)] -> String
-formatDimensions dims = intercalate " | " parts
+formatDimensions dimension = intercalate " | " parts
   where
-    parts = [key ++ ": " ++ printf "%.3f" value | (key, value) <- dims]
+    parts = [key ++ ": " ++ printf "%.3f" value | (key, value) <- dimension]

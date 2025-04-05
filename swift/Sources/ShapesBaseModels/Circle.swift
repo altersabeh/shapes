@@ -46,8 +46,11 @@ public final class Circle: BaseShape, Dimensional, Displayable {
     }
 
     private func formatDimensions() -> String {
-        let parts: [String] = dimensions.map { dim in
-            dim.map { "\($0.key): \(String(format: "%.3f", $0.value))" }.joined(separator: " | ")
+        let parts: [String] = dimensions.map { dimension in
+            dimension.map { "\($0.key.uppercased()): \(String(format: "%.3f", $0.value))" }
+                .joined(
+                    separator: " | "
+                )
         }
 
         return parts.joined(separator: " | ")

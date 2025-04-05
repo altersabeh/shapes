@@ -6,7 +6,7 @@ import std.conv;
 import std.format;
 import std.stdio;
 import std.math;
-
+import std.string;
 import shapes.base.commons;
 
 class Circle : BaseShape, Dimensional, Displayable {
@@ -17,14 +17,13 @@ private:
 
     string formatDimensions() const {
         string[] parts = dimensions
-            .map!(dim => dim.byKeyValue.map!(kv =>
-                    kv.key ~ ": " ~ format("%.3f", kv.value)
+            .map!(dimension => dimension.byKeyValue.map!(
+                    kv =>
+                    toUpper(kv.key) ~ ": " ~ format("%.3f", kv.value)
             ).array
         ).joiner.array;
 
-        string formattedDimensions = parts.join(" | ");
-
-        return formattedDimensions;
+        return parts.join(" | ");
     }
 
 public:

@@ -39,8 +39,9 @@ final class Circle(radius: Double)
     }
 
     private def formatDimensions: String = {
-        val parts = dimensions.map(
-          _.map { case (key, value) => s"$key: ${"%.3f".format(value)}" }.mkString(" | ")
+        val parts: List[String] = dimensions.map(
+          _.map { case (key, value) => s"${key.toUpperCase}: ${"%.3f".format(value)}" }
+              .mkString(" | ")
         )
 
         parts.mkString(" | ")

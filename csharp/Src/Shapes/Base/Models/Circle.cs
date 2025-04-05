@@ -49,8 +49,8 @@ public sealed class Circle : BaseShape, IDimensional, IDisplayable {
     }
 
     private string FormatDimensions() {
-        IEnumerable<string> parts = Dimensions.Select(dim =>
-            string.Join("", dim.Select(kv => $"{kv.Key}: {Math.Round(kv.Value, 3):F3}"))
+        IEnumerable<string> parts = Dimensions.Select(dimension =>
+            string.Join("", dimension.Select(kv => $"{kv.Key}: {Math.Round(kv.Value, 3):F3}"))
         );
 
         return string.Join(" | ", parts);

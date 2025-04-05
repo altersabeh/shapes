@@ -61,8 +61,8 @@ func (c Circle) Perimeter() float64 {
 
 func (c *Circle) dimensionFormatter() string {
 	var parts []string
-	for _, dim := range c.BaseShape.Dimensions {
-		for k, v := range dim {
+	for _, dimension := range c.BaseShape.Dimensions {
+		for k, v := range dimension {
 			parts = append(parts, fmt.Sprintf("%s: %.2f", k, v))
 		}
 	}

@@ -50,11 +50,11 @@ auto Circle::perimeter() const -> double {
 
 auto Circle::formatDimensions() const -> string {
     vector<string> parts;
-    for (const auto& dim : getDimensions()) {
-        for (const auto& [key, value] : dim) {
-            ostringstream oss;
-            oss << key << ": " << fixed << setprecision(3) << value;
-            parts.push_back(oss.str());
+    for (const auto& dimensions : getDimensions()) {
+        for (const auto& [key, value] : dimensions) {
+            ostringstream dimension;
+            dimension << key << ": " << fixed << setprecision(3) << value;
+            parts.push_back(dimension.str());
         }
     }
 

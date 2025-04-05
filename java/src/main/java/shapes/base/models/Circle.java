@@ -60,7 +60,7 @@ public class Circle extends BaseShape implements Dimensional, Displayable {
         List<String> parts = getDimensions()
             .stream()
             .map(
-                dim -> dim
+                dimension -> dimension
                     .entrySet()
                     .stream()
                     .map(e -> e.getKey() + ": " + String.format("%.3f", e.getValue()))

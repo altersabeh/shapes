@@ -49,8 +49,8 @@ final class Circle extends BaseShape with Displayable implements Dimensional {
 
   String _formatDimensions() {
     List<String> parts =
-        dimensions.map((dim) {
-          return dim.entries
+        dimensions.map((dimension) {
+          return dimension.entries
               .map((e) {
                 return "${e.key}: ${e.value.toStringAsFixed(3)}";
               })
