@@ -1,5 +1,6 @@
+from fixtures import helper
+
 from shapes.base.commons import Dimensional
-from tests.fixtures import helper
 
 
 class TestDimensional:
