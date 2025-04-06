@@ -23,9 +23,9 @@ final class Runner {
             $shape = InputReader\readInput();
             if ("q" === $shape) {
                 $printThankYouMessage();
-
                 break;
             }
+
             $actions = [
                 "circle" => [Handler::class, "handleCircle"],
                 "c" => [Handler::class, "handleCircle"],

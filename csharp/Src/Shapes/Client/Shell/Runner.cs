@@ -34,7 +34,7 @@ public sealed class Runner {
                 break;
             }
 
-            var actions = new Dictionary<string, Action> {
+            Dictionary<string, Action>? actions = new() {
                 ["circle"] = Handler.HandleCircle,
                 ["c"] = Handler.HandleCircle,
                 ["rectangle"] = Handler.HandleRectangle,
@@ -43,7 +43,7 @@ public sealed class Runner {
                 ["s"] = Handler.HandleSquare,
             };
 
-            Action action = actions.TryGetValue(shape, out Action? value)
+            var action = actions.TryGetValue(shape, out Action? value)
                 ? value
                 : () => {
                     Console.WriteLine("Invalid input. Please try again.");

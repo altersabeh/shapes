@@ -43,7 +43,7 @@ public final class Runner {
                 Map.entry("s", Handler::handleSquare)
             );
 
-            Runnable action = actions.getOrDefault(shape, () -> {
+            var action = actions.getOrDefault(shape, () -> {
                 System.out.println("Invalid input. Please try again.");
                 System.out.println("Type one of the listed options.");
             });

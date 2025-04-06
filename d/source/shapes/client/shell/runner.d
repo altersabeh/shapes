@@ -23,7 +23,7 @@ final class Runner {
     }
 
     void run() {
-        auto printThankYouMessage = () {
+        void delegate() printThankYouMessage = () {
             writeln("Thank you for using the Shapes CLI!");
             writeln("P.S. Did you know? The secret code is 42!");
         };
@@ -38,12 +38,12 @@ final class Runner {
             }
 
             auto actions = [
-                "circle" : &handler.handleCircle,
-                "c" : &handler.handleCircle,
-                "rectangle" : &handler.handleRectangle,
-                "r" : &handler.handleRectangle,
-                "square" : &handler.handleSquare,
-                "s" : &handler.handleSquare,
+                "circle" : () => handler.handleCircle(),
+                "c" : () => handler.handleCircle(),
+                "rectangle" : () => handler.handleRectangle(),
+                "r" : () => handler.handleRectangle(),
+                "square" : () => handler.handleSquare(),
+                "s" : () => handler.handleSquare(),
             ];
 
             auto action = actions.get(shape, () {

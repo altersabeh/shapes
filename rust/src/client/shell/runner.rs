@@ -22,7 +22,7 @@ impl Runner {
     }
 
     pub fn run(&self) {
-        let print_thank_you_message = || {
+        let print_thank_you_message: fn() = || {
             println!("Thank you for using the Shapes CLI!");
             println!("P.S. Did you know? The secret code is 42!");
         };

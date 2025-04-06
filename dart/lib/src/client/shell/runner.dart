@@ -17,10 +17,11 @@ class Runner {
   }
 
   void run() {
-    void printThankYouMessage() {
+    // ignore: prefer_function_declarations_over_variables
+    void Function() printThankYouMessage = () {
       print("Thank you for using the Shapes CLI!");
       print("P.S. Did you know? The secret code is 42!");
-    }
+    };
 
     while (true) {
       Runner._startingMessage();

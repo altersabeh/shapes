@@ -14,7 +14,7 @@ final class Runner {
     }
 
     def run(): Unit = {
-        val printThankYouMessage = () => {
+        val printThankYouMessage: () => Unit = () => {
             println("Thank you for using the Shapes CLI!")
             println("P.S. Did you know? The secret code is 42!")
         }

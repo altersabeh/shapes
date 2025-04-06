@@ -18,7 +18,7 @@ export class Runner {
     }
 
     public async run(): Promise<void> {
-        const printThankYouMessage = (): void => {
+        const printThankYouMessage: () => void = () => {
             console.log("Thank you for using the Shapes CLI!");
             console.log("P.S. Did you know? The secret code is 42!");
         };

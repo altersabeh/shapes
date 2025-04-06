@@ -16,7 +16,7 @@ public final class Runner {
     }
 
     public func run() {
-        let printThankYouMessage = {
+        let printThankYouMessage: () -> Void = {
             print("Thank you for using the Shapes CLI!")
             print("P.S. Did you know? The secret code is 42!")
         }

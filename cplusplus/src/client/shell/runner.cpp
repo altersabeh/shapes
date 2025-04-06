@@ -20,7 +20,7 @@ void Runner::startingMessage() {
 }
 
 void Runner::run() {
-    auto printThankYouMessage = []() {
+    function<void()> printThankYouMessage = []() {
         std::println("Thank you for using the Shapes CLI!");
         std::println("P.S. Did you know? The secret code is 42!");
     };

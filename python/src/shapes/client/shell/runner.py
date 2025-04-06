@@ -1,4 +1,5 @@
-from typing import final
+from collections.abc import Callable
+from typing import Any, final
 
 from shapes.client.shell import handler
 
@@ -21,9 +22,11 @@ class Runner:
         print("Type '[E]XIT' to quit the program.")
 
     def run(self):
-        def print_thank_you_message():
-            print("Thank you for using the Shapes CLI!")
-            print("P.S. Did you know? The secret code is 42!")
+        # pylint: disable=unnecessary-lambda-assignment
+        print_thank_you_message = lambda: (
+            print("Thank you for using the Shapes CLI!"),
+            print("P.S. Did you know? The secret code is 42!"),
+        )
 
         while True:
             Runner.starting_message()
@@ -33,7 +36,7 @@ class Runner:
                 print_thank_you_message()
                 break
 
-            actions = {
+            actions: dict[str, Callable[..., Any]] = {
                 "circle": handler.handle_circle,
                 "c": handler.handle_circle,
                 "rectangle": handler.handle_rectangle,
