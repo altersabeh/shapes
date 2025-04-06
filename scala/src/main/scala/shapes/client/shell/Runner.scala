@@ -1,7 +1,5 @@
 package shapes.client.shell
 
-import scala.annotation.tailrec
-
 final class Runner {
     println("=" * 53)
     println("Welcome to the Area and Perimeter Calculator!")
