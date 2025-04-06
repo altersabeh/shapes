@@ -1,10 +1,10 @@
-use std::{collections::HashMap as HM, f64::consts::PI};
+use std::{collections::HashMap, f64::consts::PI};
 
 use crate::base::commons::{BaseShape, Dimensional, Displayable};
 
 pub struct Circle {
     pub radius: f64,
-    dimensions: Vec<HM<&'static str, f64>>,
+    dimensions: Vec<HashMap<&'static str, f64>>,
     color: &'static str,
 }
 
@@ -15,9 +15,9 @@ impl Circle {
         Self {
             radius: dim1,
             dimensions: vec![
-                HM::from([("radius", radius.max(1.0))]),
-                HM::from([("diameter", radius.max(1.0) * 2.0)]),
-                HM::from([("curvature", 1.0 / radius.max(1.0))]),
+                HashMap::from([("radius", radius.max(1.0))]),
+                HashMap::from([("diameter", radius.max(1.0) * 2.0)]),
+                HashMap::from([("curvature", 1.0 / radius.max(1.0))]),
             ],
             color: "None",
         }
@@ -47,7 +47,7 @@ impl Circle {
 }
 
 impl BaseShape for Circle {
-    fn get_dimensions(&self) -> &Vec<HM<&'static str, f64>> {
+    fn get_dimensions(&self) -> &Vec<HashMap<&'static str, f64>> {
         &self.dimensions
     }
 
