@@ -21,13 +21,8 @@ public sealed class Circle : BaseShape, IDimensional, IDisplayable {
     }
 
     public string Color {
-        get {
-            return _color;
-        }
-
-        set {
-            _color = value;
-        }
+        get { return _color; }
+        set { _color = value; }
     }
 
     public override void PrintDescription() {
@@ -50,7 +45,10 @@ public sealed class Circle : BaseShape, IDimensional, IDisplayable {
 
     private string FormatDimensions() {
         IEnumerable<string> parts = Dimensions.Select(dimension =>
-            string.Join("", dimension.Select(kv => $"{kv.Key}: {Math.Round(kv.Value, 3):F3}"))
+            string.Join(
+                "",
+                dimension.Select(entry => $"{entry.Key.ToUpper()}: {Math.Round(entry.Value, 3):F3}")
+            )
         );
 
         return string.Join(" | ", parts);

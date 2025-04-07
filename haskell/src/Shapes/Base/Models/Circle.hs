@@ -5,6 +5,7 @@ module Shapes.Base.Models.Circle (
     setColor,
 ) where
 
+import Data.Char
 import Data.List (intercalate)
 import Shapes.Base.Commons
 import Text.Printf
@@ -48,4 +49,4 @@ setColor (Circle radius _) = Circle radius
 formatDimensions :: [(String, Double)] -> String
 formatDimensions dimension = intercalate " | " parts
   where
-    parts = [key ++ ": " ++ printf "%.3f" value | (key, value) <- dimension]
+    parts = [map toUpper key ++ ": " ++ printf "%.3f" value | (key, value) <- dimension]

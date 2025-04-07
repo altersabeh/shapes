@@ -1,15 +1,15 @@
 #define _USE_MATH_DEFINES
 
-#include <boost/algorithm/string/join.hpp>
+#include <boost/algorithm/string.hpp>
+#include <boost/format.hpp>
 #include <cmath>
-#include <iomanip>
-#include <iostream>
 #include <print>
 #include <shapes/base/models.hpp>
 #include <sstream>
 
 using namespace boost::algorithm;
 using namespace std;
+using frmt = boost::format;
 
 namespace shapes::base::models {
 Circle::Circle(double radius)
@@ -22,11 +22,11 @@ Circle::Circle(double radius)
     this->radius = dim1;
 }
 
-auto Circle::getColor() const -> const string& {
+auto Circle::getColor() const -> const std::string& {
     return color;
 }
 
-void Circle::setColor(const string& value) {
+void Circle::setColor(const std::string& value) {
     color = value;
 }
 
@@ -52,9 +52,9 @@ auto Circle::formatDimensions() const -> string {
     vector<string> parts;
     for (const auto& dimensions : getDimensions()) {
         for (const auto& [key, value] : dimensions) {
-            ostringstream dimension;
-            dimension << key << ": " << fixed << setprecision(3) << value;
-            parts.push_back(dimension.str());
+            ostringstream entry;
+            entry << to_upper_copy(key) << ": " << str(frmt("%.3f") % value);
+            parts.push_back(entry.str());
         }
     }
 

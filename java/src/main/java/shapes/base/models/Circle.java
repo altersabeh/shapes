@@ -63,7 +63,10 @@ public class Circle extends BaseShape implements Dimensional, Displayable {
                 dimension -> dimension
                     .entrySet()
                     .stream()
-                    .map(e -> e.getKey() + ": " + String.format("%.3f", e.getValue()))
+                    .map(
+                        entry -> entry.getKey().toUpperCase()
+                            + ": " + String.format("%.3f", entry.getValue())
+                    )
                     .collect(Collectors.joining(", "))
             )
             .collect(Collectors.toList());

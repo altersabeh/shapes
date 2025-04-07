@@ -38,7 +38,7 @@ impl Circle {
             .flat_map(|dimension| {
                 dimension
                     .iter()
-                    .map(|(key, value)| format!("{}: {:.3}", key, value))
+                    .map(|(key, value)| format!("{}: {:.3}", key.to_uppercase(), value))
             })
             .collect::<Vec<_>>();
 

@@ -51,8 +51,8 @@ final class Circle extends BaseShape with Displayable implements Dimensional {
     List<String> parts =
         dimensions.map((dimension) {
           return dimension.entries
-              .map((e) {
-                return "${e.key}: ${e.value.toStringAsFixed(3)}";
+              .map((entry) {
+                return "${entry.key.toUpperCase()}: ${entry.value.toStringAsFixed(3)}";
               })
               .join(", ");
         }).toList();
