@@ -45,7 +45,7 @@ class Circle < BaseShape
     def format_dimensions
         parts = @dimensions.map do |dimension|
             dimension.map do |key, value|
-            "#{key.upcase}: #{format("%.3f", value)}"
+                "#{key.upcase}: #{format("%.3f", value)}"
             end
         end.flatten
 
