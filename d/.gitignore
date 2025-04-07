@@ -10,10 +10,6 @@ build/
 # Code coverage
 *.lst
 
-
-# Build prerequisites
-*.d
-
 # Compiled object files
 *.o
 *.obj
