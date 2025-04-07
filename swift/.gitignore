@@ -1,11 +1,74 @@
-.DS_Store
-/.build
-/Packages
-xcuserdata/
+# Swift Package Manager (SwiftPM) generated files
+.build/
+.swiftpm/
+Packages
+
+# Xcode generated files
+*.xcodeproj
+xcuserdata
 DerivedData/
-.swiftpm/configuration/registries.json
-.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
-.netrc
-.vscode/launch.json
 .index-build/
+
+# Swift module files
+*.swiftmodule
+*.swiftdoc
+
+# SourceKit-LSP generated files
+.vscode/launch.json
+
+# CMake build files
+CMakeCache.txt
+CMakeFiles
+CMakeLists.txt.user
+CMakeScripts
+CTestTestfile.cmake
+Makefile
+Testing
+cmake_install.cmake
+compile_commands.json
+install_manifest.txt
+_deps
+
+# Build directory
 build/
+
+# Build prerequisites
+*.d
+
+# Compiled object files
+*.o
+*.obj
+*.slo
+*.lo
+
+# Compiled dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled static libraries
+*.a
+*.lib
+*.lai
+*.la
+
+# Executables
+*.exe
+*.out
+*.app
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows system files
+$RECYCLE.BIN/
+[Dd]esktop.ini
+*.lnk
+
+# Visual Studio Code settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
