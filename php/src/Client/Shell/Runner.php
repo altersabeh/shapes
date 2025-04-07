@@ -23,6 +23,7 @@ final class Runner {
             $shape = InputReader\readInput();
             if ("q" === $shape) {
                 $printThankYouMessage();
+
                 break;
             }
 
