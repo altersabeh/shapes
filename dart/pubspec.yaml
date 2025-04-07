@@ -10,4 +10,4 @@ dev_dependencies:
   test: ^1.24.0
 
 executables:
-  shapes-app: shapes.dart
+  shapes-app: shapes_app.dart
