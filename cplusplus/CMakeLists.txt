@@ -36,14 +36,20 @@ set_target_properties(shapes_static PROPERTIES
 
 add_executable(shapes_app src/app/main.cpp)
 
-if(NOT MSVC)
-    message(STATUS "Linking to stdc++exp for GCC/Clang.")
+if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+    message(STATUS "Linking to stdc++exp for GCC.")
     # for std::println and std::print
     target_link_libraries(shapes_shared PRIVATE stdc++exp)
     target_link_libraries(shapes_static PRIVATE stdc++exp)
     target_link_libraries(shapes_app shapes_static stdc++exp)
-else()
+elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+    message(STATUS "Not linking to stdc++exp for Clang.")
+    target_link_libraries(shapes_app shapes_static)
+elseif(MSVC)
     message(STATUS "Not linking to stdc++exp for MSVC.")
+    target_link_libraries(shapes_app shapes_static)
+else()
+    message(WARNING "Unknown compiler, not linking to stdc++exp.")
     target_link_libraries(shapes_app shapes_static)
 endif()
 
@@ -57,7 +63,6 @@ install(TARGETS shapes_static shapes_shared shapes_app
 
 install(DIRECTORY include DESTINATION include)
 
-# Check if the compiler is MSVC
 if(NOT MSVC)
     find_package(GTest REQUIRED)
     enable_testing()
@@ -69,7 +74,11 @@ if(NOT MSVC)
     )
 
     add_executable(commons_test ${COMMONS_TEST_SOURCES})
-    target_link_libraries(commons_test GTest::GTest GTest::Main shapes_static stdc++exp)
+    if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+        target_link_libraries(commons_test GTest::GTest GTest::Main shapes_static stdc++exp)
+    else()
+        target_link_libraries(commons_test GTest::GTest GTest::Main shapes_static)
+    endif()
 
     add_test(NAME CommonsTests COMMAND commons_test)
 
@@ -80,7 +89,11 @@ if(NOT MSVC)
     )
 
     add_executable(models_test ${MODELS_TEST_SOURCES})
-    target_link_libraries(models_test GTest::GTest GTest::Main shapes_static stdc++exp)
+    if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+        target_link_libraries(models_test GTest::GTest GTest::Main shapes_static stdc++exp)
+    else()
+        target_link_libraries(models_test GTest::GTest GTest::Main shapes_static)
+    endif()
 
     add_test(NAME ModelsTests COMMAND models_test)
 
