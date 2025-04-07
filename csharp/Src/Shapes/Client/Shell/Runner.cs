@@ -10,9 +10,7 @@ public sealed class Runner {
     }
 
     private static void StartingMessage() {
-        Console.WriteLine(
-            "Choose a shape to calculate its area and perimeter."
-        );
+        Console.WriteLine("Choose a shape to calculate its area and perimeter.");
         Console.WriteLine("  [C] CIRCLE");
         Console.WriteLine("  [R] RECTANGLE");
         Console.WriteLine("  [S] SQUARE");

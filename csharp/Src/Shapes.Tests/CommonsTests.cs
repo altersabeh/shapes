@@ -29,12 +29,12 @@ class UtilsTests {
     }
 
     static void AssertIMeasurable(
-        IDimensional shape,
+        IDimensional geometricShape,
         double expectedArea,
         double expectedperimeter
     ) {
-        double areaDiff = Math.Abs(shape.Area() - expectedArea);
-        double perimeterDiff = Math.Abs(shape.Perimeter() - expectedperimeter);
+        double areaDiff = Math.Abs(geometricShape.Area() - expectedArea);
+        double perimeterDiff = Math.Abs(geometricShape.Perimeter() - expectedperimeter);
 
         Assert.That(areaDiff, Is.LessThan(0.001), "AREA NOT EQUAL");
         Assert.That(perimeterDiff, Is.LessThan(0.001), "PERIMETER NOT EQUAL!");
