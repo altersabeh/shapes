@@ -1,4 +1,14 @@
 {
+  "archive": {
+    "name": "shapes",
+    "exclude": [
+      ".php-cs-fixer.cache",
+      ".phpunit-cache/",
+      ".psalm-cache/",
+      "node_modules/",
+      "vendor/"
+    ]
+  },
   "autoload": {
     "files": [
       "src/Client/Shell/InputReader.php"
