@@ -6,12 +6,12 @@
     ".ruff-cache/**": true,
     ".venv/**": true,
   },
+  "python.analysis.enablePytestSupport": true,
   "python.analysis.extraPaths": [
-    "${workspaceFolder}/src"
+    "${workspaceFolder}/src",
   ],
   "python.autoComplete.extraPaths": [
-    "${workspaceFolder}/src"
+    "${workspaceFolder}/src",
   ],
-  "python.analysis.enablePytestSupport": true,
-  "python.testing.pytestEnabled": true
+  "python.testing.pytestEnabled": true,
 }
