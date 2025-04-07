@@ -5,19 +5,17 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-
 namespace shapes::base {
 namespace commons {
     class BaseShape {
       private:
-        vector<map<string, double>> dimensions;
+        std::vector<std::map<std::string, double>> dimensions;
 
       public:
-        BaseShape(const vector<map<string, double>>& dimensions);
+        BaseShape(const std::vector<std::map<std::string, double>>& dimensions);
         virtual ~BaseShape();
         [[nodiscard]]
-        auto getDimensions() const -> const vector<map<string, double>>&;
+        auto getDimensions() const -> const std::vector<std::map<std::string, double>>&;
         [[nodiscard]]
         auto showAvailableDimensionCount() const -> size_t;
         static auto validateShape() -> bool;

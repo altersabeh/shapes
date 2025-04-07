@@ -4,22 +4,21 @@
 #include "commons.hpp"
 
 using namespace shapes::base::commons;
-using namespace std;
 
 namespace shapes::base {
 namespace models {
     class Circle : public BaseShape, public Dimensional, public Displayable {
       private:
         double radius;
-        string color;
+        std::string color;
         [[nodiscard]]
-        auto formatDimensions() const -> string;
+        auto formatDimensions() const -> std::string;
 
       public:
         explicit Circle(double radius);
         [[nodiscard]]
-        auto getColor() const -> const string&;
-        void setColor(const string& value);
+        auto getColor() const -> const std::string&;
+        void setColor(const std::string& value);
         [[nodiscard]]
         auto area() const -> double override;
         [[nodiscard]]
