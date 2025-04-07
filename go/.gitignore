@@ -27,7 +27,6 @@ build/
 *.la
 *.lai
 *.lib
-*.rlib
 
 # Executables
 *.app
