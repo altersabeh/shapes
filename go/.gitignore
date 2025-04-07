@@ -4,7 +4,7 @@
 vendor/
 build/
 
-# Go-task file created by individuals
+# Non-distributed go-task files
 [Tt]askfile.yml
 [Tt]askfile.yaml
 
