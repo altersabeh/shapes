@@ -16,7 +16,7 @@
       "dependsOn": [ "^fmt" ]
     },
     "test:cov": {
-      "inputs": [ "$TURBO_DEFAULT$", "lib/**/*", "test/**/*" ],
+      "inputs": [ "$TURBO_DEFAULT$", "lib/**/*", "tests/**/*" ],
       "outputs": [ "./coverage/**" ]
     },
     "start": {
