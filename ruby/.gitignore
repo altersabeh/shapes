@@ -1,15 +1,42 @@
-# .bundle/
-/.yardoc
-/_yardoc/
-/coverage/
-/doc/
-/pkg/
-/spec/reports/
-/tmp/
-vendor/
+# Bundle
 .bundle/bin/
+pkg/
+vendor/
 
-# rspec failure tracking
+# Documentation cache and generated files
+.yardoc/
+_yardoc/
+doc/
+rdoc/
+
+# Gem files
+*.gem
+*.rbc
+
+# RSpec test files
 .rspec_status
+coverage/
+spec/reports/
 
-.ruby-lsp
+# Ruby LSP files
+.ruby-lsp/
+
+# Ruby version managers
+.ruby-version
+.rvmrc
+
+# macOS system files
+.AppleDouble
+.DS_Store
+.LSOverride
+._*
+
+# Windows system files
+$RECYCLE.BIN/
+[Dd]esktop.ini
+*.lnk
+
+# Visual Studio Code settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json

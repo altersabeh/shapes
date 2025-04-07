@@ -12,6 +12,7 @@ DerivedData/
 # Swift module files
 *.swiftmodule
 *.swiftdoc
+*.swiftinterface
 
 # SourceKit-LSP generated files
 .vscode/launch.json

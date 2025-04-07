@@ -1,50 +1,61 @@
-# Cabal and GHC build artefacts
-dist/
-dist-newstyle/
-*.hi
-*.o
+# Cabal related files
+dist
+dist-*
+cabal-dev
+.cabal-sandbox/
+cabal.sandbox.config
+cabal.project.local
 
-# Haskell Tool Stack-related
+# Stack related files
 .stack-work/
-tests/integration/tests/**/*.yaml.lock
 
-# Stack's GitHub workflow-related
-_release/
+### Haskell (GHC)
+*.exe
+*.hi
+*.prof
+*.eventlog
+*.hp
+*.aux
+*.tix
+*.hpc
 
-# MkDocs-related
-_site/
-.python-doc-virtualenv
+# Build prerequisites
+*.d
 
-# Haskell Language Server-related
-hie.yaml
+# Compiled object files
+*.o
+*.obj
+*.slo
+*.lo
 
-# Stan-related
-.hie
-stan.html
+# Compiled dynamic libraries
+*.so
+*.dylib
+*.dll
 
-# Emacs-related
-.dir-locals.el
-*_flymake.hs
+# Compiled static libraries
+*.a
+*.lib
+*.lai
+*.la
 
-# Vim-related
-*.swp
-*.tag
+# Executables
+*.exe
+*.out
+*.app
 
-# IntelliJ IDE-related
-.idea/
-*.iml
-
-# hsenv-related
-.hsenv
-
-# Vagrant-related
-.vagrant/
-
-# HSpec-related
-.hspec-failures
-
-# macOS-related
+# macOS system files
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
 
-# VS Code workspace settings
-# .vscode
+# Windows system files
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Visual Studio Code settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json

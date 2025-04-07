@@ -1,34 +1,35 @@
-# macOS
-.DS_Store
-
-# sbt specific
-dist/*
-target/
+# Simple Build Tool (sbt)
+dist/
 lib_managed/
-src_managed/
-project/project/
 project/boot/
 project/plugins/project/
-project/local-plugins.sbt
-.history
-.ensime
-.ensime_cache/
-.sbt-scripted/
-local.sbt
-null/
+project/project/
+src_managed/
+target/
 
-# Bloop
-.bsp
-
-# VS Code
-# .vscode/
-
-# Metals
+# Bloop Scala IDE
 .bloop/
+.bsp/
 .metals/
-metals.sbt
+.scala-build/
+project/**/metals.sbt
 
-# IDEA
-.idea
-.idea_modules
-/.worksheet/
+# Scala compiled objects
+*.class
+*.tasty
+
+# macOS system files
+.AppleDouble
+.DS_Store
+.LSOverride
+._*
+
+# Windows system files
+$RECYCLE.BIN/
+[Dd]esktop.ini
+*.lnk
+
+# Visual Studio Code settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json

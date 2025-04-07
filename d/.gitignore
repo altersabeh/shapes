@@ -1,17 +1,53 @@
+# DUB files
 .dub
 docs.json
 __dummy.html
 docs/
-/shapes
+
+# build directory
+build/
+
+# Code coverage
+*.lst
+
+
+# Build prerequisites
+*.d
+
+# Compiled object files
+*.o
+*.obj
+*.slo
+*.lo
+
+# Compiled dynamic libraries
 *.so
 *.dylib
 *.dll
+
+# Compiled static libraries
 *.a
 *.lib
-*-test-*
+*.lai
+*.la
+
+# Executables
 *.exe
-*.pdb
-*.o
-*.obj
-*.lst
-build/
+*.out
+*.app
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows system files
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Visual Studio Code settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
