@@ -8,18 +8,6 @@ build/
 [Tt]askfile.yml
 [Tt]askfile.yaml
 
-# macOS system files
-.DS_Store
-.AppleDouble
-.LSOverride
-._*
-
-# Windows system files
-$RECYCLE.BIN/
-[Dd]esktop.ini
-*.lnk
-*.stackdump
-
 # Build prerequisites
 *.d
 
@@ -46,6 +34,23 @@ $RECYCLE.BIN/
 *.exe
 *.out
 
+# Generated files by metals when using code-workspace
+.metals/
+.bsp/
+.scala-build/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows system files
+$RECYCLE.BIN/
+[Dd]esktop.ini
+*.lnk
+*.stackdump
+
 # Visual Studio Code settings
 .vscode/*
 !.vscode/extensions.json
@@ -53,8 +58,3 @@ $RECYCLE.BIN/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/*.code-snippets
-
-# Generated files by metals when using code-workspace
-.metals/
-.bsp/
-.scala-build/
