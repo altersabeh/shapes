@@ -1,5 +1,3 @@
-using static System.StringComparison;
-
 namespace Shapes.Client.Shell;
 
 sealed class InputReader {
