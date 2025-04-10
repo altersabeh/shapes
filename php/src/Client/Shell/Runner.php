@@ -12,7 +12,7 @@ final class Runner {
     }
 
     public function run(): void {
-        $printThankYouMessage = static function (): void {
+        $printThankYouMessage = static function(): void {
             echo "Thank you for using the Shapes CLI!" . PHP_EOL;
             echo "P.S. Did you know? The secret code is 42!" . PHP_EOL;
         };
@@ -23,7 +23,6 @@ final class Runner {
             $shape = InputReader\readInput();
             if ("q" === $shape) {
                 $printThankYouMessage();
-
                 break;
             }
 
@@ -38,7 +37,7 @@ final class Runner {
 
             $action =
                 $actions[$shape] ??
-                static function (): void {
+                static function(): void {
                     echo "Invalid input. Please try again." . PHP_EOL;
                     echo "Type one of the listed options." . PHP_EOL;
                 };

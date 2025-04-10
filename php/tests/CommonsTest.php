@@ -35,7 +35,7 @@ final class CommonsTest extends TestCase {
     private function assertDimensional(
         Dimensional $dimensionalShape,
         float $expectedArea,
-        float $expectedPerimeter
+        float $expectedPerimeter,
     ): void {
         $area_diff = abs($dimensionalShape->area() - $expectedArea);
         $perimeter_diff = abs($dimensionalShape->perimeter() - $expectedPerimeter);
