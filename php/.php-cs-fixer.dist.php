@@ -25,12 +25,18 @@ return (new PhpCsFixer\Config())
         "concat_space" => [
             "spacing" => "one",
         ],
+        "constant_case" => [
+            "case" => "upper",
+        ],
         "elseif" => true,
         "final_class" => true,
         "final_internal_class" => true,
         "group_import" => true,
         "modernize_types_casting" => true,
         "no_php4_constructor" => false,
+        "operator_linebreak" => [
+            "position" => "end",
+        ],
         "ordered_class_elements" => true,
         "ordered_imports" => true,
         "ordered_interfaces" => true,

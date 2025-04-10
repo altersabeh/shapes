@@ -17,7 +17,7 @@ final class Runner {
             echo "P.S. Did you know? The secret code is 42!" . PHP_EOL;
         };
 
-        while (true) {
+        while (TRUE) {
             self::startingMessage();
 
             $shape = InputReader\readInput();
@@ -36,9 +36,9 @@ final class Runner {
                 "s" => [Handler::class, "handleSquare"],
             ];
 
-            $action
-                = $actions[$shape]
-                ?? static function (): void {
+            $action =
+                $actions[$shape] ??
+                static function (): void {
                     echo "Invalid input. Please try again." . PHP_EOL;
                     echo "Type one of the listed options." . PHP_EOL;
                 };

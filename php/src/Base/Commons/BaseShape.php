@@ -22,7 +22,7 @@ abstract class BaseShape {
     }
 
     public static function validateShape(): bool {
-        return true;
+        return TRUE;
     }
 
     abstract public function printDescription(): void;

@@ -4,7 +4,7 @@ namespace Shapes\Base\Commons;
 
 trait Displayable {
     public function shouldDisplay(): bool {
-        return true;
+        return TRUE;
     }
 
     public function display(): void {

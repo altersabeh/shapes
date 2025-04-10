@@ -5,14 +5,14 @@ namespace Shapes\Client\Shell;
 function readInput(): string {
     echo "Your Answer >>> ";
     $user_input = fgets(STDIN);
-    $user_input = false !== $user_input ? strtolower(trim($user_input)) : "";
+    $user_input = FALSE !== $user_input ? strtolower(trim($user_input)) : "";
     readExit($user_input);
 
     return $user_input;
 }
 
 function readNumber(): float {
-    while (true) {
+    while (TRUE) {
         $user_input = readInput();
 
         if (is_numeric($user_input)) {
