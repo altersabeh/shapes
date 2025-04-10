@@ -59,6 +59,9 @@
     {
       "name": "kotlin",
       "path": "kotlin"
+    },
+    {
+      "path": "elixir"
     }
   ],
   "settings": {
