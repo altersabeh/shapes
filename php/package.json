@@ -3,6 +3,7 @@
     "@prettier/plugin-php": "^0.22.4",
     "prettier": "^3.5.3"
   },
+  "name": "@shapes/shapes",
   "prettier": {
     "braceStyle": "1tbs",
     "bracketSpacing": true,
@@ -16,5 +17,7 @@
     "singleQuote": false,
     "tabWidth": 4,
     "trailingCommaPHP": true
-  }
+  },
+  "private": true,
+  "version": "1.0.0"
 }
