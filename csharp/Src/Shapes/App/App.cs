@@ -3,7 +3,7 @@ using Shapes.Client.Shell;
 
 namespace Shapes.App;
 
-class Program {
+class App {
     static void Main(string[] args) {
         Runner program = new Runner();
 
