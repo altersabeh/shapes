@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
-require_relative "fixtures/helper"
-
+require "rspec/autorun" if __FILE__ == $0
 require "shapes/base/commons"
+
+require_relative "fixtures/helper"
 
 RSpec.describe "Dimensional Tests" do
     it "ensures Circle implements Dimensional" do

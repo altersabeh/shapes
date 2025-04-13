@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "rspec/autorun" if __FILE__ == $0
+
 require_relative "fixtures/helper"
 
 DELTA = 0.001
