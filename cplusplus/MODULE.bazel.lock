@@ -60,6 +60,8 @@
     "https://bcr.bazel.build/modules/boost.detail/1.87.0/source.json": "dde910ab5e8ca18352cceaf4a922904b3de9ace042bf16f1a2015ca53776a568",
     "https://bcr.bazel.build/modules/boost.exception/1.87.0/MODULE.bazel": "2bc7bfa2166bccb25c8b814ad8d5bf462448349ffd41e9541cfa7b849bd15ca8",
     "https://bcr.bazel.build/modules/boost.exception/1.87.0/source.json": "987bb7df5cbf05e4c3349073fe889e33b8914ea9b9b0b5cf72bc742941343d8b",
+    "https://bcr.bazel.build/modules/boost.format/1.87.0/MODULE.bazel": "5f8ee480f33df7a405dcc14f97d0aaf3801c850904a8246fcefff2cb4495c70b",
+    "https://bcr.bazel.build/modules/boost.format/1.87.0/source.json": "53cae5a3e0f894f15498b65561dc1135641fba3ec176ae72487ae35c000c425b",
     "https://bcr.bazel.build/modules/boost.function/1.87.0/MODULE.bazel": "d7ad93c26d0102b48cd6f781fcb68d16861fd6bf8772f784f034afabbabea391",
     "https://bcr.bazel.build/modules/boost.function/1.87.0/source.json": "dd6765e2d9d902fc82da874f55061cf233a17affa66acb1641f478480b80d5d2",
     "https://bcr.bazel.build/modules/boost.function_types/1.87.0/MODULE.bazel": "fed8aedff1fb01468a24e53a10793411330e36ebe29aeafaadeae00e25c20371",
