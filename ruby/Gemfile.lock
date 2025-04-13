@@ -55,6 +55,8 @@ GEM
       prism (>= 1.2, < 2.0)
       rbs (>= 3, < 4)
       sorbet-runtime (>= 0.5.10782)
+    ruby-lsp-rake (0.3.4)
+      ruby-lsp (~> 0.23.0)
     ruby-lsp-rspec (0.1.22)
       ruby-lsp (~> 0.23.0)
     ruby-progressbar (1.13.0)
@@ -70,6 +72,7 @@ DEPENDENCIES
   rake (~> 13.2.1)
   rspec (~> 3.13.0)
   rubocop (~> 1.75.2)
+  ruby-lsp-rake
   ruby-lsp-rspec
   shapes!
 
