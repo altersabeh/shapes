@@ -6,6 +6,7 @@ use std::collections::HashMap;
 pub struct Runner;
 
 impl Runner {
+    #[allow(clippy::new_without_default)]
     pub fn new() -> Self {
         println!("{}", "=".repeat(53));
         println!("Welcome to the Area and Perimeter Calculator!");
@@ -45,7 +46,7 @@ impl Runner {
                 ("s", handler::handle_square),
             ]);
 
-            let action = actions.get(shape.as_str()).copied().unwrap_or_else(|| {
+            let action = actions.get(shape.as_str()).copied().unwrap_or({
                 || {
                     println!("Invalid input. Please try again.");
                     println!("Type one of the listed options.");
