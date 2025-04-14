@@ -4,7 +4,7 @@ import ShapesBaseCommons
 public final class Square: Dimensional {
     private let side: Double
 
-    public init(side: Double) {
+    public init(_ side: Double) {
         let dim1: Double = side > 0 ? side : 1
         self.side = dim1
     }

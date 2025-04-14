@@ -5,7 +5,7 @@ public final class Circle: BaseShape, Dimensional, Displayable {
     private var radius: Double
     private var _color: String
 
-    public init(radius: Double) {
+    public init(_ radius: Double) {
         let dim1: Double = radius > 0 ? radius : 0
 
         self.radius = dim1
