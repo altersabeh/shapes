@@ -7,7 +7,7 @@ end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
-max_line_length = 2000
+max_line_length = 200
 
 [*.{json,toml,yaml,yml,xml,code-workspace}]
 indent_size = 2
