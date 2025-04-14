@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from shapes.base.models import Circle
 from shapes.client.shell import Runner
 
