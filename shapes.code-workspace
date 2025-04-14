@@ -110,6 +110,7 @@
       "PHP_CS_FIXER_IGNORE_ENV": "1"
     },
     "testing.gutterEnabled": false,
-    "xml.format.maxLineWidth": 200
+    "xml.format.maxLineWidth": 200,
+    "testing.showAllMessages": true
   }
 }
