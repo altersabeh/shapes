@@ -10,4 +10,7 @@
     "bazel-testlogs/**": true,
     "build/**": true
   },
+  "terminal.integrated.env.windows": {
+    "BAZEL_VC": "${env:VCINSTALLDIR}"
+  }
 }

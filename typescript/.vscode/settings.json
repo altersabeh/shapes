@@ -3,5 +3,8 @@
     ".yarn/**": true,
     "coverage/**": true,
     "node_modules/**": true
+  },
+  "terminal.integrated.env.windows": {
+    "JITI_INTEROP_DEFAULT": "true"
   }
 }

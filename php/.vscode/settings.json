@@ -10,4 +10,7 @@
   "prettier.documentSelectors": [
     "**/*.{js,jsx,ts,tsx,vue,html,css,scss,less,json,md,mdx,graphql,yaml,yml,php}"
   ],
+  "terminal.integrated.env.windows": {
+    "PHP_CS_FIXER_IGNORE_ENV": "1"
+  }
 }
