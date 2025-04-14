@@ -7,3 +7,7 @@ dfmt_space_before_aa_colon = true
 dfmt_space_before_named_arg_colon = true
 dfmt_template_constraint_style = always_newline_indent
 tab_width = 4
+
+[Makefile]
+indent_style = space
+indent_size = 4
