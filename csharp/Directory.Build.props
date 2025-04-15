@@ -9,8 +9,7 @@
   </PropertyGroup>
 
   <Target Name="PostClean" AfterTargets="Clean">
-    <RemoveDir Directories="$(BaseIntermediateOutputPath)" />
-    <RemoveDir Directories="$(BaseOutputPath)" />
+    <RemoveDir Directories="$(RepoRoot)artifacts" />
   </Target>
 
   <Target Name="PreFormat" BeforeTargets="Format">
