@@ -1,6 +1,9 @@
 <Project>
 
   <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
     <VSTestVerbosity>detailed</VSTestVerbosity>
     <TargetFramework>net9.0</TargetFramework>
   </PropertyGroup>
