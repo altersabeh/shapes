@@ -10,6 +10,13 @@ gradle-app.setting
 *.ktlib
 .kotlin/
 
+# Java package files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+
 # JDT-specific files
 .classpath
 
