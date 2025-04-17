@@ -4,7 +4,9 @@
     ".pdm-plugins/**": true,
     ".pytest-cache/**": true,
     ".ruff-cache/**": true,
-    ".venv/**": true
+    ".venv/**": true,
+    "dist/**": true,
+    "htmlcov/**": true
   },
   "python.analysis.enablePytestSupport": true,
   "python.analysis.extraPaths": [
