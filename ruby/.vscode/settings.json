@@ -1,7 +1,8 @@
 {
   "files.watcherExclude": {
+    ".bundle/bin/**": true,
     ".ruby-lsp/**": true,
-    "vendor/**": true,
+    "vendor/**": true
   },
   "rubyLsp.featureFlags": {
     "fullTestDiscovery": true

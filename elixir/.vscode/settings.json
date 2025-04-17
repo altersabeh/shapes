@@ -2,6 +2,6 @@
   "files.watcherExclude": {
     "_build/**": true,
     ".elixir_ls/**": true,
-    "deps/**": true,
+    "deps/**": true
   }
 }

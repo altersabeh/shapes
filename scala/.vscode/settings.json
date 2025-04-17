@@ -1,7 +1,10 @@
 {
   "files.watcherExclude": {
+    ".bloop/**": true,
+    ".metals/**": true,
     "**/target": true,
-    "project/target/": true,
+    "null/**": true,
     "project/project/**": true,
-  },
+    "project/target/": true
+  }
 }

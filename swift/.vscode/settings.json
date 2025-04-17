@@ -3,6 +3,6 @@
   "files.watcherExclude": {
     ".build/**": true,
     ".index-cache/**": true,
-    "build/**": true,
-  },
+    "build/**": true
+  }
 }

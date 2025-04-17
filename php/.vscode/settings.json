@@ -5,6 +5,7 @@
   "files.watcherExclude": {
     ".phpunit-cache/**": true,
     ".psalm-cache/**": true,
+    "node_modules/**": true,
     "vendor/**": true
   },
   "prettier.documentSelectors": [

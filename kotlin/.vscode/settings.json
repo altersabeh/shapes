@@ -1,6 +1,7 @@
 {
   "files.watcherExclude": {
-    ".dub/**": true,
+    ".gradle/**": true,
+    ".kotlin/**": true,
     "build/**": true
   }
 }
