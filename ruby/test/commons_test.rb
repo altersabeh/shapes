@@ -8,7 +8,7 @@ require_relative "fixtures/helper"
 
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new(color: true)
 
-class TestDimensional < Minitest::Test
+class DimensionalTest < Minitest::Test
     def test_circle_implements_dimensional
         circle = Helper.setup_circle
         assert_dimensional(circle, 754.767, 97.389)

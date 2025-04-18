@@ -9,7 +9,7 @@ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new(color: true)
 
 DELTA = 0.001
 
-class TestCircle < Minitest::Test
+class CircleTest < Minitest::Test
     def test_circle_area
         circle = Helper.setup_circle
         result = circle.area
@@ -25,7 +25,7 @@ class TestCircle < Minitest::Test
     end
 end
 
-class TestRectangle < Minitest::Test
+class RectangleTest < Minitest::Test
     def test_rectangle_area
         rectangle = Helper.setup_rectangle
         result = rectangle.area
@@ -41,7 +41,7 @@ class TestRectangle < Minitest::Test
     end
 end
 
-class TestSquare < Minitest::Test
+class SquareTest < Minitest::Test
     def test_square_area
         square = Helper.setup_square
         result = square.area
