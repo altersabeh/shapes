@@ -118,9 +118,6 @@
     "python.terminal.activateEnvInCurrentTerminal": true,
     "python.terminal.activateEnvironment": true,
     "python.testing.pytestEnabled": false,
-    "rubyLsp.featureFlags": {
-      "fullTestDiscovery": true
-    },
     "rubyLsp.linters": [
       "rubocop",
       "reek"
