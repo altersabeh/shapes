@@ -18,7 +18,7 @@ class Runner
         puts "Type '[E]XIT' to quit the program."
     end
 
-    def run # rubocop:disable Metrics/MethodLength,Metrics/AbcSize
+    def run # rubocop:disable Metrics/AbcSize
         print_thank_you_message = proc do
             puts "Thank you for using the Shapes CLI!"
             puts "P.S. Did you know? The secret code is 42!"
