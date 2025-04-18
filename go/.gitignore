@@ -33,11 +33,6 @@ build/
 *.exe
 *.out
 
-# Generated files by metals when using code-workspace
-.metals/
-.bsp/
-.scala-build/
-
 # macOS system files
 .DS_Store
 .AppleDouble
