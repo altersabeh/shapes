@@ -11,13 +11,13 @@ let package = Package(
             targets: ["Shapes"]
         ),
         .executable(
-            name: "shape-app",
+            name: "shapes-app",
             targets: ["ShapesApp"]
         ),
     ],
     dependencies: [
         .package(url: "https://github.com/swiftlang/swift-docc-plugin", from: "1.4.3"),
-        .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", from: "0.58.2")
+        .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", from: "0.58.2"),
     ],
     targets: [
         .target(
