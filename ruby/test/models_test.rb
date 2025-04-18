@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 require "minitest/autorun"
+require "minitest/reporters"
 
 require_relative "fixtures/helper"
+
+Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new(color: true)
 
 DELTA = 0.001
 

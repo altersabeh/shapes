@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 require "minitest/autorun"
+require "minitest/reporters"
 require "shapes/base/commons"
 
 require_relative "fixtures/helper"
+
+Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new(color: true)
 
 class TestDimensional < Minitest::Test
     def test_circle_implements_dimensional
