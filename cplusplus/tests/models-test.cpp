@@ -10,14 +10,14 @@ namespace shapes::tests {
 constexpr double DELTA = 0.001;
 
 namespace circle_tests {
-    TEST(CircleTest, Area) {
+    TEST(CircleTest, TestCircleArea) {
         auto circle = helper::setupCircle();
         const double result = circle.area();
         const double expected = 754.767;
         EXPECT_TRUE(abs(result - expected) < DELTA);
     }
 
-    TEST(CircleTest, Perimeter) {
+    TEST(CircleTest, TestCirclePerimeter) {
         auto circle = helper::setupCircle();
         const double result = circle.perimeter();
         const double expected = 97.389;
@@ -26,14 +26,14 @@ namespace circle_tests {
 } // namespace circle_tests
 
 namespace rectangle_tests {
-    TEST(RectangleTest, Area) {
+    TEST(RectangleTest, TestRectangleArea) {
         auto rectangle = helper::setupRectangle();
         const double result = rectangle.area();
         const double expected = 756.437;
         EXPECT_TRUE(abs(result - expected) < DELTA);
     }
 
-    TEST(RectangleTest, Perimeter) {
+    TEST(RectangleTest, TestRectanglePerimeter) {
         auto rectangle = helper::setupRectangle();
         const double result = rectangle.perimeter();
         const double expected = 112.0;
@@ -42,14 +42,14 @@ namespace rectangle_tests {
 } // namespace rectangle_tests
 
 namespace square_tests {
-    TEST(SquareTest, Area) {
+    TEST(SquareTest, TestSquareArea) {
         auto square = helper::setupSquare();
         const double result = square.area();
         const double expected = 105.062;
         EXPECT_TRUE(abs(result - expected) < DELTA);
     }
 
-    TEST(SquareTest, Perimeter) {
+    TEST(SquareTest, TestSquarePerimeter) {
         auto square = helper::setupSquare();
         const double result = square.perimeter();
         const double expected = 41.0;
