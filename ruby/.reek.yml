@@ -1,0 +1,15 @@
+detectors:
+  Attribute:
+    enabled: false
+
+  DuplicateMethodCall:
+    max_calls: 10
+
+  IrresponsibleModule:
+    enabled: false
+
+  NestedIterators:
+    max_allowed_nesting: 5
+
+  TooManyStatements:
+    max_statements: 30
