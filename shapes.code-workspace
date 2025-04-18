@@ -93,7 +93,28 @@
     "prettier.documentSelectors": [
       "**/*.{js,jsx,ts,tsx,vue,html,css,scss,less,json,md,mdx,graphql,yaml,yml,php}"
     ],
+    "pylint.importStrategy": "fromEnvironment",
     "python.analysis.enablePytestSupport": false,
+    "python.analysis.exclude": [
+      "${workspaceFolder:cplusplus}",
+      "${workspaceFolder:d}",
+      "${workspaceFolder:dart}",
+      "${workspaceFolder:elixir}",
+      "${workspaceFolder:fsharp}",
+      "${workspaceFolder:go}",
+      "${workspaceFolder:haskell}",
+      "${workspaceFolder:java}",
+      "${workspaceFolder:kotlin}",
+      "${workspaceFolder:php}",
+      "${workspaceFolder:ruby}",
+      "${workspaceFolder:rust}",
+      "${workspaceFolder:scala}",
+      "${workspaceFolder:typescript}",
+      "${workspaceFolder:swift}"
+    ],
+    "python.analysis.include": [
+      "${workspaceFolder:python}"
+    ],
     "python.terminal.activateEnvInCurrentTerminal": true,
     "python.terminal.activateEnvironment": true,
     "python.testing.pytestEnabled": false,
@@ -110,7 +131,7 @@
       "PHP_CS_FIXER_IGNORE_ENV": "1"
     },
     "testing.gutterEnabled": false,
-    "xml.format.maxLineWidth": 200,
-    "testing.showAllMessages": true
+    "testing.showAllMessages": true,
+    "xml.format.maxLineWidth": 200
   }
 }
