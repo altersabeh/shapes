@@ -8,7 +8,9 @@ group :development do
     gem "minitest", "~> 5.25"
     gem "minitest-reporters", require: false
     gem "rake", "~> 13.2.1"
+    gem "reek", "~> 6.4.0"
     gem "rubocop", "~> 1.75.2"
     gem "rubocop-minitest", require: false
     gem "ruby-lsp-rake", require: false
+    gem "ruby-lsp-reek", require: false
 end

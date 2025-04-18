@@ -8,7 +8,38 @@ GEM
   specs:
     ansi (1.5.0)
     ast (2.4.3)
+    bigdecimal (3.1.9)
     builder (3.3.0)
+    concurrent-ruby (1.3.5)
+    dry-configurable (1.3.0)
+      dry-core (~> 1.1)
+      zeitwerk (~> 2.6)
+    dry-core (1.1.0)
+      concurrent-ruby (~> 1.0)
+      logger
+      zeitwerk (~> 2.6)
+    dry-inflector (1.2.0)
+    dry-initializer (3.2.0)
+    dry-logic (1.6.0)
+      bigdecimal
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.1)
+      zeitwerk (~> 2.6)
+    dry-schema (1.13.4)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 1.0, >= 1.0.1)
+      dry-core (~> 1.0, < 2)
+      dry-initializer (~> 3.0)
+      dry-logic (>= 1.4, < 2)
+      dry-types (>= 1.7, < 2)
+      zeitwerk (~> 2.6)
+    dry-types (1.8.2)
+      bigdecimal (~> 3.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.0)
+      dry-inflector (~> 1.0)
+      dry-logic (~> 1.4)
+      zeitwerk (~> 2.6)
     json (2.10.2)
     language_server-protocol (3.17.0.4)
     lint_roller (1.1.0)
@@ -29,7 +60,14 @@ GEM
     rake (13.2.1)
     rbs (3.9.2)
       logger
+    reek (6.4.0)
+      dry-schema (~> 1.13.0)
+      logger (~> 1.6)
+      parser (~> 3.3.0)
+      rainbow (>= 2.0, < 4.0)
+      rexml (~> 3.1)
     regexp_parser (2.10.0)
+    rexml (3.4.1)
     rubocop (1.75.2)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
@@ -55,11 +93,16 @@ GEM
       sorbet-runtime (>= 0.5.10782)
     ruby-lsp-rake (0.3.4)
       ruby-lsp (~> 0.23.0)
+    ruby-lsp-reek (0.3.1)
+      reek (~> 6.0, >= 5.0)
+      ruby-lsp (~> 0.17, >= 0.12.0)
+      sorbet-runtime (~> 0.5, >= 0.5.5685)
     ruby-progressbar (1.13.0)
     sorbet-runtime (0.5.12024)
     unicode-display_width (3.1.4)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
+    zeitwerk (2.7.2)
 
 PLATFORMS
   x64-mingw-ucrt
@@ -68,9 +111,11 @@ DEPENDENCIES
   minitest (~> 5.25)
   minitest-reporters
   rake (~> 13.2.1)
+  reek (~> 6.4.0)
   rubocop (~> 1.75.2)
   rubocop-minitest
   ruby-lsp-rake
+  ruby-lsp-reek
   shapes!
 
 BUNDLED WITH
