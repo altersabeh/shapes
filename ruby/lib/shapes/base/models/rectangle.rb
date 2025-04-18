@@ -8,10 +8,10 @@ class Rectangle
     attr_accessor :width, :height
 
     def initialize(width, height)
-        dim1 = width >= 0 ? width : 0
-        dim2 = height >= 0 ? height : 0
-        @width = dim1
-        @height = dim2
+        dim_one = width >= 0 ? width : 0
+        dim_two = height >= 0 ? height : 0
+        @width = dim_one
+        @height = dim_two
     end
 
     def area

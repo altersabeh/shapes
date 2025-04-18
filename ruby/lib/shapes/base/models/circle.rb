@@ -10,7 +10,7 @@ class Circle < BaseShape
     attr_reader :radius
 
     def initialize(radius)
-        dim1 = radius >= 0 ? radius : 1
+        dim_one = radius >= 0 ? radius : 1
 
         super([
             { radius: [radius, 1].max },
@@ -18,7 +18,7 @@ class Circle < BaseShape
             { curvature: 1.0 / [radius, 1].max }
         ])
 
-        @radius = dim1
+        @radius = dim_one
         @color = "None"
     end
 
@@ -43,11 +43,9 @@ class Circle < BaseShape
     private
 
     def format_dimensions
-        parts = @dimensions.map do |dimension|
-            dimension.map do |key, value|
-                "#{key.upcase}: #{format("%.3f", value)}"
-            end
-        end.flatten
+        parts = dimensions.flat_map do |dimension|
+            dimension.map { |key, value| "#{key.upcase}: #{format("%.3f", value)}" }
+        end
 
         parts.join(" | ")
     end

@@ -8,8 +8,8 @@ class Square
     attr_accessor :side
 
     def initialize(side)
-        dim1 = side >= 0 ? side : 0
-        @side = dim1
+        dim_one = side >= 0 ? side : 0
+        @side = dim_one
     end
 
     def area
