@@ -69,6 +69,3 @@ $RECYCLE.BIN/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
-
-# Python Language Server
-pyrightconfig.json
