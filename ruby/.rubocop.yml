@@ -3,6 +3,9 @@ plugins:
 
 AllCops:
   TargetRubyVersion: 3.1
+  Exclude:
+    - "vendor/**/*"
+
 Layout/EmptyLineBetweenDefs:
   AllowAdjacentOneLineDefs: true
 Layout/EndOfLine:
