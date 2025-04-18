@@ -1,10 +1,14 @@
 {
   "files.watcherExclude": {
-    ".bundle/bin/**": true,
     ".ruby-lsp/**": true,
+    "bin/**": true,
     "vendor/**": true
   },
   "rubyLsp.featureFlags": {
     "fullTestDiscovery": true
-  }
+  },
+  "rubyLsp.linters": [
+    "rubocop",
+    "reek"
+  ]
 }

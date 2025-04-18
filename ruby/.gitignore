@@ -1,5 +1,5 @@
 # Bundle
-.bundle/bin/
+bin/
 pkg/
 vendor/
 
