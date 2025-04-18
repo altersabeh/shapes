@@ -5,10 +5,10 @@ class Rectangle implements Dimensional {
   double? _height;
 
   Rectangle(double width, double height) {
-    double dim1 = width > 0 ? width : 1;
-    double dim2 = height > 0 ? height : 1;
-    _width = dim1;
-    _height = dim2;
+    double dimOne = width > 0 ? width : 1;
+    double dimTwo = height > 0 ? height : 1;
+    _width = dimOne;
+    _height = dimTwo;
   }
 
   @override

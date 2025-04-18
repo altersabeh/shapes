@@ -8,7 +8,8 @@ final class Square implements Dimensional {
     private float $side;
 
     public function __construct(float $side) {
-        $this->side = $side > 0 ? $side : 1;
+        $dim_one = $side > 0 ? $side : 0;
+        $this->side = $dim_one;
     }
 
     #[\Override]

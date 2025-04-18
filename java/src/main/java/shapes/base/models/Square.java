@@ -6,8 +6,8 @@ public final class Square implements Dimensional {
     private double side;
 
     public Square(double side) {
-        double dim1 = (side > 0) ? side : 1;
-        this.side = dim1;
+        double dimOne = (side > 0) ? side : 1;
+        this.side = dimOne;
     }
 
     @Override

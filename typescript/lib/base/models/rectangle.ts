@@ -5,10 +5,10 @@ export class Rectangle implements Dimensional {
     private height: number;
 
     constructor(width: number, height: number) {
-        const dim1: number = width > 0 ? width : 1;
-        const dim2: number = height > 0 ? height : 1;
-        this.width = dim1;
-        this.height = dim2;
+        const dimOne: number = width > 0 ? width : 1;
+        const dimTwo: number = height > 0 ? height : 1;
+        this.width = dimOne;
+        this.height = dimTwo;
     }
 
     area(): number {

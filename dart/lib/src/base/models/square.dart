@@ -6,8 +6,8 @@ class Square implements Dimensional {
   double? _side;
 
   Square(double side) {
-    double dim1 = side > 0 ? side : 1;
-    _side = dim1;
+    double dimOne = side > 0 ? side : 1;
+    _side = dimOne;
   }
 
   @override

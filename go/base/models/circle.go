@@ -15,7 +15,7 @@ type Circle struct {
 }
 
 func (Circle) New(radius float64) *Circle {
-	var dim1 = map[bool]float64{true: radius, false: 1}[radius > 0]
+	var dimOne = map[bool]float64{true: radius, false: 1}[radius > 0]
 
 	baseShape := BaseShape{}.New(
 		[]map[string]float64{
@@ -28,7 +28,7 @@ func (Circle) New(radius float64) *Circle {
 	return &Circle{
 		BaseShape:   baseShape,
 		Displayable: &Displayable{},
-		radius:      dim1,
+		radius:      dimOne,
 		color:       "None",
 	}
 }

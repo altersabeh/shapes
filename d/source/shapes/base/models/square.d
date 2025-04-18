@@ -9,8 +9,8 @@ private:
 
 public:
     this(double side) {
-        immutable double dim1 = side > 0 ? side : 1;
-        this.side = dim1;
+        immutable double dimOne = side > 0 ? side : 1;
+        this.side = dimOne;
     }
 
     double area() const {

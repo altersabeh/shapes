@@ -7,8 +7,8 @@ type Square struct {
 }
 
 func (Square) New(side float64) *Square {
-	var dim1 = map[bool]float64{true: side, false: 1}[side > 0]
-	return &Square{side: dim1}
+	var dimOne = map[bool]float64{true: side, false: 1}[side > 0]
+	return &Square{side: dimOne}
 }
 
 func (s Square) Area() float64 {

@@ -12,9 +12,9 @@ final class Circle extends BaseShape with Displayable implements Dimensional {
         {"diameter": max(radius, 1) * 2},
         {"curvature": 1 / max(radius, 1)},
       ]) {
-    double dim1 = radius > 0 ? radius : 1;
+    double dimOne = radius > 0 ? radius : 1;
 
-    _radius = dim1;
+    _radius = dimOne;
     _color = "None";
   }
 

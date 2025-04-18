@@ -10,10 +10,10 @@ final class Rectangle extends Dimensional {
 
     def this(width: Double, height: Double) = {
         this()
-        var dim1: Double = if (width > 0) width else 1.0
-        var dim2: Double = if (height > 0) height else 1.0
-        this.width = dim1
-        this.height = dim2
+        var dimOne: Double = if (width > 0) width else 1.0
+        var dimTwo: Double = if (height > 0) height else 1.0
+        this.width = dimOne
+        this.height = dimTwo
     }
 
     override def area: Double = {

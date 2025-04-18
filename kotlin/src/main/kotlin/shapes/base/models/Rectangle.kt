@@ -7,11 +7,10 @@ class Rectangle : Dimensional {
     private var height: Double
 
     constructor(width: Double, height: Double) {
-        val dim1 = if (width > 0) width else 1.0
-        val dim2 = if (height > 0) height else 1.0
-
-        this.width = dim1
-        this.height = dim2
+        val dimOne: Double = if (width > 0) width else 1.0
+        val dimTwo: Double = if (height > 0) height else 1.0
+        this.width = dimOne
+        this.height = dimTwo
     }
 
     override fun area(): Double {

@@ -6,9 +6,9 @@ public final class Circle: BaseShape, Dimensional, Displayable {
     private var _color: String
 
     public init(_ radius: Double) {
-        let dim1: Double = radius > 0 ? radius : 0
+        let dimOne: Double = radius > 0 ? radius : 0
 
-        self.radius = dim1
+        self.radius = dimOne
         self._color = "None"
 
         super.init(dimensions: [

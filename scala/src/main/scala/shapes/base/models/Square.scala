@@ -9,8 +9,8 @@ final class Square extends Dimensional {
 
     def this(side: Double) = {
         this()
-        var dim1: Double = if (side > 0) side else 1.0
-        this._side = dim1
+        var dimOne: Double = if (side > 0) side else 1.0
+        this._side = dimOne
     }
 
     override def area: Double = {

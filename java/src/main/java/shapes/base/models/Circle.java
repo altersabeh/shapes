@@ -13,7 +13,7 @@ public class Circle extends BaseShape implements Dimensional, Displayable {
     private String color;
 
     public Circle(double radius) {
-        double dim1 = (radius > 0) ? radius : 1;
+        double dimOne = (radius > 0) ? radius : 1;
 
         super(
             List.of(
@@ -23,7 +23,7 @@ public class Circle extends BaseShape implements Dimensional, Displayable {
             )
         );
 
-        this.radius = dim1;
+        this.radius = dimOne;
         this.color = "None";
     }
 

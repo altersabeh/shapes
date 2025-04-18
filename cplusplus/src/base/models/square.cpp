@@ -3,8 +3,8 @@
 
 namespace shapes::base::models {
 Square::Square(double side) {
-    const double dim1 = (side > 0) ? side : 1;
-    this->side = dim1;
+    const double dimOne = (side > 0) ? side : 1;
+    this->side = dimOne;
 }
 
 auto Square::area() const -> double {

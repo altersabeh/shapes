@@ -6,8 +6,8 @@ public sealed class Square : IDimensional {
     private readonly double _side;
 
     public Square(double side) {
-        double dim1 = side > 0 ? side : 1;
-        _side = dim1;
+        double dimOne = side > 0 ? side : 1;
+        _side = dimOne;
     }
 
     public double Area() {

@@ -6,10 +6,10 @@ public final class Rectangle: Dimensional {
     private let height: Double
 
     public init(_ width: Double, _ height: Double) {
-        let dim1: Double = width > 0 ? width : 1
-        let dim2: Double = height > 0 ? height : 1
-        self.width = dim1
-        self.height = dim2
+        let dimOne: Double = width > 0 ? width : 1
+        let dimTwo: Double = height > 0 ? height : 1
+        self.width = dimOne
+        self.height = dimTwo
     }
 
     public func area() -> Double {

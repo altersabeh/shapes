@@ -6,8 +6,8 @@ pub struct Square {
 
 impl Square {
     pub fn new(side: f64) -> Self {
-        let dim1: f64 = if side < 0.0 { 1.0 } else { side };
-        Self { side: dim1 }
+        let dim_one: f64 = if side < 0.0 { 1.0 } else { side };
+        Self { side: dim_one }
     }
 }
 

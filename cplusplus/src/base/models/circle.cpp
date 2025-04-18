@@ -18,8 +18,8 @@ Circle::Circle(double radius)
         {{"diameter", std::max(radius, 1.0) * 2}},
         {{"curvature", 1.0 / std::max(radius, 1.0)}},
     }) {
-    const double dim1 = (radius > 0) ? radius : 1;
-    this->radius = dim1;
+    const double dimOne = (radius > 0) ? radius : 1;
+    this->radius = dimOne;
 }
 
 auto Circle::getColor() const -> const std::string& {

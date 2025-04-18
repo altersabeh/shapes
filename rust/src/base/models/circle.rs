@@ -10,10 +10,10 @@ pub struct Circle {
 
 impl Circle {
     pub fn new(radius: f64) -> Self {
-        let dim1: f64 = if radius < 0.0 { 1.0 } else { radius };
+        let dim_one: f64 = if radius < 0.0 { 1.0 } else { radius };
 
         Self {
-            radius: dim1,
+            radius: dim_one,
             dimensions: vec![
                 HashMap::from([("radius", radius.max(1.0))]),
                 HashMap::from([("diameter", radius.max(1.0) * 2.0)]),

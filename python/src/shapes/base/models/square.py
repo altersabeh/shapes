@@ -6,7 +6,8 @@ from shapes.base.commons import Dimensional
 @final
 class Square(Dimensional):
     def __init__(self, side: float):
-        self.side = side if side > 0 else 1
+        dim_one: float = side if side > 0 else 1
+        self.side = dim_one
 
     def area(self) -> float:
         return pow(self.side, 2)

@@ -6,7 +6,7 @@ export class Circle extends BaseShape implements Dimensional {
     private _color: string;
 
     constructor(radius: number) {
-        const dim1: number = radius > 0 ? radius : 1;
+        const dimOne: number = radius > 0 ? radius : 1;
 
         super([
             { radius: Math.max(radius, 1) },
@@ -14,7 +14,7 @@ export class Circle extends BaseShape implements Dimensional {
             { curvature: 1 / Math.max(radius, 1) },
         ]);
 
-        this.radius = dim1;
+        this.radius = dimOne;
         this._color = "None";
     }
 

@@ -28,7 +28,7 @@ private:
 
 public:
     this(double radius) {
-        immutable double dim1 = radius > 0 ? radius : 0;
+        immutable double dimOne = radius > 0 ? radius : 0;
 
         super([
             ["radius" : max(radius, 1)],
@@ -36,7 +36,7 @@ public:
             ["curvature" : 1 / max(radius, 1)],
         ]);
 
-        this.radius = dim1;
+        this.radius = dimOne;
         this.color = "None";
     }
 

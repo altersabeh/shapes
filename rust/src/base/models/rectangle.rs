@@ -7,11 +7,11 @@ pub struct Rectangle {
 
 impl Rectangle {
     pub fn new(width: f64, height: f64) -> Self {
-        let dim1: f64 = if width < 0.0 { 1.0 } else { width };
-        let dim2: f64 = if height < 0.0 { 1.0 } else { height };
+        let dim_one: f64 = if width < 0.0 { 1.0 } else { width };
+        let dim_two: f64 = if height < 0.0 { 1.0 } else { height };
         Self {
-            width: dim1,
-            height: dim2,
+            width: dim_one,
+            height: dim_two,
         }
     }
 }

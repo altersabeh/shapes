@@ -9,10 +9,10 @@ private:
 
 public:
     this(double width, double height) {
-        immutable double dim1 = width > 0 ? width : 1;
-        immutable double dim2 = height > 0 ? height : 1;
-        this.width = dim1;
-        this.height = dim2;
+        immutable double dimOne = width > 0 ? width : 1;
+        immutable double dimTwo = height > 0 ? height : 1;
+        this.width = dimOne;
+        this.height = dimTwo;
     }
 
     double area() const {

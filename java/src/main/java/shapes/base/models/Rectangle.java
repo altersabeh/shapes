@@ -7,10 +7,10 @@ public final class Rectangle implements Dimensional {
     private double height;
 
     public Rectangle(double width, double height) {
-        double dim1 = (width > 0) ? width : 1;
-        double dim2 = (height > 0) ? height : 1;
-        this.width = dim1;
-        this.height = dim2;
+        double dimOne = (width > 0) ? width : 1;
+        double dimTwo = (height > 0) ? height : 1;
+        this.width = dimOne;
+        this.height = dimTwo;
     }
 
     @Override

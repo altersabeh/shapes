@@ -7,7 +7,7 @@ from shapes.base.commons import BaseShape, Dimensional, Displayable
 @final
 class Circle(BaseShape, Dimensional, Displayable):
     def __init__(self, radius: float):
-        dim1: float = radius if radius > 0 else 1
+        dim_one: float = radius if radius > 0 else 1
 
         super().__init__(
             [
@@ -17,7 +17,7 @@ class Circle(BaseShape, Dimensional, Displayable):
             ]
         )
 
-        self.radius = dim1
+        self.radius = dim_one
         self._color = "None"
 
     @property

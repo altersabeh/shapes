@@ -19,9 +19,9 @@ class Circle : BaseShape, Dimensional, Displayable {
                     mapOf("curvature" to 1 / maxOf(radius, 1.0))
             )
     ) {
-        val dim1 = if (radius > 0) radius else 1.0
+        val dimOne: Double = if (radius > 0) radius else 1.0
 
-        this.radius = dim1
+        this.radius = dimOne
         this._color = "None"
     }
 

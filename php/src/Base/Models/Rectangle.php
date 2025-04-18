@@ -9,8 +9,10 @@ final class Rectangle implements Dimensional {
     private float $height;
 
     public function __construct(float $width, float $height) {
-        $this->width = $width > 0 ? $width : 1;
-        $this->height = $height > 0 ? $height : 1;
+        $dim_one = $width > 0 ? $width : 0;
+        $dim_two = $height > 0 ? $height : 0;
+        $this->width = $dim_one;
+        $this->height = $dim_two;
     }
 
     #[\Override]

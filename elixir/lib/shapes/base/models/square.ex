@@ -5,8 +5,8 @@ defmodule Square do
   defstruct side: 0
 
   def new(side) do
-    dim1 = if(side > 0, do: side, else: 1.0)
-    %__MODULE__{side: dim1}
+    dim_one = if(side > 0, do: side, else: 1.0)
+    %__MODULE__{side: dim_one}
   end
 
   def area(self) do

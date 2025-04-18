@@ -4,8 +4,8 @@ export class Square implements Dimensional {
     private side: number;
 
     constructor(side: number) {
-        const dim1: number = side > 0 ? side : 1;
-        this.side = dim1;
+        const dimOne: number = side > 0 ? side : 1;
+        this.side = dimOne;
     }
 
     area(): number {

@@ -5,8 +5,8 @@ defmodule Circle do
   defstruct radius: 0.0
 
   def new(radius) do
-    dim1 = if(radius > 0, do: radius, else: 1.0)
-    %__MODULE__{radius: dim1}
+    dim_one = if(radius > 0, do: radius, else: 1.0)
+    %__MODULE__{radius: dim_one}
   end
 
   def area(self) do

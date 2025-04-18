@@ -5,8 +5,8 @@ public final class Square: Dimensional {
     private let side: Double
 
     public init(_ side: Double) {
-        let dim1: Double = side > 0 ? side : 1
-        self.side = dim1
+        let dimOne: Double = side > 0 ? side : 1
+        self.side = dimOne
     }
 
     public func area() -> Double {
