@@ -121,6 +121,10 @@
     "rubyLsp.featureFlags": {
       "fullTestDiscovery": true
     },
+    "rubyLsp.linters": [
+      "rubocop",
+      "reek"
+    ],
     "search.useParentIgnoreFiles": true,
     "terminal.integrated.autoReplies": {
       "Terminate batch job (Y/N)": "Y\r"
