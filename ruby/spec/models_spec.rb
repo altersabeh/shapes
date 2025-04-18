@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "rspec/autorun" if __FILE__ == $0
+require "rspec/autorun" if __FILE__ == $PROGRAM_NAME
 
 require_relative "fixtures/helper"
 
