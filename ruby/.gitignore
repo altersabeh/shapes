@@ -18,6 +18,9 @@ rdoc/
 coverage/
 spec/reports/
 
+# Rubocop cache
+.rubocop-cache/
+
 # Ruby LSP files
 .ruby-lsp/
 
