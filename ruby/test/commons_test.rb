@@ -1,25 +1,27 @@
 # frozen_string_literal: true
 
-require "rspec/autorun" if __FILE__ == $PROGRAM_NAME
+require "minitest/autorun"
 require "shapes/base/commons"
 
 require_relative "fixtures/helper"
 
-RSpec.describe "Dimensional Tests" do
-    it "ensures Circle implements Dimensional" do
+class TestDimensional < Minitest::Test
+    def test_circle_implements_dimensional
         circle = Helper.setup_circle
         assert_dimensional(circle, 754.767, 97.389)
     end
 
-    it "ensures Rectangle implements Dimensional" do
+    def test_rectangle_implements_dimensional
         rectangle = Helper.setup_rectangle
         assert_dimensional(rectangle, 756.437, 112.0)
     end
 
-    it "ensures Square implements Dimensional" do
+    def test_square_implements_dimensional
         square = Helper.setup_square
         assert_dimensional(square, 105.062, 41.0)
     end
+
+    private
 
     def assert_dimensional(
         dimensional_shape,
@@ -29,7 +31,7 @@ RSpec.describe "Dimensional Tests" do
         area_diff = (dimensional_shape.area - expected_area).abs
         perimeter_diff = (dimensional_shape.perimeter - expected_perimeter).abs
 
-        expect(area_diff).to be < 0.001, "AREA NOT EQUAL"
-        expect(perimeter_diff).to be < 0.001, "PERIMETER NOT EQUAL!"
+        assert(area_diff < 0.001, "AREA NOT EQUAL")
+        assert(perimeter_diff < 0.001, "PERIMETER NOT EQUAL!")
     end
 end
