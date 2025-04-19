@@ -1,2 +1,5 @@
 -J-Xmx5G
 -J-Xms1G
+-Dsbt.global.base=.cache/sbt
+-Dsbt.ivy.home=.cache/ivy2
+-Dsbt.boot.directory=.cache/sbt/boot
