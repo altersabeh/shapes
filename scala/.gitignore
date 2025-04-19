@@ -1,4 +1,5 @@
 # Simple Build Tool (sbt)
+.cache/
 dist/
 lib_managed/
 project/boot/
