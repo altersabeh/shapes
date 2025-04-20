@@ -1,6 +1,6 @@
 using Shapes.Base.Models;
 
-namespace Shapes.Tests.Fixtures;
+namespace Shapes.Test.Fixtures;
 
 public class Helper {
     public static Circle SetupCircle() {

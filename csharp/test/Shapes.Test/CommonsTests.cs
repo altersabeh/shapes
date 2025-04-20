@@ -1,9 +1,9 @@
 using NUnit.Framework;
 
 using Shapes.Base.Commons;
-using Shapes.Tests.Fixtures;
+using Shapes.Test.Fixtures;
 
-namespace Shapes.Tests;
+namespace Shapes.Test;
 
 [TestFixture(TestName = "Commons Tests")]
 class UtilsTests {

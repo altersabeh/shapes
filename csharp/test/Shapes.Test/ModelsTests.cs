@@ -1,8 +1,8 @@
 using NUnit.Framework;
 
-using Shapes.Tests.Fixtures;
+using Shapes.Test.Fixtures;
 
-namespace Shapes.Tests;
+namespace Shapes.Test;
 
 [TestFixture(TestName = "Shapes Test")]
 class ShapesTests {
