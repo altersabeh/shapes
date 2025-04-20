@@ -1,5 +1,6 @@
 {
   "files.watcherExclude": {
     "artifacts": true
-  }
+  },
+  "dotnet.defaultSolution": "Shapes.slnx"
 }
