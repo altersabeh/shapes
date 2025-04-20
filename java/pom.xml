@@ -139,6 +139,7 @@
           </dependency>
         </dependencies>
         <configuration>
+          <argLine>${compiler.args}</argLine>
           <reportFormat>plain</reportFormat>
           <consoleOutputReporter>
             <disable>true</disable>
