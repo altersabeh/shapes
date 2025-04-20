@@ -22,6 +22,12 @@ x86/
 *.nuget.targets
 **/[Pp]ackages/*
 
+# Test results
+[Tt]est[Rr]esults/
+[Tt]est[Rr]eports/
+[Tt]est[Rr]esult.xml
+[Tt]est[Rr]eport.xml
+
 # Build prerequisites
 *.d
 
