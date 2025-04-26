@@ -1,7 +1,7 @@
+use std::collections::HashMap;
+
 use super::handler;
 use super::input_reader::read_input;
-
-use std::collections::HashMap;
 
 pub struct Runner;
 

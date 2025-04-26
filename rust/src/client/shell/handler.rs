@@ -1,8 +1,6 @@
 use super::input_reader::read_number;
-use crate::base::{
-    commons::Dimensional,
-    models::{Circle, Rectangle, Square},
-};
+use crate::base::commons::Dimensional;
+use crate::base::models::{Circle, Rectangle, Square};
 
 pub fn handle_circle() {
     println!("What is the radius of the circle?");

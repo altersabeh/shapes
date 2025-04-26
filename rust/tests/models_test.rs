@@ -3,7 +3,6 @@ mod fixtures {
 }
 
 use fixtures::helper;
-
 use shapes::base::commons::Dimensional;
 
 const DELTA: f64 = 0.001;

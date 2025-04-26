@@ -1,7 +1,6 @@
-use shapes::{
-    base::{commons::BaseShape, models::Circle},
-    client::shell::Runner,
-};
+use shapes::base::commons::BaseShape;
+use shapes::base::models::Circle;
+use shapes::client::shell::Runner;
 
 fn main() {
     let program: Runner = Runner::new();

@@ -1,4 +1,5 @@
-use std::{collections::HashMap, f64::consts::PI};
+use std::collections::HashMap;
+use std::f64::consts::PI;
 
 use crate::base::commons::{BaseShape, Dimensional, Displayable};
 
